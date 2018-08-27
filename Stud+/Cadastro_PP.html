@@ -7,7 +7,7 @@
  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1" />
-  <title>Stud+</title>
+  <title>Stud+ | Cadastro</title>
   <link rel= "stylesheet" type="text/css" href="paginaCadastro.css">
   <link href= "LojaVirtual_18171.css" rel="stylesheet" styletype="text/css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -30,7 +30,6 @@
      <ul>
         <li><span class="LOGO"></span></li>
         <li><a href="./Stud+_PP.html">HOME</li></a>
-        <li><a href="#">CONTATO</a></li>
         <li><a href="#">SOBRE</a></li>
         <li><a href="#" id="btn">LOGIN</a></li>
     </ul>  
@@ -44,6 +43,7 @@
 
  <img class="seta" onclick="voltarAoTopo();">
 
+<form>
  <span class="InfoCompra"> 
 
    <tr>
@@ -55,24 +55,24 @@
    </tr>
 
    <tr>
-   <td><input type="text" class="CadDataNasc" required placeholder=" Data"></td>   
+   <td><input id="data" type="text" class="CadDataNasc" required placeholder=" Data"></td>   
    </tr>    
 
    <tr>
-   <select class="CadDataNasc2">
-     <option disabled="true" selected="true"> Mês</option>
-     <option>Janeiro</option>
-     <option>Fevereiro</option>
-     <option>Março</option>
-     <option>Abril</option>
-     <option>Maio</option>
-     <option>Junho</option>
-     <option>Julho</option>
-     <option>Agosto</option>
-     <option>Setembro</option>
-     <option>Outubro</option>
-     <option>Novembro</option>
-     <option>Dezembro</option>
+   <select id="select" class="CadDataNasc2">
+     <option disabled="true" selected="true" value="0"> Mês</option>
+     <option value="1">Janeiro</option>
+     <option value="2">Fevereiro</option>
+     <option value="3">Março</option>
+     <option value="4">Abril</option>
+     <option value="5">Maio</option>
+     <option value="6">Junho</option>
+     <option value="7">Julho</option>
+     <option value="8">Agosto</option>
+     <option value="9">Setembro</option>
+     <option value="10">Outubro</option>
+     <option value="11">Novembro</option>
+     <option value="12">Dezembro</option>
    </select>
    </tr>   
 
@@ -88,13 +88,12 @@
 
 <span class="icon"></span>
 
-<input type="submit" class="button3" onclick="verificaAno();" value="Enviar">
+<a href="#"><input type="submit" class="button3" onclick="verificaAno();" value="Enviar"></a>
 
 </span>
+</form>
   
 <!--================FOOTER===============================================================================================================-->
-    
-    <footer class="footer"></footer>
     
 <!--============================= SCRIPTS ===============================================================================================-->
     
@@ -190,8 +189,11 @@ $(window).scroll(function() {
     function verificaAno()
     { 
       var ano = document.getElementById("ano").value;
+      var data = document.getElementById("data").value;
+      var mes = document.getElementById("select").value;
+      var dataAtual = new Date();
 
-      if(ano > 2018)
+      if(ano > 2018 || data > 31 || mes == 0)
         alert("Digite uma data válida!");
     }
 
