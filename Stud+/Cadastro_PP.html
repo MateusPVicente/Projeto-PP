@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html>
+    
+<!--============================= PACOTES ======================================================================-->
+    
+<head>
+ 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1" />
+  <title>Stud+</title>
+  <link rel= "stylesheet" type="text/css" href="paginaCadastro.css">
+  <link href= "LojaVirtual_18171.css" rel="stylesheet" styletype="text/css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="./Icon.ico">
+
+
+</head>
+    
+<!--============================= CORPO DA PÁGINA =====================================================================================-->  
+<body>
+    
+  <nav>
+      
+     <div class="toggle">
+        <i class="fa fa-bars menu" aria-hidden="true"></i>
+
+     </div>   
+    
+     <ul>
+        <li><span class="LOGO"></span></li>
+        <li><a href="./Stud+_PP.html">HOME</li></a>
+        <li><a href="#">CONTATO</a></li>
+        <li><a href="#">SOBRE</a></li>
+        <li><a href="#" id="btn">LOGIN</a></li>
+    </ul>  
+
+  </nav>
+
+  <!--<video autoplay loop poster="torre.jpg" class="bg_video">
+  <source src="bg.webm" type="video/webm">
+  <source src="bg.mp4" type="video/mp4">
+  </video>-->
+
+ <img class="seta" onclick="voltarAoTopo();">
+
+ <span class="InfoCompra"> 
+
+   <tr>
+   <td><input type="text" class="CadNome" required placeholder=" Nome de Usuário"></td>   
+   </tr>
+
+   <tr>
+   <td><input type="password" class="CadSenha" required placeholder=" Senha"><av>*Não fale sua senha para ninguém!*</av></td>   
+   </tr>
+
+   <tr>
+   <td><input type="text" class="CadDataNasc" required placeholder=" Data"></td>   
+   </tr>    
+
+   <tr>
+   <select class="CadDataNasc2">
+     <option disabled="true" selected="true"> Mês</option>
+     <option>Janeiro</option>
+     <option>Fevereiro</option>
+     <option>Março</option>
+     <option>Abril</option>
+     <option>Maio</option>
+     <option>Junho</option>
+     <option>Julho</option>
+     <option>Agosto</option>
+     <option>Setembro</option>
+     <option>Outubro</option>
+     <option>Novembro</option>
+     <option>Dezembro</option>
+   </select>
+   </tr>   
+
+   <msg>Data de Nascimento:</msg>
+
+   <tr>
+   <td><input id="ano" type="text" class="CadDataNasc3" required placeholder=" Ano"></td>   
+   </tr>      
+
+   <hr class="divisao">   
+
+<span class="imagem"></span>
+
+<span class="icon"></span>
+
+<input type="submit" class="button3" onclick="verificaAno();" value="Enviar">
+
+</span>
+  
+<!--================FOOTER===============================================================================================================-->
+    
+    <footer class="footer"></footer>
+    
+<!--============================= SCRIPTS ===============================================================================================-->
+    
+    <!--<div class="search-wrapper">
+    <div class="input-holder">
+        <input type="text" class="search-input" placeholder="Type to search" />
+        <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+    </div>
+    <span class="close" onclick="searchToggle(this, event);"></span>
+</div>-->
+
+<!--============================= SCRIPTS ===========================================================================================-->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('.menu').click(function(){
+            $('ul').toggleClass('active');
+        })
+    })
+
+
+  </script>
+
+  <script type="text/javascript">
+    
+    function page1()
+    {
+      window.scroll({
+          top:  590,
+          left: 100, 
+          behavior: 'smooth'
+        });
+    }
+
+  </script>
+    
+  <script>
+               
+      function iniciaModal(modalID)
+      {
+          const modal = document.getElementById(modalID);
+          if(modal){
+          modal.classList.add('mostrar');
+          modal.addEventListener('click', (e) => {
+              
+              if(e.target.id == modalID || e.target.className == 'fechar'){
+                  modal.classList.remove('mostrar');
+              }
+          });
+        }
+      }
+         
+      const btn = document.getElementById('btn');
+         if(btn != null)
+             {
+                btn.addEventListener('click', ()  => iniciaModal('modal-login'));
+             }
+   
+  </script>
+
+  <script>
+
+    function voltarAoTopo()
+    {
+         window.scroll({
+          top:  0,
+          left: 0, 
+          behavior: 'smooth'
+        });
+    }
+
+  </script>
+
+  <!--<FAZER IMAGEM APARECER--> <script type="text/javascript">
+    
+$(window).scroll(function() {
+   var scroll = $(window).scrollTop();
+   
+   if (scroll > 100) {
+      $('img').addClass('efeito');
+   } else {
+      $('img').removeClass('efeito');
+   }
+
+});
+
+  </script>
+
+  <script type="text/javascript">
+
+    function verificaAno()
+    { 
+      var ano = document.getElementById("ano").value;
+
+      if(ano > 2018)
+        alert("Digite uma data válida!");
+    }
+
+  </script>
+
+    
+<!--<script>
+    
+  function searchToggle(obj, evt){
+    var container = $(obj).closest('.search-wrapper');
+        if(!container.hasClass('active')){
+            container.addClass('active');
+            evt.preventDefault();
+        }
+        else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
+            container.removeClass('active');
+            // clear input
+            container.find('.search-input').val('');
+        }
+}
+    
+</script>-->
+    
+ <!--============================= MODAIS =============================================================================================-->   
+    <div id="modal-login" class="modal-container">
+        <div class="modal">
+            <button class="fechar">x</button>
+            <h3>LOGIN</h3>
+            <form>
+                <span class= icon-perfil></span>
+                
+        <tr>
+        <td><input type="text" class="input1" required placeholder=" Usuário"></td>   
+        </tr>  
+                
+        <tr>
+        <td><input type="password" class="input2" required placeholder=" Senha"></td>   
+        </tr>
+                
+                
+                <a href="Tarefas_PP.html"><input type="submit" class="button" value="Enviar"></a>
+                
+                <cad>Não possui uma conta? Cadastre-se agora!</cad>
+                
+                <a href="./Cadastro_PP.html"><input type="button" class="button2" value="Cadastrar-se"></a>
+                
+            </form>    
+        </div>
+        
+    </div>
+
+<!--===================================================================================================================================--> 
+    
+</body>
+</html>
