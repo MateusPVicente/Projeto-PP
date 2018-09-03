@@ -127,6 +127,18 @@
         });
     }
 
+    function validaForm(this)
+    {
+      var usuario = document.getElementById("usu").value;
+      var senha = document.getElementById("sen").value;
+
+      if(usuario = "" || senha = "")
+      	alert("Digite os campos corretamente!");
+      else
+      	window.location.href("./Tarefas_PP.html");
+        window.location.assign("./Tarefas_PP.html");
+    }
+
   </script>
 
   <!--<FAZER IMAGEM APARECER--> <script type="text/javascript">
@@ -167,19 +179,19 @@ $(window).scroll(function() {
         <div class="modal">
             <button class="fechar">x</button>
             <h3>LOGIN</h3>
-            <form>
+            <form action="./Tarefas_PP.html">
                 <span class= icon-perfil></span>
                 
         <tr>
-        <td><input type="text" class="input1" required placeholder=" Usuário"></td>   
+        <td><input type="text" id="usu" class="input1" required placeholder=" Usuário"></td>   
         </tr>  
                 
         <tr>
-        <td><input type="password" class="input2" required placeholder=" Senha"></td>   
+        <td><input type="password" id="sen" class="input2" required placeholder=" Senha"></td>   
         </tr>
                 
                 
-                <a href="Tarefas_PP.html"><input type="submit" class="button" value="Enviar"></a>
+                <input type="submit" class="button" value="Enviar">
                 
                 <cad>Não possui uma conta? Cadastre-se agora!</cad>
                 
