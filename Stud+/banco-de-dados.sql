@@ -5,7 +5,9 @@
  codUsuario int primary key not null,
  nomeUsuario varchar(30) not null,
  dataNascimento datetime not null,
- senhaUsuario int not null
+ senhaUsuario int not null,
+ codDesempenho int not null,
+ constraint fkcodDesempenho foreign key (codDesempenho) references Desempenho(codDesempenho)
  )
 
  select * from Usuario
@@ -45,5 +47,12 @@
  )
 
  select * from Forum
+
+ create table Desempenho(
+ codDesempenho int primary key not null,
+ pontuacao int not null
+ )
+
+ select * from Desempenho
 
 
