@@ -9,7 +9,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1" />
   <title>Stud+ | Cadastro</title>
   <link rel= "stylesheet" type="text/css" href="paginaCadastro.css">
-  <link href= "LojaVirtual_18171.css" rel="stylesheet" styletype="text/css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
   <link rel="shortcut icon" type="image/x-icon" href="./Icon.ico">
@@ -43,15 +42,15 @@
 
  <img class="seta" onclick="voltarAoTopo();">
 
-<form>
+<form action="./Tarefas_PP.html">
  <span class="InfoCompra"> 
 
    <tr>
-   <td><input type="text" class="CadNome" required placeholder=" Nome de Usuário"></td>   
+   <td><input type="text" id="nome" class="CadNome" required placeholder=" Nome de Usuário"></td>   
    </tr>
 
    <tr>
-   <td><input type="password" class="CadSenha" required placeholder=" Senha"><av>*Não fale sua senha para ninguém!*</av></td>   
+   <td><input type="password" id="senha" class="CadSenha" required placeholder=" Senha"><av>*Não fale sua senha para ninguém!*</av></td>   
    </tr>
 
    <tr>
@@ -88,7 +87,7 @@
 
 <span class="icon"></span>
 
-<a href="#"><input type="submit" class="button3" onclick="verificaAno();" value="Enviar"></a>
+  <a href="Tarefas_PP.html"><input type="submit" class="button3" onclick="verificaAno();" value="Confirmar"></a>
 
 </span>
 </form>
@@ -192,9 +191,11 @@ $(window).scroll(function() {
       var data = document.getElementById("data").value;
       var mes = document.getElementById("select").value;
       var dataAtual = new Date();
+      var nome = document.getElementById("nome").value;
+      var senha = document.getElementById("senha").value;
 
-      if(ano > 2018 || data > 31 || mes == 0)
-        alert("Digite uma data válida!");
+      if(nome == "" || senha == "" || ano > 2018 || data > 31 || mes == 0)
+      	alert("Digite os campos corretamente!");
     }
 
   </script>
@@ -222,7 +223,7 @@ $(window).scroll(function() {
         <div class="modal">
             <button class="fechar">x</button>
             <h3>LOGIN</h3>
-            <form>
+            <form action="./Tarefas_PP.html">
                 <span class= icon-perfil></span>
                 
         <tr>
@@ -234,7 +235,7 @@ $(window).scroll(function() {
         </tr>
                 
                 
-                <a href="Tarefas_PP.html"><input type="submit" class="button" value="Enviar"></a>
+                <a href="./Tarefas_PP.html"><input type="submit" class="button" value="Enviar"></a>
                 
                 <cad>Não possui uma conta? Cadastre-se agora!</cad>
                 
