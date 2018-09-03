@@ -1,9 +1,11 @@
 /*============================= CORPO DA PÁGINA ========================================================================================*/
 
-body {
+body 
+{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    background-color: #87CEFA;
 }
 
 ul {
@@ -64,25 +66,6 @@ ul li a:hover {
     background-color: #87CEFA;
 }
 
-.tabela
-{
-    position: absolute;
-    top: 18%;
-    left: 5%;
-    border-radius: 10px;
-    background-color: #87CEFA;
-    font-size: 200%;
-    color:black;
-    padding-left:30px;
-    padding-top: 10px;
-    padding-right:4px;
-    border-bottom:solid 10px #CCC;
-    height:30%;
-    width: 90%;
-    padding-right:80px;
-
-}
-
 .InfoCompra
 {
   position: absolute;
@@ -97,21 +80,32 @@ ul li a:hover {
   z-index: 1000;
 }
 
-/*.quadro
+.quadro
 {
   position: fixed;
-  top: 80%;
-  left: 90%;
-  border: 5px solid #00FA9A;
-  border-radius: 50px;
+  top: 20%;
+  left: 14%;
+  border: 5px solid white;
+  border-radius: 20px;
   box-sizing: border-box;
-  width: 5.8%;
-  height: 12.5%;
-  background-color: #3CB371;
+  width: 70%;
+  height: 70%;
+  background-color: white;
   z-index: 100000;
   cursor: pointer;
   z-index: 1;
-}*/
+}
+
+.paisagem
+{
+  background: url('./paisagem.jpg') repeat-x;
+  position: absolute;
+  background-size: 30%;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  margin: 0px;
+}
 
 /*============================= OPÇÕES ================================================================================================*/
 *
@@ -198,7 +192,8 @@ nav
     height: 12%;
 }
 
-@media (max-width:1300px) {
+@media (max-width:1300px) 
+{
     .toggle {
         display: block;
         z-index: 300000;
@@ -322,13 +317,12 @@ cad {
 t1
 {
     position: absolute;
-    top: 105%;
-    left: 18%;
+    top: 5%;
+    left: 10%;
     width: 80%;
     font-size: 200%;
     font-family: Righteous;
     color: white;  
-    z-index: 1000;
 }
 
 
@@ -420,7 +414,8 @@ t1
     box-shadow: inset 0 0 0 5px #0077d0;
 }
 
-.button2:hover {
+.button2:hover 
+{
     background: #0077d0;
     color: white;
     transition: 0.2s;
@@ -455,7 +450,8 @@ t1
 
 /*============================= MODAL ==================================================================================================*/
 
-.modal-container {
+.modal-container 
+{
     width: 100%;
     height: 340%;
     position: absolute;
@@ -469,7 +465,8 @@ t1
 }
 
 
-.modal {
+.modal 
+{
     background: white;
     width: 18%;
     top: 20%;
@@ -482,7 +479,8 @@ t1
     border-radius: 5%;
 }
 
-.fechar {
+.fechar 
+{
     position: absolute;
     top: -30px;
     right: -30px;
@@ -498,11 +496,13 @@ t1
     box-shadow: 0 0 0 4px #0077d0;
 }
 
-.modal-container.mostrar {
+.modal-container.mostrar 
+{
     display: flex;
 }
 
-@keyframes modal {
+@keyframes modal 
+{
     from {
         opacity: 0;
         transform: translate3d(0, -60px, 0)
@@ -514,7 +514,8 @@ t1
     }
 }
 
-@keyframes bounce {
+@keyframes bounce 
+{
     0%,
     20%,
     60%,
@@ -534,11 +535,13 @@ t1
     }
 }
 
-.mostrar .modal {
+.mostrar .modal 
+{
     animation: modal .3s;
 }
 
-div {
+div 
+{
   height: 2000px;
 }
 
