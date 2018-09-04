@@ -64,7 +64,7 @@ ul li a:hover {
     background-color: #87CEFA;
 }
 
-.tabela
+/*.tabela
 {
     position: absolute;
     top: 18%;
@@ -76,25 +76,39 @@ ul li a:hover {
     padding-left:30px;
     padding-top: 10px;
     padding-right:4px;
-    border-bottom:solid 10px #CCC;
     height:30%;
     width: 90%;
     padding-right:80px;
+    font-family: Century Gothic;
+    font-size: 150%;
+}*/
 
-}
-
-.InfoCompra
-{
+table{
+  width:800px;
+  height: 150px;
+  border:1px solid #ccc;
   position: absolute;
   top: 20%;
   left: 5%;
-  border: 5px solid #01A9DB;
-  border-radius: 50px;
-  box-sizing: border-box;
-  width: 90%;
-  height: 75%;
-  background-color: white;
-  z-index: 1000;
+  font-family: Century Gothic;
+  border-radius: 10px;
+}
+
+table thead th{
+  background-color:#2E64FE;
+  padding:8px;
+  color:#fff;
+  text-align:center;
+  font-size:20px;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+table tbody td{
+  padding:10px;
+  padding-top: 10px;
+  text-align:center;
+  font-size: 20px; 
 }
 
 /*.quadro
@@ -137,10 +151,10 @@ nav
     width: 120px;
     height: 120px;
     position: fixed;
-    top: 450px;
+    top: 380px;
     left: 37%;
     margin: 150px 150px;
-    z-index: 5000;
+    z-index: 0000;
 }
 
 #central img
@@ -307,6 +321,9 @@ h3 {
     font-weight: bold;
     color: #0077d0;
 }
+
+bv
+{color: white; font-family: Righteous; font-size: 70%; position: absolute; top: 40%;}
 
 cad {
     position: absolute;

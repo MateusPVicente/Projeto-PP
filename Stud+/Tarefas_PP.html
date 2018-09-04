@@ -27,7 +27,7 @@
         <li><span class="LOGO"></span></li>
         <li><a href="./Stud+_PP.html">HOME</li></a>
         <li><a href="./Sobre_PP.html">SOBRE</a></li>
-        <li><a href="#" id="btn">LOGIN</a></li>
+        <li><bv>Bem-Vindo, NOMEDOUSUARIO!<bv></li>
     </ul>  
 
   <nav>
@@ -39,81 +39,41 @@
   </nav>
 
   <img class="seta" onclick="voltarAoTopo();">
-
-
-    <table class="tabela">
-
+    
+    <table cellspacing="0" summary="Tabela de dados fictícios">
       <thead>
         <tr>
+          <th></th>
           <th>ID</th>
           <th>TÍTULO</th>
-          <th>AÇÕES</th>
+          <th>PRAZO</th>
           <th>STATUS</th>
+          <th>AÇÕES</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th>1</th>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
+          <td><input type="checkbox" value="1" name="marcar[]" /></td>
+		  <td>1</td>
+          <td>Lição de Português</td>
+          <td>19/09/2018</td>
+          <td>---</td>
+          <td>
+            <a href="#"><img src="edit.png" width="16" height="16" /></a>
+            <a href="#"><img src="delete.png" width="16" height="16" /></a>
+          </td>
         </tr>
         <tr>
-          <th>2</th>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
+          <td><input type="checkbox" value="2" name="marcar[]" /></td>
+					<td>2</td>
+          <td>Lição de Mateca</td>
+          <td>17/10/2018</td>
+          <td>---</td>
+          <td>
+            <a href="#"><img src="edit.png" width="16" height="16" /></a>
+            <a href="#"><img src="delete.png" width="16" height="16" /></a>
+          </td>
         </tr>
-        <tr>
-          <th>3</th>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-        </tr>
-        <tr>
-          <th>4</th>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-        </tr>
-        <tr>
-          <th>5</th>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-        </tr>
-        <tr>
-          <th>6</th>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-        </tr>
-        <tr>
-          <th>7</th>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-        </tr>
-        <tr>
-          <th>8</th>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-        </tr>
-        <tr>
-          <th>9</th>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-        </tr>
-        <tr>
-          <th>10</th>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-          <td>Conteúdo</td>
-        </tr>
-      </tbody>
-    </table>
     
 <!--============================= SCRIPTS ===============================================================================================-->
     
@@ -222,8 +182,9 @@ $(window).scroll(function() {
     
 </script>-->
     
- <!--============================= MODAIS =============================================================================================-->   
-    <div id="modal-login" class="modal-container">
+ <!--============================= MODAIS =============================================================================================-->  
+
+    	<!--<div id="modal-login" class="modal-container">
         <div class="modal">
             <button class="fechar">x</button>
             <h3>LOGIN</h3>
@@ -248,7 +209,7 @@ $(window).scroll(function() {
             </form>    
         </div>
         
-    </div>
+    </div>-->
 
 <!--===================================================================================================================================--> 
     
