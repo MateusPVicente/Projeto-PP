@@ -46,22 +46,24 @@ ul li a:hover {
 .hr
 {
     position: absolute;
-    margin: 0;
+    margin: 0px;
     top: 90%;
     left: 0%;
-    width: 99.8%;
+    width: 99.9%;
     height: 110%;
     background-color: #2F4F4F;
     z-index: 1000;
+    border: 0px solid #2F4F4F;
 }
 
 .footer
 {
+    background: url('./footer.png')no-repeat;
+    background-size: 100%;
     position: absolute;
     top: 200%;
     height: 40%;
     width: 99.9%;
-    background-color: #87CEFA;
 }
 
 /*.tabela
@@ -83,13 +85,17 @@ ul li a:hover {
     font-size: 150%;
 }*/
 
+.tabelaa
+{
+  position: absolute;
+  top: 23%;
+  left: 10%;
+}
+
 table{
   width:900px;
   height: 150px;
   border:1px solid #ccc;
-  position: absolute;
-  top: 23%;
-  left: 19%;
   font-family: Century Gothic;
   border-radius: 10px;
 }
@@ -111,21 +117,18 @@ table tbody td{
   font-size: 20px; 
 }
 
-/*.quadro
+.quadro
 {
-  position: fixed;
-  top: 80%;
-  left: 90%;
-  border: 5px solid #00FA9A;
-  border-radius: 50px;
+  position: absolute;
+  top: 120%;
+  left: 5%;
+  border-radius: 20px;
   box-sizing: border-box;
-  width: 5.8%;
-  height: 12.5%;
-  background-color: #3CB371;
-  z-index: 100000;
-  cursor: pointer;
-  z-index: 1;
-}*/
+  width: 90%;
+  height: 70%;
+  background-color:white;
+  z-index: 1000;
+}
 
 /*============================= OPÇÕES ================================================================================================*/
 *
@@ -148,11 +151,11 @@ nav
 #central
 {
     cursor: pointer;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     position: fixed;
     top: 5%;
-    left: -4%;
+    left: -10%;
     margin: 150px 150px;
     z-index: 5000;
 }
@@ -166,7 +169,7 @@ nav
 .link
 {
     position: fixed;
-    margin: 13% 6.6%; /*top e left*/
+    margin: 14% 2%; /*top e left*/
     width: 80px;
     height: 80px;
     transition: .1s ease-in-out;
@@ -253,6 +256,18 @@ nav
     z-index: 5000;  
 }
 
+.demo
+{
+    background: url('./demo.png') no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 11%;
+    left: 13%;
+    width: 75%;
+    height: 100%;
+    z-index: 5000;  
+}
+
 .LOGO {
     background: url('./Logo_Oficial.PNG') no-repeat;
     background-size: 100%;
@@ -317,7 +332,7 @@ nav
     position: absolute;
     top: -10%;
     left: 0%;
-    width: 100%;
+    width: 99.9%;
     height: 100%;
 }
 
@@ -363,8 +378,8 @@ cad {
 t1
 {
     position: absolute;
-    top: 105%;
-    left: 18%;
+    top: -20%;
+    left: 10%;
     width: 80%;
     font-size: 200%;
     font-family: Righteous;

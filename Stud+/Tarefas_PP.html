@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1" />
   <title>Stud+ | Tarefas</title>
-  <link rel= "stylesheet" type="text/css" href="Stud+_PP.css">
+  <link rel= "stylesheet" type="text/css" href="./paginaTarefas.css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
   <link rel="shortcut icon" type="image/x-icon" href="./Icon.ico">
@@ -27,7 +27,7 @@
         <li><span class="LOGO"></span></li>
         <li><a href="./Stud+_PP.html">HOME</li></a>
         <li><a href="./Sobre_PP.html">SOBRE</a></li>
-        <li><a href="#">TAREFAS</a></li>
+        <li><a href="#">SAIR</a></li>
         <li><bv>Bem-Vindo, NOMEDOUSUARIO!<bv></li>
     </ul>  
 
@@ -41,10 +41,10 @@
 
   <img class="seta" onclick="voltarAoTopo();">
     
+    <div class="tabelaa">
     <table cellspacing="0" summary="Tabela de dados fictícios">
       <thead>
         <tr>
-          <th></th>
           <th>ID</th>
           <th>TÍTULO</th>
           <th>PRAZO</th>
@@ -54,7 +54,6 @@
       </thead>
       <tbody>
         <tr>
-          <td><input type="checkbox" value="1" name="marcar[]" /></td>
 		  <td>1</td>
           <td>Lição de Português</td>
           <td>19/09/2018</td>
@@ -65,8 +64,7 @@
           </td>
         </tr>
         <tr>
-          <td><input type="checkbox" value="2" name="marcar[]" /></td>
-					<td>2</td>
+		  <td>2</td>
           <td>Lição de Mateca</td>
           <td>17/10/2018</td>
           <td>---</td>
@@ -75,6 +73,7 @@
             <a href="#"><img src="delete.png" width="25" height="25" /></a>
           </td>
         </tr>
+    </div>
 
         <div class="desempenho">
         <desempenho>0%</desempenho>	
@@ -101,6 +100,15 @@
         })
     })
 
+
+  </script>
+
+  <script type="text/javascript">
+
+  	function setTopo(){
+    $(window).scrollTop(0);
+	}
+	$(window).bind('scroll', setTopo);
 
   </script>
 

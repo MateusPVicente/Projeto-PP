@@ -1,11 +1,10 @@
 /*============================= CORPO DA PÁGINA ========================================================================================*/
 
-body 
-{
+body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: #87CEFA;
+    overflow: hidden;
 }
 
 ul {
@@ -57,54 +56,81 @@ ul li a:hover {
     z-index: 1000;
 }
 
-.hr2
-{
-    position: relative;
-    top: 20%;
-    height: 2px;
-    left: 40px;
-    width: 90%;
-    background-color: gray;
-}
-
-
 .footer
 {
-    background: url('./footer.png')no-repeat;
-    background-size: 100%;
     position: absolute;
-    top: 130%;
+    top: 200%;
     height: 40%;
     width: 99.9%;
+    background-color: #87CEFA;
 }
 
-.InfoCompra
+/*.tabela
+{
+    position: absolute;
+    top: 18%;
+    left: 5%;
+    border-radius: 10px;
+    background-color: #87CEFA;
+    font-size: 200%;
+    color:black;
+    padding-left:30px;
+    padding-top: 10px;
+    padding-right:4px;
+    height:30%;
+    width: 90%;
+    padding-right:80px;
+    font-family: Century Gothic;
+    font-size: 150%;
+}*/
+
+.tabelaa
 {
   position: absolute;
-  top: 20%;
-  left: 5%;
-  border: 5px solid #01A9DB;
+  top: 23%;
+  left: 10%;
+}
+
+table{
+  width:900px;
+  height: 150px;
+  border:1px solid #ccc;
+  font-family: Century Gothic;
+  border-radius: 10px;
+}
+
+table thead th{
+  background-color:#21CCC4;
+  padding:8px;
+  color:#fff;
+  text-align:center;
+  font-size:20px;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+table tbody td{
+  padding:10px;
+  padding-top: 10px;
+  text-align:center;
+  font-size: 20px; 
+}
+
+/*.quadro
+{
+  position: fixed;
+  top: 80%;
+  left: 90%;
+  border: 5px solid #00FA9A;
   border-radius: 50px;
   box-sizing: border-box;
-  width: 90%;
-  height: 75%;
-  background-color: white;
-  z-index: 1000;
-}
-
-.quadro
-{
-  position: absolute;
-  top: 20%;
-  left: 14%;
-  border-radius: 10px;
-  box-sizing: border-box;
-  width: 70%;
-  height: 100%;
-  background-color: white;
+  width: 5.8%;
+  height: 12.5%;
+  background-color: #3CB371;
   z-index: 100000;
+  cursor: pointer;
   z-index: 1;
-}
+}*/
 
 /*============================= OPÇÕES ================================================================================================*/
 *
@@ -127,11 +153,11 @@ nav
 #central
 {
     cursor: pointer;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     position: fixed;
-    top: 450px;
-    left: 37%;
+    top: 5%;
+    left: -10%;
     margin: 150px 150px;
     z-index: 5000;
 }
@@ -145,7 +171,7 @@ nav
 .link
 {
     position: fixed;
-    margin: 38.8% 47.6%;
+    margin: 14% 2%; /*top e left*/
     width: 80px;
     height: 80px;
     transition: .1s ease-in-out;
@@ -153,19 +179,19 @@ nav
 
 #check:checked ~ a #link_01
 {
-    transform: translateY(-120px);
+    transform: translateY(120px);
     z-index: 5000;
 }
 
 #check:checked ~ a #link_02
 {
-    transform: translateX(120px);
+    transform: translateY(220px);
     z-index: 5000;
 }
 
 #check:checked ~ a #link_04
 {
-    transform: translateX(-120px);
+    transform: translateY(323px);
     z-index: 5000;
 }
 
@@ -191,8 +217,7 @@ nav
     height: 12%;
 }
 
-@media (max-width:1300px) 
-{
+@media (max-width:1300px) {
     .toggle {
         display: block;
         z-index: 300000;
@@ -220,6 +245,18 @@ nav
     }
 }
 /*============================= IMAGENS ================================================================================================*/
+
+.desempenho
+{
+    background: url('./Desempenho.PNG') no-repeat;
+    background-size: 100%;
+    position: fixed;
+    top: 22.5%;
+    left: 77.5%;
+    width: 20%;
+    height: 80%;
+    z-index: 5000;  
+}
 
 .LOGO {
     background: url('./Logo_Oficial.PNG') no-repeat;
@@ -250,17 +287,6 @@ nav
     top: 19%;
     left: 6%;
     width: 9%;
-    height: 100%;
-    z-index: 1;
-}
-
-.sobre {
-    background: url('./sobre.PNG') no-repeat;
-    background-size: 100%;
-    position: absolute;
-    top: 30%;
-    left: 5%;
-    width: 90%;
     height: 100%;
     z-index: 1;
 }
@@ -313,6 +339,21 @@ h3 {
     color: #0077d0;
 }
 
+div desempenho
+{
+    position: absolute;
+    top: 56%;
+    left: 43%;
+    width: 10%;
+    font-size: 350%;
+    font-family: Righteous;
+    color: black;
+    z-index: 9000; 
+}
+
+bv
+{color: white; font-family: Righteous; font-size: 70%; position: absolute; top: 40%;}
+
 cad {
     position: absolute;
     top: 76%;
@@ -324,15 +365,16 @@ cad {
     color: black;
 }
 
-div t1
+t1
 {
     position: absolute;
-    top: 10%;
-    left: 38%;
+    top: 105%;
+    left: 18%;
     width: 80%;
-    font-size: 240%;
+    font-size: 200%;
     font-family: Righteous;
-    color: #008eba;  
+    color: white;  
+    z-index: 1000;
 }
 
 
@@ -424,8 +466,7 @@ div t1
     box-shadow: inset 0 0 0 5px #0077d0;
 }
 
-.button2:hover 
-{
+.button2:hover {
     background: #0077d0;
     color: white;
     transition: 0.2s;
@@ -460,8 +501,7 @@ div t1
 
 /*============================= MODAL ==================================================================================================*/
 
-.modal-container 
-{
+.modal-container {
     width: 100%;
     height: 340%;
     position: absolute;
@@ -475,8 +515,7 @@ div t1
 }
 
 
-.modal 
-{
+.modal {
     background: white;
     width: 18%;
     top: 20%;
@@ -489,8 +528,7 @@ div t1
     border-radius: 5%;
 }
 
-.fechar 
-{
+.fechar {
     position: absolute;
     top: -30px;
     right: -30px;
@@ -506,13 +544,11 @@ div t1
     box-shadow: 0 0 0 4px #0077d0;
 }
 
-.modal-container.mostrar 
-{
+.modal-container.mostrar {
     display: flex;
 }
 
-@keyframes modal 
-{
+@keyframes modal {
     from {
         opacity: 0;
         transform: translate3d(0, -60px, 0)
@@ -524,8 +560,7 @@ div t1
     }
 }
 
-@keyframes bounce 
-{
+@keyframes bounce {
     0%,
     20%,
     60%,
@@ -545,13 +580,11 @@ div t1
     }
 }
 
-.mostrar .modal 
-{
+.mostrar .modal {
     animation: modal .3s;
 }
 
-div 
-{
+div {
   height: 2000px;
 }
 
