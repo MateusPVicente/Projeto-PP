@@ -84,18 +84,18 @@ ul li a:hover {
 }*/
 
 table{
-  width:800px;
+  width:900px;
   height: 150px;
   border:1px solid #ccc;
   position: absolute;
-  top: 20%;
-  left: 5%;
+  top: 23%;
+  left: 19%;
   font-family: Century Gothic;
   border-radius: 10px;
 }
 
 table thead th{
-  background-color:#2E64FE;
+  background-color:#21CCC4;
   padding:8px;
   color:#fff;
   text-align:center;
@@ -151,10 +151,10 @@ nav
     width: 120px;
     height: 120px;
     position: fixed;
-    top: 380px;
-    left: 37%;
+    top: 5%;
+    left: -4%;
     margin: 150px 150px;
-    z-index: 0000;
+    z-index: 5000;
 }
 
 #central img
@@ -166,7 +166,7 @@ nav
 .link
 {
     position: fixed;
-    margin: 38.8% 47.6%;
+    margin: 13% 6.6%; /*top e left*/
     width: 80px;
     height: 80px;
     transition: .1s ease-in-out;
@@ -174,19 +174,19 @@ nav
 
 #check:checked ~ a #link_01
 {
-    transform: translateY(-120px);
+    transform: translateY(120px);
     z-index: 5000;
 }
 
 #check:checked ~ a #link_02
 {
-    transform: translateX(120px);
+    transform: translateY(220px);
     z-index: 5000;
 }
 
 #check:checked ~ a #link_04
 {
-    transform: translateX(-120px);
+    transform: translateY(323px);
     z-index: 5000;
 }
 
@@ -240,6 +240,18 @@ nav
     }
 }
 /*============================= IMAGENS ================================================================================================*/
+
+.desempenho
+{
+    background: url('./Desempenho.PNG') no-repeat;
+    background-size: 100%;
+    position: fixed;
+    top: 22.5%;
+    left: 77.5%;
+    width: 20%;
+    height: 80%;
+    z-index: 5000;  
+}
 
 .LOGO {
     background: url('./Logo_Oficial.PNG') no-repeat;
@@ -320,6 +332,18 @@ h3 {
     font-family: Righteous;
     font-weight: bold;
     color: #0077d0;
+}
+
+div desempenho
+{
+    position: absolute;
+    top: 56%;
+    left: 43%;
+    width: 10%;
+    font-size: 350%;
+    font-family: Righteous;
+    color: black;
+    z-index: 9000; 
 }
 
 bv

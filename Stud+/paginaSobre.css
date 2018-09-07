@@ -85,14 +85,12 @@ ul li a:hover {
   position: fixed;
   top: 20%;
   left: 14%;
-  border: 5px solid white;
   border-radius: 20px;
   box-sizing: border-box;
   width: 70%;
   height: 70%;
   background-color: white;
   z-index: 100000;
-  cursor: pointer;
   z-index: 1;
 }
 
