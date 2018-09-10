@@ -88,7 +88,7 @@ ul li a:hover {
 {
   position: absolute;
   top: 23%;
-  left: 10%;
+  left: 14%;
 }
 
 table{
@@ -156,8 +156,8 @@ nav
     width: 100px;
     height: 100px;
     position: fixed;
-    top: 5%;
-    left: -10%;
+    top: 7.5%;
+    left: -8%;
     margin: 150px 150px;
     z-index: 5000;
 }
