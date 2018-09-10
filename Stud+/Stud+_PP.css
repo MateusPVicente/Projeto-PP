@@ -387,6 +387,18 @@ t1
     z-index: 1000;
 }
 
+t2
+{
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    width: 80%;
+    font-size: 180%;
+    font-family: Righteous;
+    color: white;  
+    z-index: 1000;
+}
+
 
 /*============================= VÍDEOS =================================================================================================*/
 
