@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-	<!--============================= PACOTES =============================================================================================-->
+  <!--============================= PACOTES =============================================================================================-->
     
 <head>
  
@@ -46,11 +46,13 @@
 
     <span class="headerPerfil"></span>
 
-    <form>
+    <div>
+    <t3>NOMEUSUARIO</t3>
+	</div>
+
+    <form class="form">
       <input type="text" class="form_pergunta" name="form_Pergunta" placeholder="   Faça sua pergunta!">
       <input type="submit" class="btn_pergunta" name="btn_Pergunta" value="Enviar">
-
-
     </form>
     
 
@@ -123,9 +125,9 @@
       var senha = document.getElementById("sen").value;
 
       if(usuario == "" || senha == "")
-      	alert("Digite os campos corretamente!");
+        alert("Digite os campos corretamente!");
       else
-      	window.location.href("./Tarefas_PP.html");
+        window.location.href("./Tarefas_PP.html");
         window.location.assign("./Tarefas_PP.html");
     }
 
