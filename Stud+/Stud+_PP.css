@@ -338,7 +338,8 @@ nav
 
 /*============================= TEXTOS =================================================================================================*/
 
-h3 {
+h3 
+{
     position: relative;
     top: 18%;
     left: 33%;
@@ -364,7 +365,8 @@ div desempenho
 bv
 {color: white; font-family: Righteous; font-size: 70%; position: absolute; top: 40%;}
 
-cad {
+cad 
+{
     position: absolute;
     top: 76%;
     left: 8%;
@@ -387,16 +389,26 @@ t1
     z-index: 1000;
 }
 
-t2
+f1
 {
     position: absolute;
     text-align: center;
     top: 30%;
-    width: 80%;
+    width: 90%;
     font-size: 180%;
-    font-family: Righteous;
-    color: white;  
-    z-index: 1000;
+    font-family: Century Gothic;
+    color: white;
+}
+
+f2
+{
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    width: 90%;
+    font-size: 90%;
+    font-family: Century Gothic;
+    color: white;
 }
 
 
