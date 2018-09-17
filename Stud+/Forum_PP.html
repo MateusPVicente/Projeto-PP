@@ -30,7 +30,9 @@
         <li><span class="LOGO"></span></li>
         <li><a href="./Stud+_PP.html">HOME</li></a>
         <li><a href="./Sobre_PP.html">SOBRE</a></li>
-        <li><a href="#" id="btn">LOGIN</a></li>
+        <li><a href="./Tarefas_PP.html">TAREFAS</a></li>
+        <li><a href="#" id="btn">SAIR</a></li>
+        <li><bv>Bem-Vindo, NOMEDOUSUARIO!<bv></li>
     </ul>  
 
   </nav>
@@ -42,21 +44,31 @@
 
   <hr class= "hr3">
 
-  <span class="quadro2">
+  <t3>NOMEUSUARIO</t3>
 
-    <span class="headerPerfil"></span>
+  <input type="button" class="suaPergunta" name="suaPergunta" value="Suas Perguntas">
 
-    <div>
-    <t3>NOMEUSUARIO</t3>
-	</div>
+  <a href="#" class="config"></a>
 
-    <form class="form">
+  <span class="quadro3">
+     <form class="form">
       <input type="text" class="form_pergunta" name="form_Pergunta" placeholder="   Faça sua pergunta!">
       <input type="submit" class="btn_pergunta" name="btn_Pergunta" value="Enviar">
+      <span class="headerPerfil"></span>
     </form>
-    
-
   </span>
+  <span class="quadro2">
+    <p>NO CÉU TEM PÃO?</p>
+  </span>
+
+   <span class="quadro4">
+     <form class="form">
+      <input type="text" class="form_pergunta" name="form_Pergunta" placeholder=" Escreva sua resposta">
+      <input type="submit" class="btn_pergunta" name="btn_Pergunta" value="Enviar">
+      <span class="headerPerfil"></span>
+    </form>   
+   </span>
+    
   <!--=================================================================================================-->
   
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -106,6 +118,15 @@
                 btn.addEventListener('click', ()  => iniciaModal('modal-login'));
              }
    
+  </script>
+
+    <script type="text/javascript">
+
+    function setTopo(){
+    $(window).scrollTop(0);
+  }
+  $(window).bind('scroll', setTopo);
+
   </script>
 
   <script>
