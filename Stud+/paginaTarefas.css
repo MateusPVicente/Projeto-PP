@@ -86,14 +86,15 @@ ul li a:hover {
 
 .tabelaa
 {
-  position: absolute;
-  top: 23%;
-  left: 14%;
+  position: relative;
+  top: 150px;
+  left: 12%;
+  height: 40%;
 }
 
 table{
-  width:900px;
-  height: 150px;
+  min-width:850px;
+  min-height: 150px;
   border:1px solid #ccc;
   font-family: Century Gothic;
   border-radius: 10px;
