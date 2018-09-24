@@ -1,81 +1,53 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-
-  <!--============================= PACOTES =============================================================================================-->
+    
+<!--============================= PACOTES =============================================================================================-->
     
 <head>
  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1" />
-  <title>Fórum | Sobre</title>
-  <link rel= "stylesheet" type="text/css" href="paginaForum.css">
+  <title>Stud+ | Nova Tarefa</title>
+  <link rel= "stylesheet" type="text/css" href="./paginaTarefas.css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
   <link rel="shortcut icon" type="image/x-icon" href="./Icon.ico">
 
 
 </head>
-    
-<!--============================= CORPO DA PÁGINA =====================================================================================-->
+
 <body>
-    
-  <nav>
       
      <div class="toggle">
         <i class="fa fa-bars menu" aria-hidden="true"></i>
 
      </div>   
-    
+
      <ul>
         <li><span class="LOGO"></span></li>
         <li><a href="./Stud+_PP.html">HOME</li></a>
         <li><a href="./Sobre_PP.html">SOBRE</a></li>
         <li><a href="./Tarefas_PP.html">TAREFAS</a></li>
-        <li><a href="#">SAIR</a></li>
+        <li><a href="./Stud+_PP.html">SAIR</a></li>
         <li><bv>Bem-Vindo, NOMEDOUSUARIO!<bv></li>
     </ul>  
 
-  </nav>
-
-
-  <span class="forum"></span>
-
-  <span class="perfil"></span>
-
-  <hr class= "hr3">
-
-  <t3>NOMEUSUARIO</t3>
-
-  <input type="button" class="suaPergunta" name="suaPergunta" value="Suas Perguntas">
-
-  <a href="#" class="config"></a>
-
-  <span class="quadro3">
-     <form class="form">
-      <input type="text" class="form_pergunta" name="form_Pergunta" placeholder="   Faça sua pergunta!">
-      <input type="submit" class="btn_pergunta" name="btn_Pergunta" value="Enviar">
-	      <span class="headerQuest"></span>
-    </form>
-  </span>
-  <span class="quadro2">
-    <p>EU SOU UMA PERGUNTA</p>
-    <p1>A Resposta</p1>
-  </span>
-
-   <span class="quadro4">
-      <span class="headerResp">	
-
-      <form class="form">
-      <input type="text" class="form_resposta" name="form_Pergunta" placeholder=" Escreva sua resposta">
-      <input type="submit" class="btn_resposta" name="btn_Pergunta" value=" ► ">
-      </form>  
-      
-      </span>
-     
-   </span>
-    
-  <!--=================================================================================================-->
   
+
+  <img class="seta" onclick="voltarAoTopo();">
+    
+<!--============================= SCRIPTS ===============================================================================================-->
+    
+    <!--<div class="search-wrapper">
+    <div class="input-holder">
+        <input type="text" class="search-input" placeholder="Type to search" />
+        <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+    </div>
+    <span class="close" onclick="searchToggle(this, event);"></span>
+</div>-->
+
+<!--============================= SCRIPTS ===========================================================================================-->
+
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     
   <script type="text/javascript">
@@ -85,6 +57,15 @@
         })
     })
 
+
+  </script>
+
+  <script type="text/javascript">
+
+  	function setTopo(){
+    $(window).scrollTop(0);
+	}
+	$(window).bind('scroll', setTopo);
 
   </script>
 
@@ -136,18 +117,6 @@
         });
     }
 
-    function validaForm()
-    {
-      var usuario = document.getElementById("usu").value;
-      var senha = document.getElementById("sen").value;
-
-      if(usuario == "" || senha == "")
-        alert("Digite os campos corretamente!");
-      else
-        window.location.href("./Tarefas_PP.html");
-        window.location.assign("./Tarefas_PP.html");
-    }
-
   </script>
 
   <!--<FAZER IMAGEM APARECER--> <script type="text/javascript">
@@ -183,8 +152,9 @@ $(window).scroll(function() {
     
 </script>-->
     
- <!--============================= MODAIS =============================================================================================-->   
-    <div id="modal-login" class="modal-container">
+ <!--============================= MODAIS =============================================================================================-->  
+
+    	<!--<div id="modal-login" class="modal-container">
         <div class="modal">
             <button class="fechar">x</button>
             <h3>LOGIN</h3>
@@ -192,15 +162,15 @@ $(window).scroll(function() {
                 <span class= icon-perfil></span>
                 
         <tr>
-        <td><input type="text" id="usu" class="input1" required placeholder=" Usuário"></td>   
+        <td><input type="text" class="input1" required placeholder=" Usuário"></td>   
         </tr>  
                 
         <tr>
-        <td><input type="password" id="sen" class="input2" required placeholder=" Senha"></td>   
+        <td><input type="password" class="input2" required placeholder=" Senha"></td>   
         </tr>
                 
                 
-                <input type="submit" class="button" value="Enviar">
+                <a href="Tarefas_PP.html"><input type="submit" class="button" value="Enviar"></a>
                 
                 <cad>Não possui uma conta? Cadastre-se agora!</cad>
                 
@@ -209,7 +179,9 @@ $(window).scroll(function() {
             </form>    
         </div>
         
-    </div>
+    </div>-->
 
+<!--===================================================================================================================================--> 
+    
 </body>
 </html>
