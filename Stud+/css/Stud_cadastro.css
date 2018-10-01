@@ -1,0 +1,33 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color:white;
+}
+
+.header{
+    position: absolute;
+    height: 11%;
+    width: 100%;
+}
+
+.icon-perfil{
+	position: relative;
+	top:50px;
+	left: 45%;
+	width: 10%;
+	height: 20%;
+}
+
+.cadastro{
+	position: relative;
+	top: -60px;
+	font-family: "Century Gothic";
+	font-weight: bold;
+}
+
+txt{
+	font-family: "Century Gothic";
+	font-weight: bold;
+}

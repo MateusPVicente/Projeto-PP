@@ -1,0 +1,91 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color:#e3f2fd;
+}
+
+.header{
+    position: absolute;
+    height: 11%;
+    width: 100%;
+}
+
+ul li{
+    font-family: "Righteous";
+}
+
+.logo{
+    position: absolute;
+    width: 130px;
+    top: 12px;
+    left: -40px;
+}
+
+.fundo1{
+    position: absolute;
+    width: 700px;
+    top: 150px;
+    left: 300px;
+}
+
+f1{
+    font-size: 1.2rem;
+    font-family: "Righteous";
+}
+
+h2{
+    font-size: 2rem;
+    font-family: "Righteous";
+    text-align: center;
+    color: #2196f3;
+}
+
+h6{
+    text-align: center;
+    color: black;
+    font-family: "Century Gothic";
+}
+
+h4{
+    text-align: center;
+    color: black;
+    font-family: "Century Gothic";
+}
+
+div #cr{
+    font-size: 1rem;
+    font-family: "Righteous";
+}
+
+.seta{
+    position: fixed;
+    top: 80%;
+    left: 90%;
+    max-width: 20%;
+    max-height: 12.5%;
+     z-index: 1;
+    cursor: pointer;
+}
+
+.seta:hover
+{
+    position: fixed;
+    top: 80%;
+    left: 90%;
+    max-width: 20%;
+    max-height: 12.5%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#btnEntrar,#btnCadastrar{
+    color: white;
+    cursor: pointer;
+    font-family: "Righteous";
+}
+
+.efeito {
+  opacity: 1;
+}

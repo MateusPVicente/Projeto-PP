@@ -1,0 +1,28 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color:white;
+}
+
+.header{
+    position: absolute;
+    height: 11%;
+    width: 100%;
+}
+
+.sobre{
+	position: relative;
+	top: 30px;
+	left: 10%;
+	width: 80%;
+	height: 100%;
+}
+
+.hr{
+	position: relative;
+	width: 90%;
+	height: 2px;
+	background-color: #2196f3;
+}

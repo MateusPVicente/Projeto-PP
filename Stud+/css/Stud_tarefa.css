@@ -1,0 +1,29 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color:white;
+}
+
+.header{
+    position: absolute;
+    height: 11%;
+    width: 100%;
+}
+
+.desp{
+	position: relative;
+	top: 30px;
+	left: 10%;
+	max-width: 80%;
+	height: auto;
+}
+
+#table{
+	border: 5px solid #20cdc4;
+}
+
+table td a{
+    cursor: pointer;
+}

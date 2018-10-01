@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Stud+ | Sobre</title>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="./Icon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+
+      <link rel="stylesheet" type="text/css" href=".\css\Stud_home.css">
+      <link rel="stylesheet" type="text/css" href=".\css\Stud_sobre.css">
+    </head>
+    <body>
+
+  <nav>
+    <img class="header" class="responsive-img" src="./img/fundo3.png">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo"><img class="logo" src=".\img\Logo_Oficial.png"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="">SOBRE</a></li>
+        <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">LOGIN</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="home.html">HOME</a></li>
+    <li><a href="">SOBRE</a></li>
+    <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">LOGIN</a></li>
+  </ul>
+
+  <h2>SOBRE NÓS</h2>
+
+  <hr class="hr">
+
+  <img class="sobre" src="./img/sobre.png">
+
+        <img src=".\img\seta.png" id="img" class="seta" onmouseover="hoverSeta();" onmouseout="sairHoverSeta();" onclick="voltarAoTopo();">
+
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>LOGIN</h4>
+        <form action="tarefa.html">
+        
+        <tr>
+        <td><input type="text" id="usu" class="input1" required placeholder=" Usuário"></td>   
+        </tr>
+        <tr>
+        <td><input type="password" id="sen" class="input2" required placeholder=" Senha"></td>   
+        </tr>
+
+        <br><br>
+        <input type="submit" id="btnEntrar" class="btn waves-effect waves-light" value="Entrar">
+
+        <br><br>
+        <h6>Não possui uma conta? Cadastre-se agora!</h6>
+        <br>
+        <a href="cadastro.html" id="btnCadastrar" class="waves-effect waves-light btn">Cadastre-se</a>
+
+        </form>
+      </div>
+    </div>
+      
+    </body>
+    <script type="text/javascript" src="js/Stud_modal.js"></script>
+    <script type="text/javascript" src="js/Stud_home.js"></script>
+    <script type="text/javascript" src="js/Stud_navbar.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+  </html>

@@ -1,0 +1,39 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color:#f0f3f5;
+}
+
+.header{
+    position: absolute;
+    height: 11%;
+    width: 100%;
+}
+
+h2{
+	font-family: "Century Gothic";
+	color: black;
+	font-weight: bold;
+	position: relative;
+	left: -29%;
+	top: 40px;
+}
+
+#quadro{
+	  position: relative;
+	  top: 50px;
+}
+
+#face{
+	position: relative;
+	left: 20px;
+	top: 20px;
+}
+
+.nome{
+	position: relative;
+	left: 95px;
+	top:-40px;
+}
