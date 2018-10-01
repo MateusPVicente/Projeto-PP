@@ -19,8 +19,10 @@
 	{
 		var resp = confirm("Você quer apagar essa tarefa?");
 
-		if(resp)
-			id.parentNode.removeChild(id);
+
+			if(resp){
+				id.parentNode.removeChild(id);
+			}
 	}
 
 	  $(document).ready(function(){
