@@ -15,19 +15,13 @@
 		});
 	});
 
-	// function apagarTarefa(info1, info2, info3)
-	// {
-	// 	var info1 = document.getElementById(info1);
-	// 	var info2 = document.getElementById(info2);
-	// 	var info3 = document.getElementById(info3);
-	// 	var img = document.getElementById('delete');
+	function apagarTarefa(id)
+	{
+		var resp = confirm("Você quer apagar essa tarefa?");
 
-
-	// 	info1.innerHTML = " ";
-	// 	info2.innerHTML = " ";
-	// 	info3.innerHTML = " ";
-
-	// }
+		if(resp)
+			id.parentNode.removeChild(id);
+	}
 
 	  $(document).ready(function(){
    		 $('.datepicker').datepicker();

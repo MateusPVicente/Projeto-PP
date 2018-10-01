@@ -38,14 +38,6 @@
   <a id="menu" class="waves-effect waves-light btn-large pulse btn-floating btn modal-trigger" href="#modal1" ><i class="material-icons">tune</i></a>
   </div>
 
-  <!-- Tap Target Structure -->
-  <div id="target" class="tap-target">
-    <div class="tap-target-content">
-      <h5>Title</h5>
-      <p>A bunch of text</p>
-    </div>
-  </div>
-
   <div id="modal1" class="modal">
       <div class="modal-content">
         <h4>MENU DE OPÇÕES</h4>
@@ -76,31 +68,31 @@
         </thead>
 
         <tbody>
-          <tr>
-            <td id="1">Alvin</td>
-            <td id="2">Eclair</td>
-            <td id="3">$0.87</td>
+          <tr id="tr1">
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
             <td>
             <a><img src="./img/edit.png" width="25" height="25" /></a>
-            <a onclick="apagarTarefa(1,2,3)"><img id="delete" src="./img/delete.png" width="25" height="25"/></a>
+            <a onclick="apagarTarefa(getElementById('tr1'))"><img id="delete" src="./img/delete.png" width="25" height="25"/></a>
           </td>
           </tr>
-          <tr>
-            <td id="4">Alan</td>
-            <td id="5">Jellybean</td>
-            <td id="6">$3.76</td>
+          <tr id="tr2">
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
             <td>
             <a><img src="./img/edit.png" width="25" height="25" /></a>
-            <a><img onclick="apagarTarefa(4,5,6)" src="./img/delete.png" width="25" height="25" /></a>
+            <a><img onclick="apagarTarefa(getElementById('tr2'))" src="./img/delete.png" width="25" height="25" /></a>
           </td>
           </tr>
-          <tr>
-            <td id="7">Jonathan</td>
-            <td id="8">Lollipop</td>
-            <td id="9">$7.00</td>
+          <tr id="tr3"> 
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
             <td>
             <a><img src="./img/edit.png" width="25" height="25" /></a>
-            <a><img onclick="apagarTarefa(7,8,9)" src="./img/delete.png" width="25" height="25" /></a>
+            <a><img onclick="apagarTarefa(getElementById('tr3'))" src="./img/delete.png" width="25" height="25" /></a>
           </td>
           </tr>
         </tbody>

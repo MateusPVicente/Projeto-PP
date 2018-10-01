@@ -65,8 +65,9 @@ div #cr{
     left: 90%;
     max-width: 20%;
     max-height: 12.5%;
-     z-index: 1;
     cursor: pointer;
+    opacity: 0;
+    transition: .3s;
 }
 
 .seta:hover
@@ -76,8 +77,8 @@ div #cr{
     left: 90%;
     max-width: 20%;
     max-height: 12.5%;
-    z-index: 1;
     cursor: pointer;
+    transition: .3s;
 }
 
 #btnEntrar,#btnCadastrar{
@@ -88,4 +89,5 @@ div #cr{
 
 .efeito {
   opacity: 1;
+  transition: .2s;
 }
