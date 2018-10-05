@@ -32,5 +32,5 @@
 			// window.location.href= "./tarefa.html";
 			// window.location.replace("tarefa.html");
 			// $(location).attr('href', 'tarefa.html');
-			form.action = "tarefa.html"
+			form.action = "tarefa.html";
 	}

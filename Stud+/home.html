@@ -76,7 +76,7 @@
     <div id="modal1" class="modal">
       <div class="modal-content">
         <h4>LOGIN</h4>
-        <form action="tarefa.html">
+        <form id="f" action="">
         
         <tr>
         <td><input type="text" id="usu" class="input1" required placeholder=" Usuário"></td>   
@@ -86,7 +86,7 @@
         </tr>
 
         <br><br>
-        <input type="submit" id="btnEntrar" class="btn waves-effect waves-light" value="Entrar">
+        <input onclick="validaForm();" type="submit" id="btnEntrar" class="btn waves-effect waves-light" value="Entrar">
 
         <br><br>
         <h6>Não possui uma conta? Cadastre-se agora!</h6>
@@ -105,4 +105,6 @@
     <script type="text/javascript" src="js/Stud_home.js"></script>
     <script type="text/javascript" src="js/Stud_modal.js"></script>
     <script type="text/javascript" src="js/Stud_seta.js"></script>
+    <!-- <script type="text/javascript" src="nodeSQL/conexao.js"></script> -->
+    <script type="text/javascript" src="js/Stud_login.js"></script>
   </html>
