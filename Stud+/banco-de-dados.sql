@@ -10,6 +10,8 @@
  constraint fkcodDesempenho foreign key (codDesempenho) references Desempenho(codDesempenho)
  )
 
+ insert into Usuario values(1, 'Mateus de Padua Vicente', '29/11/2002', '1234', 1);
+
  select * from Usuario
 
  create table Acesso(
@@ -52,6 +54,10 @@
  codDesempenho int primary key not null,
  pontuacao int not null
  )
+
+ insert into Desempenho values(1, 10);
+ insert into Desempenho values(2, 5);
+ insert into Desempenho values(3, 0);
 
  select * from Desempenho
 
