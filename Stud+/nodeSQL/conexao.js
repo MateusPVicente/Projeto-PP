@@ -25,6 +25,7 @@ global.conexao.request()
 .then(resultado => resposta.json(resultado.recordset))
 .catch(erro => resposta.json(erro));
 }
+
 rota.get('/Usuario', (requisicao, resposta) =>{
 execSQL('SELECT * FROM Usuario', resposta);
 })
@@ -36,6 +37,11 @@ if (requisicao.params.id)
 filtro = ' WHERE senhaUsuario=' + parseInt(requisicao.params.id);
 execSQL('SELECT nomeUsuario from Usuario' + filtro, resposta);
 })
+
+function teste()
+{
+	alert(config.user);
+}
 
 // function validaForm()
 //  {

@@ -19,10 +19,20 @@
 	{
 		var resp = confirm("Você realmente deseja remover esta tarefa?");
 
+		if(resp){
+			id.parentNode.removeChild(id);
+		}
+	}
 
-			if(resp){
-				id.parentNode.removeChild(id);
-			}
+	function concluirTarefa(id, link)
+	{
+		var resp = confirm("Você realmente deseja marcar como concluída esta tarefa?");
+
+		if(resp){
+			id.style.backgroundColor = "#00cc00";
+			id.style.color = "white";
+			link.style.display = 'none';
+		}
 	}
 
 	  $(document).ready(function(){
@@ -46,4 +56,6 @@
 	  		alert("A data digitada está fora do período válido!");
 	  	}
 	  }
+
+
        
