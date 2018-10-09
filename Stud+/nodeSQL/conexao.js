@@ -1,4 +1,5 @@
-const express = require('express');
+
+const express = require('express'); //Define rotas
 const app = express();
 const bodyParser = require('body-parser');
 const porta = 3000;
@@ -12,7 +13,7 @@ sql.connect(conexaoStr)
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
-const rota = express.Router();
+const rota = express.Router(); //é o que digitamos na URL
 rota.get('/', (requisicao, resposta) => resposta.json({ mensagem: 'Funcionando!'}));
 app.use('/', rota);
 
@@ -31,50 +32,16 @@ execSQL('SELECT * FROM Usuario', resposta);
 })
 
 //o simbolo ? indica que id na rota abaixo é opcional
-rota.get('/Usuario/:senhaUsuario?', (requisicao, resposta) => {
+rota.get('/Usuario/:CodPaciente?', (requisicao, resposta) => {
 let filtro = '';
-if (requisicao.params.id)
-filtro = ' WHERE senhaUsuario=' + parseInt(requisicao.params.id);
-execSQL('SELECT nomeUsuario from Usuario' + filtro, resposta);
+if (requisicao.params.codUsuario)
+filtro = ' WHERE CodPaciente=' + parseInt(requisicao.params.codUsuario);
+execSQL('SELECT Nome from Usuario' + filtro, resposta);
 })
 
-function teste()
-{
-	alert(config.user);
-}
-
-// function validaForm()
-//  {
-//  	var usuario = document.getElementById("usuario").value;
-// 		var senha = document.getElementById("senha").value;
-// 		var confirmarSenha = document.getElementById("confSenha").value;
-// 		var data = document.getElementById("data").value;
-// 		var form = document.getElementById("form");
-
-// 		var dataAlt = data.substring(6,10);
-
-// 		var dataDesejada = new Date(data);
-//      	var dataAtual = new Date();
-
-// 		if(usuario == null || senha == null || confirmarSenha == null || data == null)
-// 		{
-// 			alert("Digite os campos corretamente!");
-// 		}
-
-// 		else if(confirmarSenha != senha)
-// 		{
-// 			alert("A senha digitada não foi confirmada corretamente!");
-// 		}
-// 		else if(dataAlt >= 2018 || dataAlt < 1800)
-// 		{
-// 			if(dataAlt < 1930 || dataAlt > 2015)
-// 			{
-// 				alert("A data digitada está fora do período válido!");
-// 			}
-// 		}
-// 		else
-// 			// window.location.href= "./tarefa.html";
-// 			// window.location.replace("tarefa.html");
-// 			// $(location).attr('href', 'tarefa.html');
-// 			form.action = "tarefa.html";
-//  }
+// rota.post('/Usuario', (requisicao, resposta) =>{
+// const id = parseInt(requisicao.body.id);
+// const nome = requisicao.body.nome.substring(0,150);
+// const cpf = requisicao.body.cpf.substring(0,11);
+// execSQL(`INSERT INTO Usuario(ID, Nome, CPF) VALUES(${id},'${nome}','${cpf}')`, resposta);
+// })
