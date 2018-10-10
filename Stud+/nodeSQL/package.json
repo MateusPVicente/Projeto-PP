@@ -1,7 +1,8 @@
 {
   "name": "nodesql",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "conexao.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +12,5 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "mssql": "^4.2.1"
-  },
-  "devDependencies": {},
-  "description": ""
+  }
 }
