@@ -1,25 +1,25 @@
 
-function EnviaID() {
+    function EnviaID() {
 
-    var xmlhttp = new XMLHttpRequest();
-    var url = "http://localhost:3000/Usuario";
+        var xmlhttp = new XMLHttpRequest();
+        var url = "http://localhost:3000/Usuario";
 
-    xmlhttp.onreadystatechange=function() {
-        if (this.readyState == 4 && this.status == 200) {
-            //quando os dados retornarem da requisição serão enviados para a função ExibeDados()
-            validaForm(this.responseText);
+        xmlhttp.onreadystatechange=function() {
+            if (this.readyState == 4 && this.status == 200) {
+                //quando os dados retornarem da requisição serão enviados para a função ExibeDados()
+                validaForm(this.responseText);
+            }
         }
-    }
 
-    // if (document.getElementById("idCliente").length == 0 ) {
-    //     xmlhttp.open("GET", url, true);
-    // } else {
-    //     var idCliente = document.getElementById("idCliente").value;
-    //     xmlhttp.open("GET", url+"/"+idCliente, true);
-    // }
-    
-    xmlhttp.send();
-} 
+        // if (document.getElementById("idCliente").length == 0 ) {
+        //     xmlhttp.open("GET", url, true);
+        // } else {
+        //     var idCliente = document.getElementById("idCliente").value;
+        //     xmlhttp.open("GET", url+"/"+idCliente, true);
+        // }
+        
+        xmlhttp.send();
+    } 
 
     function validaForm(response)
     {

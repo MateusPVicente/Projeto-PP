@@ -32,11 +32,11 @@ execSQL('SELECT * FROM Usuario', resposta);
 })
 
 //o simbolo ? indica que id na rota abaixo é opcional
-rota.get('/Usuario/:CodPaciente?', (requisicao, resposta) => {
+rota.get('/Usuario/:CodUsuario?', (requisicao, resposta) => {
 let filtro = '';
-if (requisicao.params.codUsuario)
-filtro = ' WHERE CodPaciente=' + parseInt(requisicao.params.codUsuario);
-execSQL('SELECT Nome from Usuario' + filtro, resposta);
+if (requisicao.params.id)
+filtro = ' WHERE CodUsuario=' + parseInt(requisicao.params.id);
+execSQL('SELECT nomeUsuario from Usuario' + filtro, resposta);
 })
 
 // rota.post('/Usuario', (requisicao, resposta) =>{
