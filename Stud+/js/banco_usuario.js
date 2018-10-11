@@ -11,13 +11,7 @@
             }
         }
 
-        // if (document.getElementById("idCliente").length == 0 ) {
-        //     xmlhttp.open("GET", url, true);
-        // } else {
-        //     var idCliente = document.getElementById("idCliente").value;
-        //     xmlhttp.open("GET", url+"/"+idCliente, true);
-        // }
-        
+        xmlhttp.open("GET", url, true);   
         xmlhttp.send();
     } 
 

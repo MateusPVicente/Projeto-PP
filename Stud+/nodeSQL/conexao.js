@@ -1,4 +1,3 @@
-
 const express = require('express'); //Define rotas
 const app = express();
 const bodyParser = require('body-parser');
@@ -32,11 +31,11 @@ execSQL('SELECT * FROM Usuario', resposta);
 })
 
 //o simbolo ? indica que id na rota abaixo é opcional
-rota.get('/Usuario/:CodUsuario?', (requisicao, resposta) => {
+rota.get('/Usuario/:nomeUsuario?', (requisicao, resposta) => {
 let filtro = '';
-if (requisicao.params.id)
-filtro = ' WHERE CodUsuario=' + parseInt(requisicao.params.id);
-execSQL('SELECT nomeUsuario from Usuario' + filtro, resposta);
+if (requisicao.params.nomeUsuario)
+filtro = ' WHERE nomeUsuario=' + requisicao.params.nomeUsuario;
+execSQL('SELECT * from Usuario' + filtro, resposta);
 })
 
 // rota.post('/Usuario', (requisicao, resposta) =>{
