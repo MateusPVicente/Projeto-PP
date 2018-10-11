@@ -1,5 +1,5 @@
 
-    function EnviaID() {
+   window.onload = function(){
 
         var xmlhttp = new XMLHttpRequest();
         var url = "http://localhost:3000/Usuario";
@@ -11,7 +11,16 @@
             }
         }
 
-        xmlhttp.open("GET", url, true);   
+        if (document.getElementById("usu").length == 0 ) 
+        {
+            xmlhttp.open("GET", url, true);
+        } 
+        else 
+        {
+            var idCliente = document.getElementById("usu").value;
+            xmlhttp.open("GET", url+"/"+idCliente, true);
+        }
+        
         xmlhttp.send();
     } 
 
@@ -31,7 +40,10 @@
             for(var i = 0; i < arr.length; i++)
             {
                if(arr[i].nomeUsuario == usuario && arr[i].senhaUsuario == senha)
+               {
+                  alert("VEIO ATÉ AQUI");
                   form.action = "tarefa.html"; 
+              }
             }
 
             alert("Nome de Usuário ou Senha inválidos!");

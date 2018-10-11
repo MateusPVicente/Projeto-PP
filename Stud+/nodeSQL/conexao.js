@@ -21,9 +21,9 @@ console.log('API Funcionando!');
 
 function execSQL(sql, resposta) {
 global.conexao.request()
-.query(sql)
-.then(resultado => resposta.json(resultado.recordset))
-.catch(erro => resposta.json(erro));
+	.query(sql)
+	.then(resultado => resposta.json(resultado.recordset))
+	.catch(erro => resposta.json(erro));
 }
 
 rota.get('/Usuario', (requisicao, resposta) =>{
