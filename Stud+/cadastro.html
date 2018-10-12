@@ -40,18 +40,18 @@
     <h2 class="cadastro" >CADASTRO:</h2>
 
     <div class="row container">
-    <form id="form" class="col s12" action="">
+    <form id="form" class="col s12" action="http://localhost:3000/Usuario" method="post">
       <div class="row">
         <div class="input-field col s6">
           <i class="material-icons prefix">account_circle</i>
-          <input id="usuario" id="icon_prefix" type="text" class="validate" required>
+          <input name="nomee" id="usuario" id="icon_prefix" type="text" class="validate" required>
           <label for="icon_prefix">Nome de Usuário</label>
           <span class="helper-text">*Escolha um nome bem legal!</span>
         </div>
 
         <div class="input-field col s6">
           <i class="material-icons prefix">enhanced_encryption</i>
-          <input id="senha" id="icon_telephone" type="password" class="validate" required>
+          <input nome="senhaa" id="senha" id="icon_telephone" type="password" class="validate" required>
           <label for="icon_telephone">Senha</label>
           <span class="helper-text">*Não fale sua senha para ninguém!</span>
         </div>
@@ -64,12 +64,12 @@
 
         <div class="input-field col s12">
           <i class="material-icons prefix">assignment_ind</i>
-          <input id="data" id="icon_telephone" type="text" class="validate" required pattern="[0-9][1-9]/[0-9][0-9]/[0-2][0-9][0-9][0-9]">
-          <label for="icon_telephone">Data de Nascimento</label>
+          <input name="dataNasc" id="data" type="text" class="validate" required pattern="[0-9][1-9]/[0-9][0-9]/[0-2][0-9][0-9][0-9]">
+          <label for="data">Data de Nascimento</label>
           <span class="helper-text">*Formatação: dd/mm/aaaa</span>
         </div>
 
-         <button onclick="verificaForm();" class="right container btn-large waves-effect waves-light" type="submit" name="action"><txt >Enviar</txt>
+         <button id="cad" class="right container btn-large waves-effect waves-light" type="submit" name="submit"><txt >Enviar</txt>
          <i class="material-icons right">send</i>
 
       </div>
@@ -81,7 +81,7 @@
   <div id="modal1" class="modal">
       <div class="modal-content">
         <h4>LOGIN</h4>
-        <form action="tarefa.html">
+        <form id="f">
         
         <tr>
         <td><input type="text" id="usu" class="input1" required placeholder=" Usuário"></td>   
@@ -110,4 +110,6 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/Stud_novaTarefa.js"></script>
     <script type="text/javascript" src="js/Stud_cadastro.js"></script>
+    <script type="text/javascript" src="nodeSQL/conexao.js"></script>
+    <script type="text/javascript" src="js/banco_usuario.js"></script>
   </html>

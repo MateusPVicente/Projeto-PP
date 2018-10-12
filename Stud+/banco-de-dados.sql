@@ -4,13 +4,25 @@
  create table Usuario(
  codUsuario int primary key not null,
  nomeUsuario varchar(30) not null,
- dataNascimento datetime not null,
+ dataNascimento varchar(15) not null,
  senhaUsuario int not null,
  codDesempenho int not null,
  constraint fkcodDesempenho foreign key (codDesempenho) references Desempenho(codDesempenho)
  )
 
- insert into Usuario values(1, 'Mateus de Padua Vicente', '29/11/2002', '1234', 1);
+ alter table Usuario
+ alter column dataNascimento datetime not null
+
+ drop table Usuario
+ drop table Desempenho
+ drop table Acesso
+ drop table Tarefa
+ drop table StatusTarefa
+ drop table Forum 
+
+ insert into Usuario values(1,'Mateus de Padua Vicente', '29/11/2002', '1234', 1);
+
+ delete from Usuario where codUsuario = 1
 
  select * from Usuario
 

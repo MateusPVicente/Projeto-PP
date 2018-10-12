@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const porta = 3000;
 const sql = require('mssql');
-const conexaoStr = "Server=regulus;Database=PR118171;User Id=PR118171;Password=PR118171;";
+const conexaoStr = "Server=regulus.cotuca.unicamp.br;Database=PR118171;User Id=PR118171;Password=PR118171;";
 
 sql.connect(conexaoStr)
 .then(conexao => global.conexao = conexao)
@@ -38,9 +38,9 @@ filtro = ' WHERE nomeUsuario=' + requisicao.params.nomeUsuario;
 execSQL('SELECT * from Usuario' + filtro, resposta);
 })
 
-// rota.post('/Usuario', (requisicao, resposta) =>{
-// const id = parseInt(requisicao.body.id);
-// const nome = requisicao.body.nome.substring(0,150);
-// const cpf = requisicao.body.cpf.substring(0,11);
-// execSQL(`INSERT INTO Usuario(ID, Nome, CPF) VALUES(${id},'${nome}','${cpf}')`, resposta);
-// })
+rota.post('/Usuario', (requisicao, resposta) =>{
+const nome = requisicao.body.nomee.substring(0,150);
+const senha = parseInt(requisicao.body.senhaa);
+const data = requisicao.body.dataNasc.substring(0,15);
+execSQL(`INSERT INTO Usuario(nomeUsuario, dataNascimento, senhaUsuario) VALUES('${nome}','${data}','${senha}')`, resposta);
+})

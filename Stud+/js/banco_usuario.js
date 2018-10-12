@@ -1,4 +1,8 @@
 
+   var arrNome = new Array();
+   var arrSenha = new Array();
+   var arr;
+
    window.onload = function(){
 
         var xmlhttp = new XMLHttpRequest();
@@ -7,31 +11,26 @@
         xmlhttp.onreadystatechange=function() {
             if (this.readyState == 4 && this.status == 200) {
                 //quando os dados retornarem da requisição serão enviados para a função ExibeDados()
-                validaForm(this.responseText);
+                arr = JSON.parse(this.responseText);
+                for(var i=0; i<arr.length;i++)
+                {
+                	arrNome[i] = arr[i].nomeUsuario;
+                	arrSenha[i] = arr[i].senhaUsuario;
+                }
             }
         }
 
-        if (document.getElementById("usu").length == 0 ) 
-        {
-            xmlhttp.open("GET", url, true);
-        } 
-        else 
-        {
-            var idCliente = document.getElementById("usu").value;
-            xmlhttp.open("GET", url+"/"+idCliente, true);
-        }
-        
+        xmlhttp.open("GET", url, true);
         xmlhttp.send();
     } 
 
-    function validaForm(response)
+    document.getElementById("btnEntrar").onclick = function()
     {
-        var arr = JSON.parse(response);
         var usuario = document.getElementById("usu").value;
         var senha = document.getElementById("sen").value;
-        var form = document.getElementById("f");
+        // var form = document.getElementById("f");
 
-        if(usuario == null || senha == null)
+        if(usuario == "" || senha == "")
         {
             alert("Digite os campos corretamente!");
         }
@@ -39,13 +38,12 @@
         {
             for(var i = 0; i < arr.length; i++)
             {
-               if(arr[i].nomeUsuario == usuario && arr[i].senhaUsuario == senha)
+               if(arrNome[i] == usuario && arrSenha[i] == senha)
                {
-                  alert("VEIO ATÉ AQUI");
-                  form.action = "tarefa.html"; 
-              }
+                  document.getElementById('f').action = "./tarefa.html";
+               }
+               else
+               	  alert("Nome de usuário ou senha inválidos!");
             }
-
-            alert("Nome de Usuário ou Senha inválidos!");
         }
     }

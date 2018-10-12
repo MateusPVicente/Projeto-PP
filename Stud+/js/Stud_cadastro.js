@@ -1,5 +1,5 @@
 
-	function verificaForm()
+	document.getElementById("cad").onclick = function()
 	{
 		var usuario = document.getElementById("usuario").value;
 		var senha = document.getElementById("senha").value;
@@ -9,28 +9,22 @@
 
 		var dataAlt = data.substring(6,10);
 
-		var dataDesejada = new Date(data);
-     	var dataAtual = new Date();
-
-		if(usuario == null || senha == null || confirmarSenha == null || data == null)
+		if(usuario == "" || senha == "" || confirmarSenha == "" || data == "")
 		{
 			alert("Digite os campos corretamente!");
 		}
 
 		else if(confirmarSenha != senha)
 		{
-			alert("A senha digitada não foi confirmada corretamente!");
+			alert("As senhas digitadas não são iguais!");
 		}
-		else if(dataAlt >= 2018 || dataAlt < 1800)
+		else if(dataAlt >= 2018 || dataAlt < 1800 || dataAlt < 1930 || dataAlt > 2015)
 		{
-			if(dataAlt < 1930 || dataAlt > 2015)
-			{
-				alert("A data digitada está fora do período válido!");
-			}
+			alert("A data digitada está fora do período válido!");
 		}
-		else
-			// window.location.href= "./tarefa.html";
-			// window.location.replace("tarefa.html");
-			// $(location).attr('href', 'tarefa.html');
-			form.action = "tarefa.html";
+		// else
+		// {
+		// 	document.getElementById('f').method = "post";
+		// 	document.getElementById('f').action = "http://localhost:3000/Usuario";
+		// }	    
 	}
