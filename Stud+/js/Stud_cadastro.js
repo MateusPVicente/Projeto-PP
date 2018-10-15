@@ -25,7 +25,13 @@
 			document.getElementById("form").action = "./cadastro.html";
 		}
 		else
-			document.getElementById("form").action = "./tarefa.html";
+		{
+			sessionStorage.setItem('nom',usuario);
+			window.location.assign("./tarefa.html");
+		}
+
+		// else
+		// 	document.getElementById("form").action = "./tarefa.html";
 		// else
 		// {
 		// 	document.getElementById('f').method = "post";

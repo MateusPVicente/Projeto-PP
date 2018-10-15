@@ -43,6 +43,7 @@
                   sessionStorage.setItem('nom', usuario);
                   // document.getElementById('name').innerHTML = "BEM-VINDO, " + usuario;
                   achou = true;
+                  document.getElementById("f").action = "./tarefa.html";
                }
             }
 

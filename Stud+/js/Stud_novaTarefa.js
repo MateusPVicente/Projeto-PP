@@ -65,12 +65,12 @@
 	  	window.history.forward(1);
 	  }
 
-	  document.getElementById('sair').onclick = function()
-	  {
-	  	sessionStorage.removeItem('name');
-	  	sessionStorage.removeItem('name2');
-	  	window.location = "./home.html"
-	  }
+	  // document.getElementById('sair').onclick = function()
+	  // {
+	  // 	sessionStorage.removeItem('name');
+	  // 	sessionStorage.removeItem('name2');
+	  // 	window.location = "./home.html"
+	  // }
 
 
        
