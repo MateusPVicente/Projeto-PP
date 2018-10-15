@@ -57,5 +57,20 @@
 	  	}
 	  }
 
+	  window.onload = function()
+	  {
+	  	document.getElementById('name').innerHTML = "BEM-VINDO, " + sessionStorage.getItem('nom').toUpperCase();
+	  	document.getElementById('name2').innerHTML = "BEM-VINDO, " + sessionStorage.getItem('nom').toUpperCase();
+
+	  	window.history.forward(1);
+	  }
+
+	  document.getElementById('sair').onclick = function()
+	  {
+	  	sessionStorage.removeItem('name');
+	  	sessionStorage.removeItem('name2');
+	  	window.location = "./home.html"
+	  }
+
 
        

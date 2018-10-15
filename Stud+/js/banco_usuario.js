@@ -25,25 +25,28 @@
     } 
 
     document.getElementById("btnEntrar").onclick = function()
-    {
+    {  
         var usuario = document.getElementById("usu").value;
         var senha = document.getElementById("sen").value;
-        // var form = document.getElementById("f");
 
         if(usuario == "" || senha == "")
         {
             alert("Digite os campos corretamente!");
         }
         else
-        {
+        { 
+            var achou = false;
             for(var i = 0; i < arr.length; i++)
             {
                if(arrNome[i] == usuario && arrSenha[i] == senha)
                {
-                  document.getElementById('f').action = "./tarefa.html";
+                  sessionStorage.setItem('nom', usuario);
+                  // document.getElementById('name').innerHTML = "BEM-VINDO, " + usuario;
+                  achou = true;
                }
-               else
-               	  alert("Nome de usuário ou senha inválidos!");
             }
+
+            if (!achou)
+              alert("Nome de usuário ou senha inválidos!");
         }
     }

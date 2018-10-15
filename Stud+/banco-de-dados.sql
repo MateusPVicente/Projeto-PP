@@ -2,16 +2,13 @@
 --Banco de dados - Prática Profssional:
 
  create table Usuario(
- codUsuario int primary key not null,
+ codUsuario int primary key identity(1,1) not null,
  nomeUsuario varchar(30) not null,
  dataNascimento varchar(15) not null,
- senhaUsuario int not null,
- codDesempenho int not null,
+ senhaUsuario varchar(30) not null,
+ codDesempenho int null,
  constraint fkcodDesempenho foreign key (codDesempenho) references Desempenho(codDesempenho)
  )
-
- alter table Usuario
- alter column dataNascimento datetime not null
 
  drop table Usuario
  drop table Desempenho
@@ -20,11 +17,13 @@
  drop table StatusTarefa
  drop table Forum 
 
- insert into Usuario values(1,'Mateus de Padua Vicente', '29/11/2002', '1234', 1);
+ select * from Usuario
+
+ DBCC CHECKIDENT('Usuario', RESEED, 0)
+
+ insert into Usuario values('Mateus de Padua Vicente', '29/11/2002', '1234', 1)
 
  delete from Usuario where codUsuario = 1
-
- select * from Usuario
 
  create table Acesso(
  codAcesso int primary key not null,
@@ -67,6 +66,9 @@
  pontuacao int not null
  )
 
+ alter table Desempenho
+ alter column codDesempenho int null
+
  insert into Desempenho values(1, 10);
  insert into Desempenho values(2, 5);
  insert into Desempenho values(3, 0);
@@ -74,3 +76,4 @@
  select * from Desempenho
 
 
+ sp_help Usuario
