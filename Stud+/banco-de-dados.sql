@@ -10,6 +10,7 @@
  constraint fkcodDesempenho foreign key (codDesempenho) references Desempenho(codDesempenho)
  )
 
+
  drop table Usuario
  drop table Desempenho
  drop table Acesso
@@ -39,7 +40,7 @@
  codTarefa int primary key identity(1,1) not null,
  titulo varchar(50) not null,
  dataEntrega datetime not null,
- relevancia varchar(50) not null
+ relevancia varchar(50) not null,
  )
 
  alter table Tarefa
@@ -52,6 +53,8 @@
  add titulo varchar(50) not null
 
  select * from Tarefa
+
+ delete from Tarefa where codTarefa =1
 
 
  create table StatusTarefa(

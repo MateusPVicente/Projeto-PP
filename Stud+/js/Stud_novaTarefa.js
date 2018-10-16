@@ -39,28 +39,6 @@
    		 $('.datepicker').datepicker();
     		});
 
-	  arrTitulo = new Array();
-
-	  window.onload = function(){
-
-        var xmlhttp = new XMLHttpRequest();
-        var url = "http://localhost:3000/Tarefa";
-
-        xmlhttp.onreadystatechange=function() {
-            if (this.readyState == 4 && this.status == 200) {
-                //quando os dados retornarem da requisição serão enviados para a função ExibeDados()
-                arr = JSON.parse(this.responseText);
-                for(var i=0; i<arr.length;i++)
-                {
-                	arrTitulo[i] = arr[i].titulo;
-                }
-            }
-        }
-
-        xmlhttp.open("GET", url, true);
-        xmlhttp.send();
-    	} 
-
 	  function validaForm2()
 	  {
 	  	var titulo  = document.getElementById("titulo").value;
@@ -93,11 +71,6 @@
 	  	document.getElementById('name2').innerHTML = "BEM-VINDO, " + sessionStorage.getItem('nom').toUpperCase();
 
 	  	// window.history.forward(1);
-	  }
-
-	  function adicionaTarefa()
-	  {
-	  	
 	  }
 
 	  // document.getElementById('sair').onclick = function()

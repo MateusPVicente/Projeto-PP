@@ -43,11 +43,14 @@
                if(arrNome[i] == usuario && arrSenha[i] == senha)
                {
                   sessionStorage.setItem('nom', usuario);
-                  // sessionStorage.setItem('cod', arrCodUsu[i]);
+                  sessionStorage.setItem('cod', arrCodUsu[i]);
 
                   // document.getElementById('name').innerHTML = "BEM-VINDO, " + usuario;
                   achou = true;
                   document.getElementById("f").action = "./tarefa.html";
+
+                  
+
                }
             }
 

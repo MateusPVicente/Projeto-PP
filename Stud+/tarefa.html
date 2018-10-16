@@ -55,47 +55,17 @@
     <h2 class="cyan-text text-darken-1">SUAS TAREFAS:</h2>
     <br><br>
 
-
-
     <table id="table" class="centered responsive-table">
         <thead>
           <tr>
-              <th>ID</th>
               <th>TÍTULO</th>
               <th>PRAZO</th>
+              <th>RELEVÂNCIA</th>
               <th>AÇÕES</th>
           </tr>
         </thead>
 
-        <tbody>
-          <tr id="tr1">
-            <td>1</td>
-            <td>Tarefa de Português</td>
-            <td>24/11/2018</td>
-            <td>
-            <a onclick="concluirTarefa(getElementById('tr1'), this)"><img src="./img/edit.png" width="25" height="25" /></a>
-            <a onclick="apagarTarefa(getElementById('tr1'))"><img id="delete" src="./img/delete.png" width="25" height="25"/></a>
-          </td>
-          </tr>
-          <tr id="tr2">
-            <td>2</td>
-            <td>Tarefa de Matemática</td>
-            <td>02/12/2018</td>
-            <td>
-            <a onclick="concluirTarefa(getElementById('tr2'), this)"><img src="./img/edit.png" width="25" height="25" /></a>
-            <a onclick="apagarTarefa(getElementById('tr2'))"><img src="./img/delete.png" width="25" height="25" /></a>
-          </td>
-          </tr>
-          <tr id="tr3"> 
-            <td>3</td>
-            <td>Lista de Física</td>
-            <td>11/01/2019</td>
-            <td>
-            <a onclick="concluirTarefa(getElementById('tr3'), this)"><img src="./img/edit.png" width="25" height="25" /></a>
-            <a onclick="apagarTarefa(getElementById('tr3'))"><img src="./img/delete.png" width="25" height="25" /></a>
-          </td>
-          </tr>
-        </tbody>
+        <tbody id="div"></tbody>
       </table>
 
     <br><br>
@@ -110,4 +80,5 @@
     <script type="text/javascript" src="js/Stud_navbar.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/Stud_novaTarefa.js"></script>
+    <script type="text/javascript" src="js/Stud_tarefa.js"></script>
   </html>

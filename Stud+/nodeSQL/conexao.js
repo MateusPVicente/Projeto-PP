@@ -12,6 +12,13 @@ sql.connect(conexaoStr)
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
+app.use(function(req, res, next) 
+{ 
+	res.header("Access-Control-Allow-Origin", "*"); 
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept"); 
+	res.header("Access-Control-Allow-Methods", "GET, POST, HEAD, OPTIONS, PATCH, DELETE"); next(); 
+});
+
 const rota = express.Router(); //é o que digitamos na URL
 rota.get('/', (requisicao, resposta) => resposta.json({ mensagem: 'Funcionando!'}));
 app.use('/', rota);
@@ -41,16 +48,22 @@ const data = requisicao.body.dataNasc;
 execSQL(`INSERT INTO Usuario(nomeUsuario, dataNascimento, senhaUsuario) VALUES('${nome}','${data}','${senha}')`, resposta);
 })
 
-rota.get('/Usuario', (requisicao, resposta) =>{
-execSQL(`SELECT codUsuario FROM Usuario WHERE nomeUsuario = '${requisicao.body.nomee}'`, resposta);
-})
+/*var cod = rota.get('/Usuario/:nomeUsuario?', (requisicao, resposta) => {
+let filtro = '';
+if (requisicao.params.nomeUsuario)
+filtro = ` WHERE nomeUsuario='` + requisicao.params.nomeUsuario + `'`;
+execSQL('SELECT codUsuario from Usuario' + filtro, resposta);
+});
+*/
 
 rota.post('/Tarefa', (requisicao, resposta) =>{
 const tituloo = requisicao.body.tit;
 const prazoo = requisicao.body.pra;
 const urgenciaa = requisicao.body.urg;
-execSQL(`INSERT INTO Tarefa(dataEntrega,relevancia,titulo,codUsuario) VALUES('${prazoo}','${urgenciaa}','${tituloo}')`, resposta);
+// const codigo = cod;
+execSQL(`INSERT INTO Tarefa(dataEntrega,relevancia,titulo) VALUES('${prazoo}','${urgenciaa}','${tituloo}')`, resposta);
 })
+
 
 // const cod = parseInt(execSQL('SELECT COUNT(codUsario) from Usuario'));
 // function incrementa(cod){cod++;}

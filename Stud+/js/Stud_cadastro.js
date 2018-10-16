@@ -27,8 +27,23 @@
 		else
 		{
 			sessionStorage.setItem('nom',usuario);
-			// document.getElementById('form').action = "http://localhost:3000/Usuario";
-			// document.getElementById('form').action = "./tarefa.html";
+
+			cadastrar = function(form){
+		    	$.post( "http://localhost:3000/clientes/", form.serialize() ).done(function(data){
+			        if (!data.erro) {
+			            form.each(function(data){
+			                    //limpar formulário
+			                    this.reset();
+			            });
+
+			            $("#modalInc").closeModal();
+			        }
+			        alert(data.mensagem);
+
+			        //chamar listarItem
+			        listarClientes("tbody");
+			    });
+			};   
 			
 		}
 
