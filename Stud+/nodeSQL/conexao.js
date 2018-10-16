@@ -30,12 +30,8 @@ rota.get('/Usuario', (requisicao, resposta) =>{
 execSQL('SELECT * FROM Usuario', resposta);
 })
 
-//o simbolo ? indica que id na rota abaixo é opcional
-rota.get('/Usuario/:nomeUsuario?', (requisicao, resposta) => {
-let filtro = '';
-if (requisicao.params.nomeUsuario)
-filtro = ' WHERE nomeUsuario=' + requisicao.params.nomeUsuario;
-execSQL('SELECT * from Usuario' + filtro, resposta);
+rota.get('/Tarefa', (requisicao, resposta) =>{
+execSQL('SELECT * FROM Tarefa', resposta);
 })
 
 rota.post('/Usuario', (requisicao, resposta) =>{
@@ -43,6 +39,17 @@ const nome = requisicao.body.nomee.substring(0,150);
 const senha = requisicao.body.senhaa;
 const data = requisicao.body.dataNasc;
 execSQL(`INSERT INTO Usuario(nomeUsuario, dataNascimento, senhaUsuario) VALUES('${nome}','${data}','${senha}')`, resposta);
+})
+
+rota.get('/Usuario', (requisicao, resposta) =>{
+execSQL(`SELECT codUsuario FROM Usuario WHERE nomeUsuario = '${requisicao.body.nomee}'`, resposta);
+})
+
+rota.post('/Tarefa', (requisicao, resposta) =>{
+const tituloo = requisicao.body.tit;
+const prazoo = requisicao.body.pra;
+const urgenciaa = requisicao.body.urg;
+execSQL(`INSERT INTO Tarefa(dataEntrega,relevancia,titulo,codUsuario) VALUES('${prazoo}','${urgenciaa}','${tituloo}')`, resposta);
 })
 
 // const cod = parseInt(execSQL('SELECT COUNT(codUsario) from Usuario'));

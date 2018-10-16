@@ -56,10 +56,10 @@
   <br><br>
 
   <div class="row container">
-    <form class="col s12">
+    <form class="col s12" action="http://localhost:3000/Tarefa" method="post">
       <div class="row">
         <div class="input-field col s12">
-          <input id="titulo" type="text" class="validate">
+          <input name="tit" id="titulo" type="text" class="validate">
           <label for="title">Título*</label>
           <span class="helper-text">Por exemplo: "Lição de Português"</span>
         </div>
@@ -67,13 +67,23 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <input id="prazo" type="text" class="datepicker">
+          <input name="pra" id="prazo" type="text" class="datepicker">
           <label for="prazo">Prazo*</label>
-          <span class="helper-text">Formatação: "dd/mm/aaaa"</span>
+          <span class="helper-text">* Clique para selecionar uma data *</span>
         </div>
      </div>
 
-     <a  onclick="validaForm2();" id="nt" class="container waves-effect waves-light btn-large"><i class="material-icons left">library_add</i>NOVA TAREFA<a/>
+     <div class="row">
+        <div class="input-field col s12">
+          <input name="urg" id="urg" type="text" class="text">
+          <label for="urg">Urgência*</label>
+          <span class="helper-text">* Alta / Média / Baixa *</span>
+        </div>
+     </div>
+
+     <!-- <a  onclick="validaForm2();" id="nt" class=" container waves-effect waves-light btn-large"><i class="material-icons left">library_add</i>NOVA TAREFA<a/> -->
+
+      <button id="nt" class="right container btn-large waves-effect waves-light" type="submit" name="submit"><txt >NOVA TAREFA</txt><i class="material-icons right">library_add</i>
 
     </form>
   </div>

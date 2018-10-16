@@ -27,7 +27,9 @@
 		else
 		{
 			sessionStorage.setItem('nom',usuario);
-			window.location.assign("./tarefa.html");
+			// document.getElementById('form').action = "http://localhost:3000/Usuario";
+			// document.getElementById('form').action = "./tarefa.html";
+			
 		}
 
 		// else
@@ -38,3 +40,4 @@
 		// 	document.getElementById('f').action = "http://localhost:3000/Usuario";
 		// }	    
 	}
+

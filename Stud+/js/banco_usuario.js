@@ -1,6 +1,7 @@
 
    var arrNome = new Array();
    var arrSenha = new Array();
+   var arrCodUsu = new Array();
    var arr;
 
    window.onload = function(){
@@ -16,6 +17,7 @@
                 {
                 	arrNome[i] = arr[i].nomeUsuario;
                 	arrSenha[i] = arr[i].senhaUsuario;
+                  arrCodUsu[i] = arr[i].codUsuario;
                 }
             }
         }
@@ -41,6 +43,8 @@
                if(arrNome[i] == usuario && arrSenha[i] == senha)
                {
                   sessionStorage.setItem('nom', usuario);
+                  // sessionStorage.setItem('cod', arrCodUsu[i]);
+
                   // document.getElementById('name').innerHTML = "BEM-VINDO, " + usuario;
                   achou = true;
                   document.getElementById("f").action = "./tarefa.html";
@@ -51,3 +55,4 @@
               alert("Nome de usuário ou senha inválidos!");
         }
     }
+

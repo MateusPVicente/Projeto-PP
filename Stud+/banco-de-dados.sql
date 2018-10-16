@@ -21,9 +21,9 @@
 
  DBCC CHECKIDENT('Usuario', RESEED, 0)
 
- insert into Usuario values('Mateus de Padua Vicente', '29/11/2002', '1234', 1)
+ delete from Usuario
 
- delete from Usuario where codUsuario = 1
+ insert into Usuario values('Mateus de Padua Vicente', '29/11/2002', '1234', 1) 
 
  create table Acesso(
  codAcesso int primary key not null,
@@ -36,11 +36,20 @@
  select * from Acesso
 
  create table Tarefa(
- codTarefa int primary key not null,
- disciplina varchar(50) not null,
+ codTarefa int primary key identity(1,1) not null,
+ titulo varchar(50) not null,
  dataEntrega datetime not null,
  relevancia varchar(50) not null
  )
+
+ alter table Tarefa
+ add constraint fkcodUsuarioo foreign key(codUsuario) references Usuario (codUsuario)
+
+ alter table Tarefa
+ drop column disciplina
+
+ alter table Tarefa
+ add titulo varchar(50) not null
 
  select * from Tarefa
 
