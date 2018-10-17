@@ -24,14 +24,14 @@
 		}
 	}
 
-	function concluirTarefa(id, link)
+	function concluirTarefa(id)
 	{
 		var resp = confirm("Você realmente deseja marcar como concluída esta tarefa?");
 
 		if(resp){
 			id.style.backgroundColor = "#00cc00";
 			id.style.color = "white";
-			link.style.display = 'none';
+			// link.style.display = 'none';
 		}
 	}
 
@@ -61,6 +61,7 @@
 	  	}
 	  	else
 	  	{
+	  		document.getElementById('codi').value = sessionStorage.getItem('cod');
 	  		alert("Sua tarefa foi adicionada com sucesso!");
 	  	}
 	  }

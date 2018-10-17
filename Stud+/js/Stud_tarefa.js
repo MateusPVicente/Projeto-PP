@@ -1,4 +1,4 @@
-      var arr = new Array();
+      var arr;
 
 window.onload = function(){
 
@@ -24,18 +24,21 @@ window.onload = function(){
 
 function ListarTarefas(response)
       {
-        arr = response;
+
+        arr = JSON.parse(response);
+
         var estrutura = "";
 
         for(var i = 0; i < arr.length; i++) 
         {
             estrutura += "<tr id="+i+">" + 
             "<td>"+arr[i].titulo+"<td>" +
-            "<td>"+arr[i].prazo+"<td>" +
+            "<td>"+arr[i].dataEntrega+"<td>" +
             "<td>"+arr[i].relevancia+"<td>" +
-            "<a onclick='concluirTarefa(getElementById('"+i+"'), this)'><img src='./img/edit.png' width='25' height='25' /></a>" +
-            "<a onclick='apagarTarefa(getElementById('"+i+"'))'><img id='delete' src='./img/delete.png' width='25' height='25'/></a>";
+            "<a onclick='concluirTarefa(getElementById('"+i+"'));'><img src='./img/edit.png' width='25' height='25' /></a>" +
+            "<a onclick='apagarTarefa(getElementById('"+i+"'));'><img id='delete' src='./img/delete.png' width='25' height='25'/></a>";
         }
+
 
         document.getElementById("div").innerHTML = estrutura;
      

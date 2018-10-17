@@ -60,8 +60,8 @@ rota.post('/Tarefa', (requisicao, resposta) =>{
 const tituloo = requisicao.body.tit;
 const prazoo = requisicao.body.pra;
 const urgenciaa = requisicao.body.urg;
-// const codigo = cod;
-execSQL(`INSERT INTO Tarefa(dataEntrega,relevancia,titulo) VALUES('${prazoo}','${urgenciaa}','${tituloo}')`, resposta);
+const codigo = requisicao.body.cod;
+execSQL(`INSERT INTO Tarefa(titulo,dataEntrega,relevancia,codUsuario) VALUES('${tituloo}','${prazoo}','${urgenciaa}','${codigo}')`, resposta);
 })
 
 

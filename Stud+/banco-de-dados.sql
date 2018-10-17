@@ -45,6 +45,8 @@
 
  alter table Tarefa
  add constraint fkcodUsuarioo foreign key(codUsuario) references Usuario (codUsuario)
+ alter table Tarefa
+ add codUsuario int
 
  alter table Tarefa
  drop column disciplina
@@ -54,7 +56,7 @@
 
  select * from Tarefa
 
- delete from Tarefa where codTarefa =1
+ delete from Tarefa 
 
 
  create table StatusTarefa(
