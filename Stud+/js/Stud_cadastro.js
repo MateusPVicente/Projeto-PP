@@ -19,7 +19,7 @@
 			alert("As senhas digitadas não são iguais!");
 			document.getElementById("form").action = "./cadastro.html";
 		}
-		else if(dataAlt >= 2018 || dataAlt < 1800 || dataAlt < 1930 || dataAlt > 2015)
+		else if(dataAlt >= 2018 || dataAlt < 1900 || dataAlt > 2015)
 		{
 			alert("A data digitada está fora do período válido!");
 			document.getElementById("form").action = "./cadastro.html";
@@ -27,24 +27,6 @@
 		else
 		{
 			sessionStorage.setItem('nom',usuario);
-
-			cadastrar = function(form){
-		    	$.post( "http://localhost:3000/clientes/", form.serialize() ).done(function(data){
-			        if (!data.erro) {
-			            form.each(function(data){
-			                    //limpar formulário
-			                    this.reset();
-			            });
-
-			            $("#modalInc").closeModal();
-			        }
-			        alert(data.mensagem);
-
-			        //chamar listarItem
-			        listarClientes("tbody");
-			    });
-			};   
-			
 		}
 
 		// else

@@ -44,6 +44,7 @@
 	  	var titulo  = document.getElementById("titulo").value;
 	  	var prazo = document.getElementById("prazo").value;
 	  	var urgencia = document.getElementById('urg').value;
+	  	var valCod = document.getElementById('cod').value;
 	  	var dataDesejada = new Date(prazo);
      	var dataAtual = new Date();
 
@@ -61,8 +62,8 @@
 	  	}
 	  	else
 	  	{
-	  		document.getElementById('codi').value = sessionStorage.getItem('cod');
 	  		alert("Sua tarefa foi adicionada com sucesso!");
+	  		valCod = sessionStorage.getItem('cod');
 	  	}
 	  }
 

@@ -41,6 +41,8 @@
  titulo varchar(50) not null,
  dataEntrega datetime not null,
  relevancia varchar(50) not null,
+ codUsuario int not null,
+ constraint fkcodUsuarioo foreign key(codUsuario) references Usuario (codUsuario)
  )
 
  alter table Tarefa
@@ -72,6 +74,13 @@
  codUsuario int not null,
  constraint fkcodUsuario2 foreign key(codUsuario) references Usuario(codUsuario)
  )
+
+ create table Pergunta(
+ codPergunta int primary key identity(1,1) not null,
+ pergunta ntext not null
+ )
+
+ select * from Pergunta
 
  select * from Forum
 
