@@ -37,11 +37,16 @@ window.onload = function(){
     function concluirTarefa(id)
     {
         var resp = confirm("Você realmente deseja marcar como concluída esta tarefa?");
+        var urlll = "http://localhost:3000/Tarefa/" + id;
 
-        if(resp){
-            id.style.backgroundColor = "#00cc00";
-            id.style.color = "white";
-            // link.style.display = 'none';
+        if(resp)
+        {
+            var xmlhttppp = new XMLHttpRequest();          
+            xmlhttppp.open("PATCH", urlll, true);
+            xmlhttppp.send(); 
+
+            // document.getElementById(id).style.backgroundColor = "#00cc00";
+            // document.getElementById(id).style.color = "white";
         }
     }
 
@@ -56,13 +61,29 @@ window.onload = function(){
 
         for(var i = 0; i < arr.length; i++) 
         {
-            estrutura += "<tr id="+arr[i].codTarefa+">" + 
-            "<td>"+arr[i].titulo+"<td>" +
-            "<td>"+arr[i].dataEntrega+"<td>" +
-            "<td>"+arr[i].relevancia+"<td>" +
-            "<a onclick='concluirTarefa(getElementById("+arr[i].codTarefa+"));'><img src='./img/edit.png' width='25' height='25'></a>" +
-            "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
-            "<tr>";
+            if(arr[i].finalizada == "N")
+            {
+                alert("ADICIONANDO PELA PRIMEIRA VEZ");
+                estrutura += "<tr id="+arr[i].codTarefa+">" + 
+                "<td>"+arr[i].titulo+"<td>" +
+                "<td>"+arr[i].dataEntrega+"<td>" +
+                "<td>"+arr[i].relevancia+"<td>" +
+                "<a onclick='concluirTarefa("+arr[i].codTarefa+");'><img src='./img/edit.png' width='25' height='25'></a>" +
+                "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
+                "<tr>";
+            }
+            else if(arr[i].finalizada == "S")
+            {
+                alert("ESTILIZANDO");
+                estrutura += '<tr style= "background-color: #00cc00, color: white;" id='+arr[i].codTarefa+">" + 
+                "<td>"+arr[i].titulo+"<td>" +
+                "<td>"+arr[i].dataEntrega+"<td>" +
+                "<td>"+arr[i].relevancia+"<td>" +
+                "<a onclick='concluirTarefa("+arr[i].codTarefa+");'><img src='./img/edit.png' width='25' height='25'></a>" +
+                "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
+                "<tr>";
+            }
+
         }
 
         document.getElementById("div").innerHTML = estrutura;

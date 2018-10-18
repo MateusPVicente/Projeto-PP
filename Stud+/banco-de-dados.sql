@@ -44,6 +44,9 @@
  codUsuario int not null,
  constraint fkcodUsuarioo foreign key(codUsuario) references Usuario (codUsuario)
  )
+
+ select * from Tarefa
+
  DELETE FROM Tarefa WHERE codTarefa=8
  SELECT * FROM Tarefa WHERE codUsuario = 1
  alter table Tarefa

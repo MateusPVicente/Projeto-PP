@@ -61,14 +61,23 @@ const tituloo = requisicao.body.tit;
 const prazoo = requisicao.body.pra;
 const urgenciaa = requisicao.body.urg;
 const codigo = requisicao.body.cod;
-execSQL(`INSERT INTO Tarefa(titulo,dataEntrega,relevancia,codUsuario) VALUES('${tituloo}','${prazoo}','${urgenciaa}','${codigo}')`, resposta);
+execSQL(`INSERT INTO Tarefa(titulo,dataEntrega,relevancia,codUsuario,finalizada) VALUES('${tituloo}','${prazoo}','${urgenciaa}','${codigo}', 'N')`, resposta);
 })
 
 rota.delete('/Tarefa/:codTarefa?', (requisicao, resposta) =>{ 
 	execSQL('DELETE FROM Tarefa WHERE codTarefa=' + requisicao.params.codTarefa, resposta); 
 })
 
+rota.post('/Usuario', (requisicao, resposta) =>{
+const nome = requisicao.body.nomee.substring(0,150);
+const senha = requisicao.body.senhaa;
+const data = requisicao.body.dataNasc;
+execSQL(`INSERT INTO Usuario(nomeUsuario, dataNascimento, senhaUsuario) VALUES('${nome}','${data}','${senha}')`, resposta);
+})
 
+rota.patch('/Tarefa/:codTarefa?', (requisicao, resposta) =>{
+    execSQL("UPDATE Tarefa SET finalizada='S' WHERE codTarefa=" + requisicao.params.codTarefa, resposta);  
+})
 
 // const cod = parseInt(execSQL('SELECT COUNT(codUsario) from Usuario'));
 // function incrementa(cod){cod++;}
