@@ -44,14 +44,21 @@
  codUsuario int not null,
  constraint fkcodUsuarioo foreign key(codUsuario) references Usuario (codUsuario)
  )
-
+ DELETE FROM Tarefa WHERE codTarefa=8
+ SELECT * FROM Tarefa WHERE codUsuario = 1
  alter table Tarefa
- add constraint fkcodUsuarioo foreign key(codUsuario) references Usuario (codUsuario)
+ alter column dataEntrega varchar(20) not null
+
+ insert into Tarefa values('Portugues', 'Oct 30, 2018', 'Alta')
+
+ --codUsuario int not null,
+ --constraint fkcodUsuarioo foreign key(codUsuario) references Usuario (codUsuario)
+
  alter table Tarefa
  add codUsuario int
 
  alter table Tarefa
- drop column disciplina
+ nocheck constraint fkcodUsuario
 
  alter table Tarefa
  add titulo varchar(50) not null

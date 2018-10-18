@@ -15,25 +15,6 @@
 	// 	});
 	// });
 
-	function apagarTarefa(id)
-	{
-		var resp = confirm("Você realmente deseja remover esta tarefa?");
-
-		if(resp){
-			id.parentNode.removeChild(id);
-		}
-	}
-
-	function concluirTarefa(id)
-	{
-		var resp = confirm("Você realmente deseja marcar como concluída esta tarefa?");
-
-		if(resp){
-			id.style.backgroundColor = "#00cc00";
-			id.style.color = "white";
-			// link.style.display = 'none';
-		}
-	}
 
 	  $(document).ready(function(){
    		 $('.datepicker').datepicker();
@@ -63,14 +44,18 @@
 	  	else
 	  	{
 	  		alert("Sua tarefa foi adicionada com sucesso!");
-	  		valCod = sessionStorage.getItem('cod');
+	  		//valCod = sessionStorage.getItem('cod');
 	  	}
 	  }
+
+	  //var valCod = document.getElementById('cod').value;
 
 	  window.onload = function()
 	  {
 	  	document.getElementById('name').innerHTML = "BEM-VINDO, " + sessionStorage.getItem('nom').toUpperCase();
 	  	document.getElementById('name2').innerHTML = "BEM-VINDO, " + sessionStorage.getItem('nom').toUpperCase();
+	  	document.getElementById('cod').value = sessionStorage.getItem('cod');
+	  	//valCod = sessionStorage.getItem('cod');
 
 	  	// window.history.forward(1);
 	  }

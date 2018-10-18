@@ -3,7 +3,7 @@
 window.onload = function(){
 
         var xmlhttp = new XMLHttpRequest();
-        var url = "http://localhost:3000/Tarefa";
+        var url = "http://localhost:3000/Tarefa/" + sessionStorage.getItem('cod');
 
         xmlhttp.onreadystatechange=function() {
             if (this.readyState == 4 && this.status == 200) {
@@ -20,9 +20,34 @@ window.onload = function(){
         // window.history.forward(1);
     }
 
+    function apagarTarefa(obj, id)
+    {
+        var resp = confirm("Você realmente deseja remover esta tarefa?");
+        var urll = "http://localhost:3000/Tarefa/" + id;
+
+        if(resp){
+            var xmlhttpp = new XMLHttpRequest();
+            obj.parentNode.removeChild(obj);          
+            xmlhttpp.open("DELETE", urll, true);
+            xmlhttpp.send();
+        }
+    }
 
 
-function ListarTarefas(response)
+    function concluirTarefa(id)
+    {
+        var resp = confirm("Você realmente deseja marcar como concluída esta tarefa?");
+
+        if(resp){
+            id.style.backgroundColor = "#00cc00";
+            id.style.color = "white";
+            // link.style.display = 'none';
+        }
+    }
+
+
+
+    function ListarTarefas(response)
       {
 
         arr = JSON.parse(response);
@@ -31,14 +56,14 @@ function ListarTarefas(response)
 
         for(var i = 0; i < arr.length; i++) 
         {
-            estrutura += "<tr id="+i+">" + 
+            estrutura += "<tr id="+arr[i].codTarefa+">" + 
             "<td>"+arr[i].titulo+"<td>" +
             "<td>"+arr[i].dataEntrega+"<td>" +
             "<td>"+arr[i].relevancia+"<td>" +
-            "<a onclick='concluirTarefa(getElementById('"+i+"'));'><img src='./img/edit.png' width='25' height='25' /></a>" +
-            "<a onclick='apagarTarefa(getElementById('"+i+"'));'><img id='delete' src='./img/delete.png' width='25' height='25'/></a>";
+            "<a onclick='concluirTarefa(getElementById("+arr[i].codTarefa+"));'><img src='./img/edit.png' width='25' height='25'></a>" +
+            "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
+            "<tr>";
         }
-
 
         document.getElementById("div").innerHTML = estrutura;
      

@@ -41,12 +41,12 @@ rota.get('/Tarefa', (requisicao, resposta) =>{
 execSQL('SELECT * FROM Tarefa', resposta);
 })
 
-rota.post('/Usuario', (requisicao, resposta) =>{
-const nome = requisicao.body.nomee.substring(0,150);
-const senha = requisicao.body.senhaa;
-const data = requisicao.body.dataNasc;
-execSQL(`INSERT INTO Usuario(nomeUsuario, dataNascimento, senhaUsuario) VALUES('${nome}','${data}','${senha}')`, resposta);
-})
+rota.get('/Tarefa/:codUsuario?', (requisicao, resposta) => {
+let filtro = '';
+if (requisicao.params.codUsuario)
+filtro = ` WHERE codUsuario='` + requisicao.params.codUsuario + `'`;
+execSQL('SELECT * from Tarefa' + filtro, resposta);
+});
 
 /*var cod = rota.get('/Usuario/:nomeUsuario?', (requisicao, resposta) => {
 let filtro = '';
@@ -63,6 +63,11 @@ const urgenciaa = requisicao.body.urg;
 const codigo = requisicao.body.cod;
 execSQL(`INSERT INTO Tarefa(titulo,dataEntrega,relevancia,codUsuario) VALUES('${tituloo}','${prazoo}','${urgenciaa}','${codigo}')`, resposta);
 })
+
+rota.delete('/Tarefa/:codTarefa?', (requisicao, resposta) =>{ 
+	execSQL('DELETE FROM Tarefa WHERE codTarefa=' + requisicao.params.codTarefa, resposta); 
+})
+
 
 
 // const cod = parseInt(execSQL('SELECT COUNT(codUsario) from Usuario'));
