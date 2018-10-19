@@ -23,6 +23,7 @@
     function MostrarPergunta(response)
     {
     	arr = JSON.parse(response);
+        alert(arr[0].pergunta);
     	var estrutura = "";
 
 		estrutura += 

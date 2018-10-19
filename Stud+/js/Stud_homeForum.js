@@ -24,7 +24,7 @@
 
 	function ListarPerguntas(response)
 	{
-    arr = JSON.parse(response);
+        arr = JSON.parse(response);
 		var input = document.getElementById('quest').value;
 
     for(var i = 0; i < arr.length; i++)
@@ -35,8 +35,8 @@
     document.getElementById('group').innerHTML = estrutura; 
 	}
 
-  function criarPag(cod)
-  {
-    location.href = "./modelo.html";
-    sessionStorage.setItem('codPerg',cod);  
-  }
+      function criarPag(cod)
+      {
+        location.href = "./modelo.html";
+        sessionStorage.setItem('codPerg',cod);    
+      }
