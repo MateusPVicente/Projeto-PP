@@ -1,3 +1,7 @@
+@font-face{
+    src: url('../Comfortaa-Bold.ttf');
+    font-family: "Comfortaa";
+}
 
 body {
     margin: 0;
@@ -26,4 +30,10 @@ body {
 
 table td a{
     cursor: pointer;
+}
+
+tr
+{
+    font-family: "Comfortaa";
+    font-size: 18px;
 }

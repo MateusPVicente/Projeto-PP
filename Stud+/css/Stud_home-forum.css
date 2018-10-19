@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -15,4 +14,9 @@ body {
 h2{
     font-family: "Century Gothic";
     color: black;
+}
+
+a:hover{
+	cursor: pointer;
+	user-select: none;
 }

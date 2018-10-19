@@ -15,13 +15,20 @@
  drop table Desempenho
  drop table Acesso
  drop table Tarefa
- drop table StatusTarefa
- drop table Forum 
+ drop table Pergunta
+ drop table Resposta
+
+ alter table Resposta
+ check constraint fkcodPergunta
+
+ alter table Pergunta
+ check constraint fkcodUsuarioo2
 
  select * from Usuario
 
  DBCC CHECKIDENT('Usuario', RESEED, 0)
  DBCC CHECKIDENT('Tarefa', RESEED, 0)
+ DBCC CHECKIDENT('Pergunta', RESEED, 0)
 
  delete from Usuario
 
@@ -71,29 +78,24 @@
 
  delete from Tarefa 
 
-
- create table StatusTarefa(
- codStatus int primary key not null,
- tipoStatus varchar(15) not null
- )
-
- select * from StatusTarefa
-
- create table Forum(
- codForum int primary key not null,
- descricao varchar(100) not null,
- codUsuario int not null,
- constraint fkcodUsuario2 foreign key(codUsuario) references Usuario(codUsuario)
- )
-
  create table Pergunta(
  codPergunta int primary key identity(1,1) not null,
- pergunta ntext not null
+ pergunta ntext not null,
+ nomePerguntador varchar(50), 
  )
 
  select * from Pergunta
 
- select * from Forum
+ create table Resposta(
+ codResp int primary key identity(1,1) not null,
+ resposta ntext not null,
+ codUsuario int,
+ codPergunta int,
+ constraint fkcodPergunta foreign key(codPergunta) references Pergunta(codPergunta) ,
+ constraint fkcodUsuariooo2 foreign key(codUsuario) references Usuario(codUsuario) 
+ )
+
+ select * from Resposta
 
  create table Desempenho(
  codDesempenho int primary key not null,

@@ -48,6 +48,20 @@ filtro = ` WHERE codUsuario='` + requisicao.params.codUsuario + `'`;
 execSQL('SELECT * from Tarefa' + filtro, resposta);
 });
 
+rota.get('/Pergunta/:codPergunta?', (requisicao, resposta) => {
+let filtro = '';
+if (requisicao.params.codPergunta)
+filtro = ` WHERE codPergunta='` + requisicao.params.codPergunta + `'`;
+execSQL('SELECT * from Pergunta' + filtro, resposta);
+});
+
+rota.get('/Resposta/:codPergunta?', (requisicao, resposta) => {
+let filtro = '';
+if (requisicao.params.codPergunta)
+filtro = ` WHERE codPergunta='` + requisicao.params.codPergunta + `'`;
+execSQL('SELECT * from Resposta' + filtro, resposta);
+});
+
 /*var cod = rota.get('/Usuario/:nomeUsuario?', (requisicao, resposta) => {
 let filtro = '';
 if (requisicao.params.nomeUsuario)
@@ -64,6 +78,20 @@ const codigo = requisicao.body.cod;
 execSQL(`INSERT INTO Tarefa(titulo,dataEntrega,relevancia,codUsuario,finalizada) VALUES('${tituloo}','${prazoo}','${urgenciaa}','${codigo}', 'N')`, resposta);
 })
 
+rota.post('/Pergunta', (requisicao, resposta) =>{
+const perg = requisicao.body.quest;
+const nome = requisicao.body.nome;
+execSQL(`INSERT INTO Pergunta(pergunta,nomePerguntador) VALUES('${perg}','${nome}')`, resposta);
+})
+
+rota.post('/Resposta', (requisicao, resposta) =>{
+const resp = requisicao.body.textarea1;
+const codUsuario = requisicao.body.codUsu;
+console.log(codUsuario);
+const codPergunta = requisicao.body.codPerg;
+execSQL(`INSERT INTO Resposta(resposta,codUsuario, codPergunta) VALUES('${resp}','${codUsuario}','${codPergunta}')`, resposta);
+})
+
 rota.delete('/Tarefa/:codTarefa?', (requisicao, resposta) =>{ 
 	execSQL('DELETE FROM Tarefa WHERE codTarefa=' + requisicao.params.codTarefa, resposta); 
 })
@@ -78,6 +106,3 @@ execSQL(`INSERT INTO Usuario(nomeUsuario, dataNascimento, senhaUsuario) VALUES('
 rota.patch('/Tarefa/:codTarefa?', (requisicao, resposta) =>{
     execSQL("UPDATE Tarefa SET finalizada='S' WHERE codTarefa=" + requisicao.params.codTarefa, resposta);  
 })
-
-// const cod = parseInt(execSQL('SELECT COUNT(codUsario) from Usuario'));
-// function incrementa(cod){cod++;}

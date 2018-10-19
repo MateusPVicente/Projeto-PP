@@ -24,7 +24,7 @@
         <li><a href="homeLOGADO.html">HOME</a></li>
         <li><a href="sobreLOGADO.html">SOBRE</a></li>
         <li><a href="tarefa.html">TAREFAS</a></li>
-        <li><a>BEM-VINDO, NOMEUSUARIO</a></li>
+        <li><a id="name">BEM-VINDO, NOMEUSUARIO</a></li>
       </ul>
     </div>
   </nav>
@@ -33,7 +33,7 @@
     <li><a href="">HOME</a></li>
     <li><a href="sobre.html">SOBRE</a></li>
     <li><a href="tarefa.html">TAREFAS</a></li>
-    <li><a class="blue-text">BEM-VINDO, NOMEUSUARIO</a></li>
+    <li><a id="name2" class="blue-text">BEM-VINDO, NOMEUSUARIO</a></li>
   </ul>
 
   <div class="fixed-action-btn">
@@ -52,46 +52,36 @@
       </div>
     </div>
 
-  <div id="quadro" class="container col s12 m6">
-    <div class="col s12 m6">
-      <div class="card white darken-1">
-        <div class="card-content black-text">
-          <span class="card-title"><i class="medium material-icons" id="face" >face</i> <p class="nome" >NOMEUSUARIO</p></span>
-          <p id="pergunta">PERGUNTA: Lorem ipsum elit venenatis sapien dictum diam, quisque donec ullamcorper blandit varius turpis faucibus, adipiscing faucibus praesent platea hac. iaculis placerat tempor viverra velit rhoncus quisque, quis potenti neque torquent enim etiam ipsum, interdum orci senectus potenti cras.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <div id="quadro" class="container col s12 m6"></div>
   <br><br><br>
   <h2>RESPOSTAS:</h2>
 
-  <div id="respostas"></div>
-
-  <div id="quadro" class="container col s12 m6">
+  <div id="quadrin" class="container col s12 m6">
     <div class="col s12 m6">
       <div class="card white darken-1">
         <div class="card-content black-text">
-          
-          
             <div class="row">
-            <form class="col s12">
+            <form class="col s12" action="http://localhost:3000/Resposta" method="post">
               <div class="row">
               <div class="input-field col s12">
-              <textarea id="textarea1" class="materialize-textarea"></textarea>
-            <label for="textarea1">Sabe a resposta? Escreva-a aqui para ajudar!</label>
+              <textarea name="textarea1" id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Sabe a resposta? Escreva-a aqui para ajudar!</label>
               </div>
               </div>
-             </form>
+             
              </div>
 
-             <button class="container btn waves-effect waves-light">RESPONDER</button>
-
+             <button id="btnRes" class="container btn waves-effect waves-light">RESPONDER</button>
+             <input type="text" name="codUsu" id="codUsu" style="visibility: hidden;">
+              <input type="text" name="codPerg" id="codPerg" style="visibility: hidden;">
+             </form>
         </div>
       </div>
     </div>
   </div>
-      
+
+  <div id="respostas" class="container col s12 m6"></div>
+
     </body>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/Stud_navbar.js"></script>
@@ -99,4 +89,5 @@
     <script type="text/javascript" src="js/Stud_home.js"></script>
     <script type="text/javascript" src="js/Stud_modal.js"></script>
     <script type="text/javascript" src="js/Stud_modelo.js"></script>
+    <script type="text/javascript" src="js/Stud_resposta.js"></script>
   </html>

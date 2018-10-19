@@ -44,7 +44,7 @@ window.onload = function(){
             xmlhttppp.open("PATCH", urlll, true);
             xmlhttppp.send(); 
             obj.parentNode.removeChild(obj);
-            document.getElementById(id).style.backgroundColor = "#00cc00";
+            document.getElementById(id).style.backgroundColor = "#00b966";
             document.getElementById(id).style.color = "white";
 
         }
@@ -62,34 +62,29 @@ window.onload = function(){
         {
             if(arr[i].finalizada == "N")
             {
-                alert("NORMAL");
                 estrutura += "<tr id="+arr[i].codTarefa+">" + 
                 "<td>"+arr[i].titulo+"<td>" +
                 "<td>"+arr[i].dataEntrega+"<td>" +
                 "<td>"+arr[i].relevancia+"<td>" +
                 "<a onclick='concluirTarefa("+arr[i].codTarefa+", this);'><img src='./img/edit.png' width='25' height='25'></a>" +
                 "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
-                "<tr>";
+                "</tr>";
 
-                document.getElementById("div").innerHTML = estrutura;
+                //document.getElementById("div").innerHTML = estrutura;
             }
-
-            else if(arr[i].finalizada == "S")
+            else
             {
-                alert("ESTILIZANDO...");
-                estrutura += "<tr id="+arr[i].codTarefa+">" + 
+                estrutura += "<tr bgcolor='#00b966' style='color: white; font-weight: bold' id="+arr[i].codTarefa+">" + 
                 "<td>"+arr[i].titulo+"<td>" +
                 "<td>"+arr[i].dataEntrega+"<td>" +
                 "<td>"+arr[i].relevancia+"<td>" +
                 "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
-                "<tr>";
+                "</tr>";
 
-                document.getElementById("div").innerHTML = estrutura;
-                document.getElementById(arr[i].codTarefa).style.backgroundColor = "#00cc00";
-                document.getElementById(arr[i].codTarefa).style.color = "white";
+                //document.getElementById("div").innerHTML = estrutura;
+                //document.getElementById(arr[i].codTarefa).style.color = "white";
             }
 
+            document.getElementById("div").innerHTML = estrutura;
         }
-
-            
     }

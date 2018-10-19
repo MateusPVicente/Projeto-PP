@@ -24,7 +24,7 @@
         <li><a href="homeLOGADO.html">HOME</a></li>
         <li><a href="sobreLOGADO.html">SOBRE</a></li>
         <li><a href="tarefa.html">TAREFAS</a></li>
-        <li><a>BEM-VINDO, NOMEUSUARIO</a></li>
+        <li><a id="name">BEM-VINDO, NOMEUSUARIO</a></li>
       </ul>
     </div>
   </nav>
@@ -33,7 +33,7 @@
     <li><a href="">HOME</a></li>
     <li><a href="sobre.html">SOBRE</a></li>
     <li><a href="tarefa.html">TAREFAS</a></li>
-    <li><a class="blue-text">BEM-VINDO, NOMEUSUARIO</a></li>
+    <li><a id="name2" class="blue-text">BEM-VINDO, NOMEUSUARIO</a></li>
   </ul>
 
   <div class="fixed-action-btn">
@@ -61,10 +61,13 @@
   <div id="quadro" class="container col s12 m6">
     <div class="col s12 m6">
       <div class="card white darken-1">
-        <div class="card-content black-text">
+        <div class="card-content black-text center-align">
+          <form  action="http://localhost:3000/Pergunta" method="post">
           <span class="card-title"><p class="nome" >TEM ALGUMA PERGUNTA?</p></span>
-          <textarea id="quest" class="materialize-textarea" placeholder="ESCREVA AQUI"></textarea>
+          <textarea name="quest" id="quest" class="materialize-textarea" placeholder="ESCREVA AQUI"></textarea>
           <button class="container btn waves-effect waves-light" id="btnQuest">PERGUNTAR</button>
+          <input type="text" name="nome" id="nome" style="visibility: hidden;">
+         </form>
         </div>
       </div>
     </div>
@@ -78,6 +81,5 @@
     <script type="text/javascript" src="js/Stud_paralax.js"></script>
     <script type="text/javascript" src="js/Stud_home.js"></script>
     <script type="text/javascript" src="js/Stud_modal.js"></script>
-    <script type="text/javascript" src="js/Stud_modelo.js"></script>
     <script type="text/javascript" src="js/Stud_homeForum.js"></script>
   </html>
