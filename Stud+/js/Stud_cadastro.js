@@ -11,18 +11,18 @@
 		if(usuario == "" || senha == "" || confirmarSenha == "" || data == "")
 		{
 			alert("Digite os campos corretamente!");
-			document.getElementById("form").action = "./cadastro.html";
+			window.reload();
 		}
 
 		else if(confirmarSenha != senha)
 		{
 			alert("As senhas digitadas não são iguais!");
-			document.getElementById("form").action = "./cadastro.html";
+			window.reload();
 		}
 		else if(dataAlt >= 2018 || dataAlt < 1900 || dataAlt > 2015)
 		{
 			alert("A data digitada está fora do período válido!");
-			document.getElementById("form").action = "./cadastro.html";
+			window.reload();
 		}
 		else
 		{

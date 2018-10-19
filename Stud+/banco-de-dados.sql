@@ -21,10 +21,9 @@
  select * from Usuario
 
  DBCC CHECKIDENT('Usuario', RESEED, 0)
+ DBCC CHECKIDENT('Tarefa', RESEED, 0)
 
  delete from Usuario
-
- insert into Usuario values('Mateus de Padua Vicente', '29/11/2002', '1234', 1) 
 
  create table Acesso(
  codAcesso int primary key not null,
@@ -46,6 +45,8 @@
  )
 
  select * from Tarefa
+
+ delete from Tarefa
 
  DELETE FROM Tarefa WHERE codTarefa=8
  SELECT * FROM Tarefa WHERE codUsuario = 1

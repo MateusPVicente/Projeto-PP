@@ -7,7 +7,6 @@ window.onload = function(){
 
         xmlhttp.onreadystatechange=function() {
             if (this.readyState == 4 && this.status == 200) {
-                //quando os dados retornarem da requisição serão enviados para a função ExibeDados()
                 ListarTarefas(this.responseText);
             }
         }
@@ -34,7 +33,7 @@ window.onload = function(){
     }
 
 
-    function concluirTarefa(id)
+    function concluirTarefa(id,obj)
     {
         var resp = confirm("Você realmente deseja marcar como concluída esta tarefa?");
         var urlll = "http://localhost:3000/Tarefa/" + id;
@@ -44,9 +43,10 @@ window.onload = function(){
             var xmlhttppp = new XMLHttpRequest();          
             xmlhttppp.open("PATCH", urlll, true);
             xmlhttppp.send(); 
+            obj.parentNode.removeChild(obj);
+            document.getElementById(id).style.backgroundColor = "#00cc00";
+            document.getElementById(id).style.color = "white";
 
-            // document.getElementById(id).style.backgroundColor = "#00cc00";
-            // document.getElementById(id).style.color = "white";
         }
     }
 
@@ -54,7 +54,6 @@ window.onload = function(){
 
     function ListarTarefas(response)
       {
-
         arr = JSON.parse(response);
 
         var estrutura = "";
@@ -63,29 +62,34 @@ window.onload = function(){
         {
             if(arr[i].finalizada == "N")
             {
-                alert("ADICIONANDO PELA PRIMEIRA VEZ");
+                alert("NORMAL");
                 estrutura += "<tr id="+arr[i].codTarefa+">" + 
                 "<td>"+arr[i].titulo+"<td>" +
                 "<td>"+arr[i].dataEntrega+"<td>" +
                 "<td>"+arr[i].relevancia+"<td>" +
-                "<a onclick='concluirTarefa("+arr[i].codTarefa+");'><img src='./img/edit.png' width='25' height='25'></a>" +
+                "<a onclick='concluirTarefa("+arr[i].codTarefa+", this);'><img src='./img/edit.png' width='25' height='25'></a>" +
                 "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
                 "<tr>";
+
+                document.getElementById("div").innerHTML = estrutura;
             }
+
             else if(arr[i].finalizada == "S")
             {
-                alert("ESTILIZANDO");
-                estrutura += '<tr style= "background-color: #00cc00, color: white;" id='+arr[i].codTarefa+">" + 
+                alert("ESTILIZANDO...");
+                estrutura += "<tr id="+arr[i].codTarefa+">" + 
                 "<td>"+arr[i].titulo+"<td>" +
                 "<td>"+arr[i].dataEntrega+"<td>" +
                 "<td>"+arr[i].relevancia+"<td>" +
-                "<a onclick='concluirTarefa("+arr[i].codTarefa+");'><img src='./img/edit.png' width='25' height='25'></a>" +
                 "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
                 "<tr>";
+
+                document.getElementById("div").innerHTML = estrutura;
+                document.getElementById(arr[i].codTarefa).style.backgroundColor = "#00cc00";
+                document.getElementById(arr[i].codTarefa).style.color = "white";
             }
 
         }
 
-        document.getElementById("div").innerHTML = estrutura;
-     
-  }
+            
+    }
