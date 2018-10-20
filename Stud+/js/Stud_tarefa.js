@@ -26,7 +26,7 @@ window.onload = function(){
 
         if(resp){
             var xmlhttpp = new XMLHttpRequest();
-            obj.parentNode.removeChild(obj);          
+            //obj.parentNode.removeChild(obj);          
             xmlhttpp.open("DELETE", urll, true);
             xmlhttpp.send();
         }

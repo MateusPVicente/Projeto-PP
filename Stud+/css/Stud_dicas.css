@@ -1,0 +1,77 @@
+@font-face{
+    src: url('../Comfortaa-Bold.ttf');
+    font-family: "Comfortaa";
+}
+
+.header{
+    position: absolute;
+    height: 11%;
+    width: 100%;
+}
+
+ul li{
+    font-family: "Righteous";
+}
+
+.logo{
+    position: absolute;
+    width: 130px;
+    top: 12px;
+    left: -40px;
+}
+
+/*p{
+	position: absolute;
+	font-family: "Comfortaa";
+
+	background: -webkit-linear-gradient(left, #256DA4, #277AB9, #2A89D0 100%);
+	background: linear-gradient(to right,  #256DA4, #277AB9, #2A89D0 100%);
+
+	border-bottom-color: #1064A8;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	font-size: 30px;
+	left: 40vw;
+	top: 80%;
+	border-bottom: 2px solid #1064A8;
+	transition: .5s;
+	user-select: none;
+}*/
+
+.h44{
+	font-family: "Comfortaa";
+
+	background: -webkit-linear-gradient(left, #256DA4, #277AB9, #2A89D0 100%);
+	background: linear-gradient(to right,  #256DA4, #277AB9, #2A89D0 100%);
+
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.texto{
+	font-family: "Comfortaa";
+	font-size: 130%;
+	text-align: justify;
+}
+
+/*
+p2
+{
+	position: absolute;
+	font-family: "Comfortaa";
+	color: white;
+	top: 150px;
+	left: 200px;
+	font-size: 40px;
+	user-select: none;
+}*/
+
+h3{
+	color: white;
+	font-family: "Comfortaa";
+}
+
+.parallax-container {
+      height: 60vh;
+    }

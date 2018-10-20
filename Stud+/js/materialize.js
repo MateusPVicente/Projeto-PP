@@ -2871,7 +2871,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     onCloseStart: null,
     onCloseEnd: null,
     preventScrolling: true,
-    dismissible: true,
+    dismissible: false,
     startingTop: '4%',
     endingTop: '10%'
   };

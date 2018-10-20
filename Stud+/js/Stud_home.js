@@ -20,4 +20,6 @@ function voltarAoTopo()
  	img = document.getElementById("imagem").src = "./img/seta.png";
  }
 
+ 
+
 

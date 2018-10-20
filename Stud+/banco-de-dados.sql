@@ -89,13 +89,12 @@
  create table Resposta(
  codResp int primary key identity(1,1) not null,
  resposta ntext not null,
- codUsuario int,
+ nomeRespondedor varchar(50),
  codPergunta int,
- constraint fkcodPergunta foreign key(codPergunta) references Pergunta(codPergunta) ,
- constraint fkcodUsuariooo2 foreign key(codUsuario) references Usuario(codUsuario) 
+ constraint fkcodPergunta foreign key(codPergunta) references Pergunta(codPergunta)  
  )
 
- select * from Resposta
+  select * from Resposta
 
  create table Desempenho(
  codDesempenho int primary key not null,

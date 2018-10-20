@@ -62,6 +62,7 @@ filtro = ` WHERE codPergunta='` + requisicao.params.codPergunta + `'`;
 execSQL('SELECT * from Resposta' + filtro, resposta);
 });
 
+
 /*var cod = rota.get('/Usuario/:nomeUsuario?', (requisicao, resposta) => {
 let filtro = '';
 if (requisicao.params.nomeUsuario)
@@ -86,10 +87,9 @@ execSQL(`INSERT INTO Pergunta(pergunta,nomePerguntador) VALUES('${perg}','${nome
 
 rota.post('/Resposta', (requisicao, resposta) =>{
 const resp = requisicao.body.textarea1;
-const codUsuario = requisicao.body.codUsu;
-console.log(codUsuario);
+const nome = requisicao.body.nome;
 const codPergunta = requisicao.body.codPerg;
-execSQL(`INSERT INTO Resposta(resposta,codUsuario, codPergunta) VALUES('${resp}','${codUsuario}','${codPergunta}')`, resposta);
+execSQL(`INSERT INTO Resposta(resposta,nomeRespondedor,codPergunta) VALUES('${resp}','${nome}','${codPergunta}')`, resposta);
 })
 
 rota.delete('/Tarefa/:codTarefa?', (requisicao, resposta) =>{ 
