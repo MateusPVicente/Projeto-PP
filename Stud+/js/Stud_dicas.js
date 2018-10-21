@@ -80,8 +80,9 @@
  {
  	titulo.innerHTML = "RESUMOS";
 
- 	texto.innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbspO descanso é essencial para manter a mente tranquila. Apenas o esforço sem pausas não faz bem para sua saúde mental, só deixa-o mais cansado e sem vontade de estudar. " +
- 	"<br>&nbsp&nbsp&nbsp&nbsp&nbspPara obter um bom resultado de seus desempenho, insira no seu cronograma de estudos um período de lazer e descanso. Que tal dar uma sonequinha? Pode ir, mas não se esqueça de volta depois, hein?!"
+ 	texto.innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbspPrimeiramente é necessário que definamos o termo resumo: Resumo é um documento que contém a síntese de um texto/conteúdo podendo ser realizado em estrutura de parágrafos ou em tópicos. <br>&nbsp&nbsp&nbsp&nbsp&nbspSendo assim, "+
+	"já é possível notar qual será a função dele em sua jornada: auxiliar na hora de estudo, visualizando apenas os pontos principais que devem ser compreendidos, além de poupar seu tempo de ficar lendo toda aquela teoria! <br>&nbsp&nbsp&nbsp&nbsp&nbspPara melhorar ainda mais seu rendimento, procure "+
+	"utilizar várias cores de canetas para diferenciar títulos, textos, tópicos, curiosidades, etc. Vamos treinar!";	 			
 
 	imagem.src= "img/d6.png";	
  }

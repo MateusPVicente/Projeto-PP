@@ -35,7 +35,7 @@ f1{
     font-family: "Righteous";
 }
 
-h2{
+#h2{
     font-size: 2rem;
     font-family: "Righteous";
     text-align: center;
@@ -90,4 +90,14 @@ div #cr{
 .efeito {
   opacity: 1;
   transition: .2s;
+}
+
+#c
+{
+    font-family: "Comfortaa";
+}
+
+#v
+{
+    font-family: "Righteous";
 }

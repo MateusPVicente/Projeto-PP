@@ -16,14 +16,6 @@ body {
     width: 100%;
 }
 
-.desp{
-	position: relative;
-	top: 30px;
-	left: 10%;
-	max-width: 80%;
-	height: auto;
-}
-
 #table{
 	border: 5px solid #20cdc4;
 }
@@ -37,3 +29,27 @@ tr
     font-family: "Comfortaa";
     font-size: 18px;
 }
+
+.img
+{
+    max-width: 100%;
+    height: auto;
+    position: relative;
+}
+
+#v
+{
+    user-select: none;
+}
+
+#n{
+    font-weight: bold;
+    font-family: "Comfortaa";
+}
+
+#m
+{
+    font-weight: bold;
+    font-family: "Comfortaa";
+}
+

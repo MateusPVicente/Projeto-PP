@@ -12,16 +12,6 @@ body {
     width: 100%;
 }
 
-.nt{
-	font-family: Century Gothic;
-	font-weight: bold;
-	color: black;
-	position: relative;
-	top: 20px;
-	left: 0%;
+#nt{
+	font-family: "Comfortaa";
 }
-
-/*#nt{
-	position: relative;
-	left: 120px;
-}*/

@@ -20,3 +20,8 @@ a:hover{
 	cursor: pointer;
 	user-select: none;
 }
+
+#c
+{
+    font-family: "Comfortaa";
+}

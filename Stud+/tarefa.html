@@ -49,10 +49,39 @@
 
       </div>
     </div>
-    <br><br>
-    <img class="desp" src="img/desp.png">
-    <br><br><br><br>
-    <h2 class="cyan-text text-darken-1">SUAS TAREFAS:</h2>
+    <br>
+
+    <!-- CARD AQUI -->
+
+    <div class="row">
+    <div class="col s12 m12 l12">
+      <div class="card green accent-2">
+        <div class="card-content white-text">
+          <div class="center-align"><img class="img" src="img/perfil.png"></div>
+          <h5 class="center-align" id="c">NomeUsuario</h5>
+          <br><br>
+          <!------------------------>
+
+          <div class="row">
+            <div class="col s12 m12 l12">
+              <div class="card teal lighten-1">
+                <div class="card-content white-text">
+                  <h4 id="v" class="center-align white-text">DESEMPENHO: %</h4>
+              </div>
+            </div>
+          </div>
+          
+          <!------------------------>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!--------------->
+    <br>
+    <p id="h2" class="cyan-text text-darken-1">SUAS TAREFAS:</p>
+    <div id="n" class="center-align white-text"><a href="#modal3" class="modal-trigger waves-effect waves-light btn-large btn">FILTRAR</a></div>
     <br><br>
 
     <table id="table" class="centered responsive-table">
@@ -74,6 +103,51 @@
 
     
     <br><br><br><br><br>
+
+    <!------------------------>
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+            <h5 id="m" class="center-align black-text">FILTRE PARA ENCONTRAR SUAS TAREFAS MAIS FACILMENTE!</h5>
+
+            <div class="s12 m12 l12">
+
+            <p>
+              <label>
+                <input name="group1" type="radio" checked />
+                <span>A-Z</span>
+              </label>
+            </p>
+
+            <p>
+              <label>
+                <input name="group1" type="radio" />
+                <span>PRAZO</span>
+              </label>
+            </p>
+
+            <p>
+              <label>
+                <input name="group1" type="radio" />
+                <span>RELEVÂNCIA</span>
+              </label>
+            </p>
+
+            <p>
+              <label>
+                <input name="group1" type="radio" />
+                <span>CONCLUÍDAS</span>
+              </label>
+            </p>
+
+            </div>
+
+            <div id="n" class="center-align white-text"><a href="#modal3" class="modal-trigger waves-effect waves-light btn-large btn">PRONTO!</a></div>
+
+        </div>
+      </div>
+
+
+    <!------------------------>
 
       
     </body>

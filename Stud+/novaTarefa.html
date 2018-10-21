@@ -50,15 +50,15 @@
 
       </div>
     </div>
-
-  <h2 class="nt">NOVA TAREFA:</h2>
+  <br><br>
+  <h3 id="nt" class="black-text center">NOVA TAREFA:</h3>
 
   <br><br>
 
   <div class="row container">
     <form class="col s12" action="http://localhost:3000/Tarefa" method="post">
 
-      <input type="text" name="cod" id="cod">
+      <input type="text" name="cod" id="cod" style="visibility: hidden">
 
       <div class="row">
         <div class="input-field col s12">
@@ -86,7 +86,8 @@
 
      <!-- <a  onclick="validaForm2();" id="nt" class=" container waves-effect waves-light btn-large"><i class="material-icons left">library_add</i>NOVA TAREFA<a/> -->
 
-      <button onclick="validaForm2()" id="nt" class="right container btn-large waves-effect waves-light" type="submit" name="submit"><txt >NOVA TAREFA</txt><i class="material-icons right">library_add</i>
+      <div class="center-align"><button onclick="validaForm2()" id="nt" class="btn-large waves-effect waves-light" type="submit" name="submit"><txt >NOVA TAREFA</txt><i class="material-icons right">library_add</i></div>
+        <br><br>
 
     </form>
   </div>
