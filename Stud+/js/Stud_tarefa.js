@@ -1,4 +1,9 @@
       var arr;
+      var arrTitulo = new Array();
+      var arrTitOrdenado = new Array();
+      var arrData = new Array();
+      var arrRelevacia = new Array();
+      var ordenado = false;
 
 window.onload = function(){
 
@@ -7,6 +12,9 @@ window.onload = function(){
 
         xmlhttp.onreadystatechange=function() {
             if (this.readyState == 4 && this.status == 200) {
+
+
+
                 ListarTarefas(this.responseText);
             }
         }
@@ -69,37 +77,114 @@ window.onload = function(){
         }
     }
 
+    function OrdemAlfabetica(array)
+    {
+        var items = array;
+
+        items.sort(function (a, b) 
+        {
+                console.log(a);
+                console.log(b);
+              if (a > b) {
+                console.log("a > b");
+                return 1;
+              }
+
+              if (a < b) {
+                console.log("a < b");
+                return -1;
+              }
+
+              console.log("a = b");
+              return 0;
+        });
+
+        arrTitOrdenado = items;
+        ordenado = true;
+
+        // location.reload();
+    }
+
+    document.getElementById("n").onclick = function()
+    {
+        var alf = document.getElementById("r1");
+        var prazo = document.getElementById("r2");
+        var relev = document.getElementById("r3");
+        var conc = document.getElementById("r4");
+
+        if(alf.checked)
+        {
+            OrdemAlfabetica(arrTitulo);
+        }
+    }
 
 
     function ListarTarefas(response)
       {
         arr = JSON.parse(response);
-
         var estrutura = "";
         var qtdConcluidas = 0;
+
+        //--------------------------------------------
+
+        for(var v = 0; v < arr.length; v++)
+        {
+            arrTitulo[v] = arr[v].titulo;
+            arrData[v] = arr[v].dataEntrega;
+            arrRelevacia[v] = arr[v].relevancia;
+        }
+
+        //--------------------------------------------
 
         for(var i = 0; i < arr.length; i++) 
         {
             if(arr[i].finalizada == "N")
             {
-                estrutura += "<tr id="+arr[i].codTarefa+">" + 
-                "<td>"+arr[i].titulo+"<td>" +
-                "<td>"+arr[i].dataEntrega.substring(0,10)+"<td>" +
-                "<td>"+arr[i].relevancia+"<td>" +
-                "<a onclick='concluirTarefa("+arr[i].codTarefa+", this);'><img src='./img/edit.png' width='25' height='25'></a>" +
-                "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
-                "</tr>";
+                
+                if(ordenado)
+                {
+                    alert("oi");
+                    estrutura += "<tr id="+arr[i].codTarefa+">" + 
+                    "<td>"+arrTitOrdenado[i]+"<td>" +
+                    "<td>"+arrData[i].substring(0,10)+"<td>" +
+                    "<td>"+arrRelevacia[i]+"<td>" +
+                    "<a onclick='concluirTarefa("+arr[i].codTarefa+", this);'><img src='./img/edit.png' width='25' height='25'></a>" +
+                    "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
+                    "</tr>"; 
+                }
 
-                //document.getElementById("div").innerHTML = estrutura;
+                else
+                {
+                    estrutura += "<tr id="+arr[i].codTarefa+">" + 
+                    "<td>"+arrTitulo[i]+"<td>" +
+                    "<td>"+arrData[i].substring(0,10)+"<td>" +
+                    "<td>"+arrRelevacia[i]+"<td>" +
+                    "<a onclick='concluirTarefa("+arr[i].codTarefa+", this);'><img src='./img/edit.png' width='25' height='25'></a>" +
+                    "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
+                    "</tr>";
+                }
             }
             else
             {
-                estrutura += "<tr bgcolor='#00b966' style='color: white; font-weight: bold' id="+arr[i].codTarefa+">" + 
-                "<td>"+arr[i].titulo+"<td>" +
-                "<td>"+arr[i].dataEntrega.substring(0,10)+"<td>" +
-                "<td>"+arr[i].relevancia+"<td>" +
-                "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
-                "</tr>";
+                if(ordenado)
+                {
+                    estrutura += "<tr bgcolor='#00b966' style='color: white; font-weight: bold' id="+arr[i].codTarefa+">" + 
+                    "<td>"+arrTitOrdenado[i]+"<td>" +
+                    "<td>"+arrData[i].substring(0,10)+"<td>" +
+                    "<td>"+arrRelevacia[i]+"<td>" +
+                    "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
+                    "</tr>";
+                }
+
+                else
+                {
+                    estrutura += "<tr bgcolor='#00b966' style='color: white; font-weight: bold' id="+arr[i].codTarefa+">" + 
+                    "<td>"+arrTitulo[i]+"<td>" +
+                    "<td>"+arrData[i].substring(0,10)+"<td>" +
+                    "<td>"+arrRelevacia[i]+"<td>" +
+                    "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
+                    "</tr>";
+                }
 
                 qtdConcluidas++;
 
