@@ -62,15 +62,6 @@ filtro = ` WHERE codPergunta='` + requisicao.params.codPergunta + `'`;
 execSQL('SELECT * from Resposta' + filtro, resposta);
 });
 
-
-/*var cod = rota.get('/Usuario/:nomeUsuario?', (requisicao, resposta) => {
-let filtro = '';
-if (requisicao.params.nomeUsuario)
-filtro = ` WHERE nomeUsuario='` + requisicao.params.nomeUsuario + `'`;
-execSQL('SELECT codUsuario from Usuario' + filtro, resposta);
-});
-*/
-
 rota.post('/Tarefa', (requisicao, resposta) =>{
 const tituloo = requisicao.body.tit;
 const prazoo = requisicao.body.pra;

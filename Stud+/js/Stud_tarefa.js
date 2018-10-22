@@ -77,7 +77,7 @@ window.onload = function(){
 
         }
     }
-
+//----------------------ORDENAÇÃO-------------------------------------------
     function OrdemAlfabetica(array)
     {
         var items = array;
@@ -155,7 +155,7 @@ window.onload = function(){
 
         ordenado = true;
     }
-
+//---------------------------------------------------------------------------
     document.getElementById("sla").onclick = function(){
         $('#modal3').modal('open');
     }

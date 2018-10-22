@@ -32,26 +32,20 @@
 	  	if(titulo == "" || prazo == "" || urgencia == "")
 	  	{
 	  		alert("Digite as informações corretamente!");
-	  		window.reload();
 	  	}
 	  	else if(dataDesejada < dataAtual)
 	  	{
 	  		alert("A data digitada está fora do período válido!");
-	  		window.reload();
 	  	}
 	  	else if(urgencia != "Alta" && urgencia != "Média" && urgencia != "Pequena")
 	  	{
 	  		alert("Classificação de urgencia inválida!");
-	  		window.reload();
 	  	}
 	  	else
 	  	{
 	  		alert("Sua tarefa foi adicionada com sucesso!");
-	  		//valCod = sessionStorage.getItem('cod');
 	  	}
-	  }
-
-	  //var valCod = document.getElementById('cod').value;
+	  } 
 
 	  window.onload = function()
 	  {

@@ -1,5 +1,5 @@
-	var estrutura = "";
-	var HTML = "";
+  var estrutura = "";
+  var HTML = "";
   var arr;
 
   window.onload = function(){
