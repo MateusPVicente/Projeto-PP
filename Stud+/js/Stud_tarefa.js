@@ -1,9 +1,10 @@
       var arr;
       var arrTitulo = new Array();
-      var arrTitOrdenado = new Array();
       var arrData = new Array();
       var arrRelevacia = new Array();
       var ordenado = false;
+      var filtro = 'a';
+      var ajuda;
 
 window.onload = function(){
 
@@ -12,10 +13,8 @@ window.onload = function(){
 
         xmlhttp.onreadystatechange=function() {
             if (this.readyState == 4 && this.status == 200) {
-
-
-
-                ListarTarefas(this.responseText);
+                ajuda = this.responseText;
+                ListarTarefas(this.responseText, filtro);
             }
         }
 
@@ -69,7 +68,9 @@ window.onload = function(){
             var xmlhttppp = new XMLHttpRequest();          
             xmlhttppp.open("PATCH", urlll, true);
             xmlhttppp.send(); 
+
             obj.parentNode.removeChild(obj);
+
             document.getElementById(id).style.backgroundColor = "#00b966";
             document.getElementById(id).style.color = "white";
             location.href = "tarefa.html";
@@ -83,26 +84,80 @@ window.onload = function(){
 
         items.sort(function (a, b) 
         {
-                console.log(a);
-                console.log(b);
-              if (a > b) {
-                console.log("a > b");
-                return 1;
-              }
+            if (a.titulo.toUpperCase() > b.titulo.toUpperCase()) {
+              return 1;
+            }
 
-              if (a < b) {
-                console.log("a < b");
-                return -1;
-              }
+            if (a.titulo.toUpperCase() < b.titulo.toUpperCase()) {
+               return -1;
+            }
 
-              console.log("a = b");
-              return 0;
+            return 0;
         });
 
-        arrTitOrdenado = items;
         ordenado = true;
+    }
 
-        // location.reload();
+    function OrdemDePrazo(array)
+    {
+        var items = array;
+
+        items.sort(function (a, b) 
+        {
+            if (a.dataEntrega.toUpperCase() > b.dataEntrega.toUpperCase()) {
+              return 1;
+            }
+
+            if (a.dataEntrega.toUpperCase() < b.dataEntrega.toUpperCase()) {
+               return -1;
+            }
+
+            return 0;
+        });
+    }
+
+    function OrdemDeRelevancia(array)
+    {
+        var items = array;
+
+        items.sort(function (a, b) 
+        {
+            if (a.relevancia.toUpperCase() > b.relevancia.toUpperCase()) {
+              return 1;
+            }
+
+            if (a.relevancia.toUpperCase() < b.relevancia.toUpperCase()) {
+              return -1;
+            }
+
+            return 0;
+        });
+
+        ordenado = true;
+    }
+
+    function OrdemDeConcluida(array)
+    {
+        var items = array;
+
+        items.sort(function (a, b) 
+        {
+            if (a.finalizada.toUpperCase() > b.finalizada.toUpperCase()) {
+              return 1;
+            }
+
+            if (a.finalizada.toUpperCase() < b.finalizada.toUpperCase()) {
+               return -1;
+            }
+
+            return 0;
+        });
+
+        ordenado = true;
+    }
+
+    document.getElementById("sla").onclick = function(){
+        $('#modal3').modal('open');
     }
 
     document.getElementById("n").onclick = function()
@@ -114,16 +169,43 @@ window.onload = function(){
 
         if(alf.checked)
         {
-            OrdemAlfabetica(arrTitulo);
+            filtro = 'a';
+            ListarTarefas(ajuda, filtro);
         }
+        else if(prazo.checked) {
+            filtro = 'b';
+            ListarTarefas(ajuda, filtro);
+        }
+        else if(relev.checked) {
+            filtro = 'c';
+            ListarTarefas(ajuda, filtro);
+        }
+        else if(conc.checked) {
+            filtro = 'd';
+            ListarTarefas(ajuda, filtro);
+        }
+
+        $('#modal3').modal('close');
     }
 
 
-    function ListarTarefas(response)
+    function ListarTarefas(response, filtro)
       {
         arr = JSON.parse(response);
         var estrutura = "";
         var qtdConcluidas = 0;
+        if(filtro == 'a') {
+            OrdemAlfabetica(arr);
+        }
+        else if(filtro == 'b') {
+            OrdemDePrazo(arr);
+        }
+        else if(filtro == 'c') {
+            OrdemDeRelevancia(arr);
+        }
+        else if(filtro == 'd') {
+            OrdemDeConcluida(arr);
+        }
 
         //--------------------------------------------
 
@@ -140,56 +222,24 @@ window.onload = function(){
         {
             if(arr[i].finalizada == "N")
             {
-                
-                if(ordenado)
-                {
-                    alert("oi");
-                    estrutura += "<tr id="+arr[i].codTarefa+">" + 
-                    "<td>"+arrTitOrdenado[i]+"<td>" +
-                    "<td>"+arrData[i].substring(0,10)+"<td>" +
-                    "<td>"+arrRelevacia[i]+"<td>" +
-                    "<a onclick='concluirTarefa("+arr[i].codTarefa+", this);'><img src='./img/edit.png' width='25' height='25'></a>" +
-                    "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
-                    "</tr>"; 
-                }
-
-                else
-                {
-                    estrutura += "<tr id="+arr[i].codTarefa+">" + 
-                    "<td>"+arrTitulo[i]+"<td>" +
-                    "<td>"+arrData[i].substring(0,10)+"<td>" +
-                    "<td>"+arrRelevacia[i]+"<td>" +
-                    "<a onclick='concluirTarefa("+arr[i].codTarefa+", this);'><img src='./img/edit.png' width='25' height='25'></a>" +
-                    "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
-                    "</tr>";
-                }
+                estrutura += "<tr id="+arr[i].codTarefa+">" + 
+                "<td>"+arrTitulo[i]+"<td>" +
+                "<td>"+arrData[i].substring(0,10)+"<td>" +
+                "<td>"+arrRelevacia[i]+"<td>" +
+                "<a onclick='concluirTarefa("+arr[i].codTarefa+", this);'><img src='./img/edit.png' width='25' height='25'></a>" +
+                "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
+                "</tr>";
             }
             else
             {
-                if(ordenado)
-                {
-                    estrutura += "<tr bgcolor='#00b966' style='color: white; font-weight: bold' id="+arr[i].codTarefa+">" + 
-                    "<td>"+arrTitOrdenado[i]+"<td>" +
-                    "<td>"+arrData[i].substring(0,10)+"<td>" +
-                    "<td>"+arrRelevacia[i]+"<td>" +
-                    "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
-                    "</tr>";
-                }
-
-                else
-                {
-                    estrutura += "<tr bgcolor='#00b966' style='color: white; font-weight: bold' id="+arr[i].codTarefa+">" + 
-                    "<td>"+arrTitulo[i]+"<td>" +
-                    "<td>"+arrData[i].substring(0,10)+"<td>" +
-                    "<td>"+arrRelevacia[i]+"<td>" +
-                    "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
-                    "</tr>";
-                }
+                estrutura += "<tr bgcolor='#00b966' style='color: white; font-weight: bold' id="+arr[i].codTarefa+">" + 
+                "<td>"+arrTitulo[i]+"<td>" +
+                "<td>"+arrData[i].substring(0,10)+"<td>" +
+                "<td>"+arrRelevacia[i]+"<td>" +
+                "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
+                "</tr>";
 
                 qtdConcluidas++;
-
-                //document.getElementById("div").innerHTML = estrutura;
-                //document.getElementById(arr[i].codTarefa).style.color = "white";
             }
 
             document.getElementById("div").innerHTML = estrutura;

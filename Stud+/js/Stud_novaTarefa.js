@@ -39,7 +39,7 @@
 	  		alert("A data digitada está fora do período válido!");
 	  		window.reload();
 	  	}
-	  	else if(urgencia != "Alta" && urgencia != "Média" && urgencia != "Baixa")
+	  	else if(urgencia != "Alta" && urgencia != "Média" && urgencia != "Pequena")
 	  	{
 	  		alert("Classificação de urgencia inválida!");
 	  		window.reload();
