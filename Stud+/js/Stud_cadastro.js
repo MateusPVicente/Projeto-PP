@@ -26,7 +26,12 @@
 		}
 		else
 		{
+			alert("qawdfawd");
 			sessionStorage.setItem('nom',usuario);
+			location.href="tarefa.html"
+			// document.getElementById("form").action = "http://localhost:3000/Usuario";
+			// document.getElementById("form").method = "post";
+			
 		}
 
 		// else
