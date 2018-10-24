@@ -1,3 +1,7 @@
+@font-face{
+    src: url('../Comfortaa-Bold.ttf');
+    font-family: "Comfortaa";
+}
 
 body {
     margin: 0;
@@ -111,12 +115,12 @@ div #cr{
 
 .nuvens
 {
-    position: relative;
-    top: 290px;
-    left: 20px;
-    min-width: 90%;
-    max-width: 90%;
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    max-width: 100%;
     height: auto;
+    transform: translate(-20%, -90%);
     z-index: 1;
 }
 
@@ -136,9 +140,13 @@ div #cr{
     font-weight: bold;
     color: white;
     user-select: none;
-    position: relative;
-    top: -30px;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translate(-30%, -40%);
     height: 10px;
+    width: 100%;
+    text-shadow: 2px 5px 10px rgba(0,0,0, .5); /*horizontal, vertical, desfoque, cor*/
 }
 
 #frase2{
@@ -149,4 +157,41 @@ div #cr{
     position: relative;
     top: -310px;
     user-select: none;
+}
+
+#fundo1
+{
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -35%);
+	max-width: 90%;
+	height: auto;
+}
+
+#h2
+{
+	font-family: "Comfortaa";
+    font-weight: bold;
+    color: black;
+    user-select: none;
+    position: absolute;
+    top: 105%;
+    left: 30%;
+    transform: translate(-30%, -105%);
+    height: 10px;
+    width: 100%;
+    text-shadow: 2px 5px 10px rgba(0,0,0, .5); /*horizontal, vertical, desfoque, cor*/
+}
+
+#sec
+{
+	position: absolute;
+	top: 260%;
+	left: 49%;
+	width: 80%;
+	height: 70%;
+	transform: translate(-49%, -190%);
+	background-color: rgba(0,0,0, .1);
+	border-radius: 20px;
 }
