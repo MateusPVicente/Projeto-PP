@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color:#e3f2fd;
+    background-color:white;
 }
 
 .header{
@@ -37,7 +37,8 @@ f1{
 
 #h2{
     font-size: 2rem;
-    font-family: "Righteous";
+    font-family: "Comfortaa";
+    font-weight: bold;
     text-align: center;
     color: #2196f3;
 }
@@ -100,4 +101,52 @@ div #cr{
 #v
 {
     font-family: "Righteous";
+}
+
+.header
+{
+    min-height: 100%;
+    z-index: 0;
+}
+
+.nuvens
+{
+    position: relative;
+    top: 290px;
+    left: 20px;
+    min-width: 90%;
+    max-width: 90%;
+    height: auto;
+    z-index: 1;
+}
+
+.sulf
+{
+    position: relative;
+    top: -30px;
+    left: -580px;
+    width: 8%;
+    height: auto;
+    z-index: 1;
+}
+
+#texto
+{
+    font-family: "Comfortaa";
+    font-weight: bold;
+    color: white;
+    user-select: none;
+    position: relative;
+    top: -30px;
+    height: 10px;
+}
+
+#frase2{
+    font-family: "Comfortaa";
+    font-weight: bold;
+    color: white;
+    z-index: 100;
+    position: relative;
+    top: -310px;
+    user-select: none;
 }
