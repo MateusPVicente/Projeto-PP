@@ -200,12 +200,39 @@ div #cr{
 {
     position: absolute;
     top: 16%;
-    left: 8%;
-    transform: translate(-8%; -16%);
+    left: 20%;
+    transform: translateX(-10%);
     color: white;
     z-index: 100;
     font-family:"Comfortaa";
-    font-size: 350%;
+    font-size: 300%;
     text-shadow: 2px 5px 10px rgba(0,0,0, .5);
     user-select: none;
+}
+
+.cards-container{
+    position: relative;
+    transform: translateY(120%); 
+    background: white;
+    padding: 30px 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.cards-container h2{
+    font-family: "Comfortaa";
+    color: #079992;
+    font-size: 24pt;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.parallax-container{
+    position: relative;
+    transform: translateY(110%);
+    z-index: -1;
+}
+
+#marquinhos
+{
+    z-index: 10;
 }

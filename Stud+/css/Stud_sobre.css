@@ -1,3 +1,7 @@
+@font-face{
+    src: url('../Comfortaa-Bold.ttf');
+    font-family: "Comfortaa";
+}
 
 body {
     margin: 0;

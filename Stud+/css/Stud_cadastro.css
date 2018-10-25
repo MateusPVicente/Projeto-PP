@@ -1,3 +1,7 @@
+@font-face{
+    src: url('../Comfortaa-Bold.ttf');
+    font-family: "Comfortaa";
+}
 
 body {
     margin: 0;
@@ -114,4 +118,21 @@ div #cr{
 #v
 {
     font-family: "Righteous";
+}
+
+#lbCad
+{
+    font-family: "Comfortaa";
+}
+
+#lb
+{
+    z-index: -1;
+    font-size: 15px;
+}
+
+#lb2
+{
+    font-size: 13px;
+    z-index: -1;
 }
