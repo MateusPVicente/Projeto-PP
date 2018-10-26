@@ -10,6 +10,8 @@
  constraint fkcodDesempenho foreign key (codDesempenho) references Desempenho(codDesempenho)
  )
 
+ select * from Usuario
+
 
  drop table Usuario
  drop table Desempenho
@@ -18,8 +20,8 @@
  drop table Pergunta
  drop table Resposta
 
- alter table Resposta
- check constraint fkcodPergunta
+ alter table Tarefa
+ check constraint fkcodUsuarioo
 
  alter table Pergunta
  check constraint fkcodUsuarioo2

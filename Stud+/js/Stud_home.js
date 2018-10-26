@@ -1,4 +1,3 @@
-
 function voltarAoTopo()
 {
      window.scroll({
@@ -19,6 +18,12 @@ function voltarAoTopo()
  	var img = document.getElementById("imagem");
  	img = document.getElementById("imagem").src = "./img/seta.png";
  }
+
+
+ history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, document.URL);
+    });
 
  
 

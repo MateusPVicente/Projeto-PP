@@ -106,3 +106,8 @@ div #cr{
 {
     font-family: "Righteous";
 }
+
+#lb
+{
+    z-index: -1
+}

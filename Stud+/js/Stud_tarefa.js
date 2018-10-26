@@ -24,7 +24,6 @@ window.onload = function(){
         document.getElementById('name').innerHTML = "BEM-VINDO, " + sessionStorage.getItem('nom').toUpperCase();
         document.getElementById('name2').innerHTML = "BEM-VINDO, " + sessionStorage.getItem('nom').toUpperCase();
         document.getElementById('c').innerHTML = sessionStorage.getItem('nom').toUpperCase();       
-        // window.history.forward(1);
     }
 
     function apagarTarefa(obj, id)
@@ -247,3 +246,15 @@ window.onload = function(){
 
         calculaDesempenho(arr.length, qtdConcluidas);
     }
+
+    document.getElementById('sair').onclick = function()
+    {
+        sessionStorage.removeItem('cod');
+        sessionStorage.removeItem('nom');
+        location.href = "home.html"
+    }
+
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, document.URL);
+    });

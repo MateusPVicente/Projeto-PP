@@ -12,7 +12,7 @@ body {
 
 .header{
     position: absolute;
-    height: 11%;
+    height: 13%;
     width: 100%;
 }
 
@@ -22,7 +22,7 @@ ul li{
 
 .logo{
     position: absolute;
-    width: 130px;
+    width: 120px;
     top: 12px;
     left: -40px;
 }
@@ -45,18 +45,6 @@ f1{
     font-weight: bold;
     text-align: center;
     color: #2196f3;
-}
-
-h6{
-    text-align: center;
-    color: black;
-    font-family: "Century Gothic";
-}
-
-h4{
-    text-align: center;
-    color: black;
-    font-family: "Century Gothic";
 }
 
 div #cr{
@@ -107,132 +95,42 @@ div #cr{
     font-family: "Righteous";
 }
 
-.header
-{
-    min-height: 100%;
-    z-index: 0;
-}
-
-.nuvens
-{
-    position: absolute;
-    top: 95%;
-    left: 20%;
-    max-width: 100%;
-    height: auto;
-    transform: translate(-20%, -95%);
-    z-index: 1;
-}
-
-.sulf
+.sec
 {
     position: relative;
-    top: -30px;
-    left: -580px;
-    width: 8%;
-    height: auto;
-    z-index: 1;
+    top: -100px;
+    left: 0%;
+    z-index: -1;
+
+}
+
+.slider
+{
+    z-index: 1
+}
+
+#h{
+    background-color: white;
+    border-radius: 50px;
+}
+
+#f1
+{
+    text-shadow: 2px 5px 10px rgba(0,0,0, .5);
 }
 
 #texto
 {
-    font-family: "Comfortaa";
-    font-weight: bold;
-    color: white;
-    user-select: none;
-    position: absolute;
-    top: 40%;
-    left: 30%;
-    transform: translate(-30%, -40%);
-    height: 10px;
-    width: 100%;
-    text-shadow: 2px 5px 10px rgba(0,0,0, .5); /*horizontal, vertical, desfoque, cor*/
+    font-family: "Righteous";
 }
 
-#frase2{
-    font-family: "Comfortaa";
-    font-weight: bold;
-    color: white;
-    z-index: 100;
+#texto2
+{
     position: relative;
-    top: -310px;
-    user-select: none;
+    top: 150px;
 }
 
-#fundo1
+#sec1
 {
-	position: absolute;
-	top: 35%;
-	left: 50%;
-	transform: translate(-50%, -35%);
-	max-width: 90%;
-	height: auto;
-}
-
-#h2
-{
-	font-family: "Comfortaa";
-    font-weight: bold;
-    color: #079992;
-    user-select: none;
-    position: absolute;
-    top: 105%;
-    left: 30%;
-    transform: translate(-30%, -105%);
-    height: 10px;
-    width: 100%;
-   /*horizontal, vertical, desfoque, cor*/
-}
-
-#sec
-{
-	position: absolute;
-	top: 330%;
-	left: 49%;
-	width: 80%;
-	height: 100%;
-	transform: translate(-49%, -190%);
-	background-color: rgba(0,0,0, .1);
-	border-radius: 20px;
-}
-
-#h3
-{
-    position: absolute;
-    top: 16%;
-    left: 20%;
-    transform: translateX(-10%);
-    color: white;
-    z-index: 100;
-    font-family:"Comfortaa";
-    font-size: 300%;
-    text-shadow: 2px 5px 10px rgba(0,0,0, .5);
-    user-select: none;
-}
-
-.cards-container{
-    position: relative;
-    transform: translateY(120%); 
-    background: white;
-    padding: 30px 50px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.cards-container h2{
-    font-family: "Comfortaa";
-    color: #079992;
-    font-size: 24pt;
-    text-align: center;
-    margin-bottom: 5%;
-}
-
-.parallax-container{
-    position: relative;
-    transform: translateY(110%);
-    z-index: -1;
-}
-
-#marquinhos
-{
-    z-index: 10;
+    box-shadow: 2px 5px 15px rgba(0,0,0, .5);
 }
