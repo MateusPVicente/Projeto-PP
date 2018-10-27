@@ -95,9 +95,9 @@
           }
           else
           {
-            sessionStorage.setItem('nom',usuario);
+            sessionStorage.setItem('nom', usuario);
             cadastrar($("#form"));
-            location.href = "tarefa.html"
+            location.href = "cadastroSucesso.html"
           } 
       }
 }

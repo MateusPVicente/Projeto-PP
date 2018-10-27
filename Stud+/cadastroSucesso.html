@@ -10,9 +10,9 @@
       <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 
       <!-- <link rel="stylesheet" type="text/css" href=".\css\Stud_home.css"> -->
-      <link rel="stylesheet" type="text/css" href=".\css\Stud_sobre.css">
+      <link rel="stylesheet" type="text/css" href=".\css\Stud_home.css">
     </head>
-    <body>
+    <body onload = "document.getElementById('txtS').innerHTML = 'OLÁ '+sessionStorage.getItem('nom').toUpper+'! BEM-VINDO(A) AO STUD+!'">
 
   <nav>
     <img class="header" class="responsive-img" src="./img/fundo3.png">
@@ -22,6 +22,7 @@
       <ul class="right hide-on-med-and-down">
         <li><a href="home.html">HOME</a></li>
         <li><a href="">SOBRE</a></li>
+        <!-- <li><a class="waves-effect waves-light btn modal-trigger" href="#modal2">LOGIN</a></li> -->
       </ul>
     </div>
   </nav>
@@ -34,17 +35,15 @@
 
   <br><br>
 
-  <h3 id="a" class="blue-text text-darken-3 center">SOBRE NÓS</h3>
+  <h4 class="teal-text center-align" id="txtS">OLÁ NOMEUSUARIO! BEM-VINDO(A) AO STUD+!</h4>
 
-  <hr class="hr">
+  <div class="center-align"><img src="img/cadastro.png" class="responsive-img" id="imga"></div>
 
-  <img class="sobre" src="./img/sobre.png">
+  <br><br>
 
-        <img src=".\img\seta.png" id="img" class="seta" onmouseover="hoverSeta();" onmouseout="sairHoverSeta();" onclick="voltarAoTopo();">
+  <div class="center-align"><a href="home.html" id="texto" class="container waves-effect waves-light btn-large">EXPLORAR!</a></div>
 
-
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal">
+    <div id="modal2" class="modal">
       <div class="modal-content">
         <h4>LOGIN</h4>
         <form action="tarefa.html">
@@ -57,12 +56,7 @@
         </tr>
 
         <br><br>
-        <input type="submit" id="btnEntrar" class="btn waves-effect waves-light" value="Entrar">
-
-        <br><br>
-        <h6>Não possui uma conta? Cadastre-se agora!</h6>
-        <br>
-        <a href="cadastro.html" id="btnCadastrar" class="waves-effect waves-light btn">Cadastre-se</a>
+        <input type="submit" id="btnEntrar" class="btn waves-effect waves-light" value="Vamos lá!">
 
         </form>
       </div>

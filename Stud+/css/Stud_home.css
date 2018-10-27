@@ -112,11 +112,18 @@ div #cr{
 #h{
     background-color: white;
     border-radius: 50px;
+    user-select: none;
+}
+
+#hh
+{
+    user-select: none;
 }
 
 #f1
 {
     text-shadow: 2px 5px 10px rgba(0,0,0, .5);
+    user-select: none;
 }
 
 #texto
@@ -133,4 +140,23 @@ div #cr{
 #sec1
 {
     box-shadow: 2px 5px 15px rgba(0,0,0, .5);
+}
+
+#txtS
+{
+    font-family: "Righteous";
+}
+
+#imga
+{
+    width: 40%;
+    transform: translateY(20px);
+    transition: .3s;
+    animation-timing-function: ease-in;
+}
+
+#imga:hover
+{
+    transform: translateY(-20px);
+    transition: .3s;
 }
