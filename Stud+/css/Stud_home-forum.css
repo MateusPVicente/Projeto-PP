@@ -109,10 +109,21 @@ div #cr{
 
 #c
 {
-    font-family: "Comfortaa";
+    font-family: "Righteous";
+    text-shadow: 2px 5px 10px rgba(0,0,0, .5);
+}
+
+#cc
+{
+    box-shadow: 2px 5px 10px rgba(0,0,0, .5);
 }
 
 #v
+{
+    font-family: "Righteous";
+}
+
+#aa
 {
     font-family: "Righteous";
 }

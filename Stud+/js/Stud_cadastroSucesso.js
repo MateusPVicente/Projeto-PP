@@ -20,3 +20,8 @@
  {
  	document.getElementById('txtS').innerHTML = 'OLÁ '+sessionStorage.getItem('nom').toUpperCase()+'! BEM-VINDO(A) AO STUD+!'
  }
+
+ document.getElementById('texto').onclick = function()
+ {
+ 	location.href = "home.html";
+ }

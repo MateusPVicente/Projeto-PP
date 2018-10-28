@@ -88,15 +88,15 @@ rota.delete('/Tarefa/:codTarefa?', (requisicao, resposta) =>{
 })
 
 rota.delete('/Pergunta/:codPergunta?', (requisicao, resposta) =>{ 
-	execSQL('DELETE FROM Pergunta WHERE codPergunta=' + requisicao.params.codPergunta, resposta); 
-	execSQL('DELETE FROM Resposta WHERE codPergunta=' + requisicao.params.codPergunta, resposta); 
+	execSQL('DELETE FROM Resposta WHERE codPergunta=' + requisicao.params.codPergunta, resposta);
+	execSQL('DELETE FROM Pergunta WHERE codPergunta=' + requisicao.params.codPergunta, resposta); 	 
 })
 
 rota.delete('/Usuario/:codUsuario?/:nomeUsuario?', (requisicao, resposta) =>{ 
-	execSQL('DELETE FROM Usuario WHERE codUsuario=' + requisicao.params.codUsuario, resposta); 
-	execSQL('DELETE FROM Pergunta WHERE nomePerguntador=' + requisicao.params.nomeUsuario, resposta); 
-	execSQL('DELETE FROM Resposta WHERE nomeRespondedor=' + requisicao.params.nomeUsuario, resposta);
-	execSQL('DELETE FROM Tarefa WHERE codUsuario=' + requisicao.params.codUsuario, resposta); 
+	execSQL(`DELETE FROM Tarefa WHERE codUsuario=  ${requisicao.params.codUsuario}`, resposta); 
+	execSQL(`DELETE FROM Usuario WHERE codUsuario= ${requisicao.params.codUsuario}`, resposta); 
+	execSQL(`DELETE FROM Resposta WHERE nomeRespondedor='${requisicao.params.nomeUsuario}'`, resposta);
+	execSQL(`DELETE FROM Pergunta WHERE nomePerguntador='${requisicao.params.nomeUsuario}'`, resposta); 	
 })
 
 rota.post('/Usuario', (requisicao, resposta) =>{

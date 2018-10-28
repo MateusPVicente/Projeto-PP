@@ -151,7 +151,7 @@ div #cr{
 {
     width: 40%;
     transform: translateY(20px);
-    animation: pulo 2s linear infinite;
+    animation: pulo 1s linear infinite;
 }
 
 @keyframes pulo
@@ -170,4 +170,9 @@ div #cr{
     {
         transform: translateY(-20px);
     }
+}
+
+#fonte
+{
+    font-family: "Righteous";
 }
