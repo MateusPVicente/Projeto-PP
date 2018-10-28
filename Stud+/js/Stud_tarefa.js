@@ -251,10 +251,16 @@ window.onload = function(){
     {
         sessionStorage.removeItem('cod');
         sessionStorage.removeItem('nom');
+        sessionStorage.removeItem('sen');
         location.href = "home.html"
     }
 
-    history.pushState(null, null, document.URL);
-    window.addEventListener('popstate', function () {
-        history.pushState(null, null, document.URL);
-    });
+    // history.pushState(null, null, document.URL);
+    // window.addEventListener('popstate', function () {
+    //     history.pushState(null, null, document.URL);
+    // });
+
+    document.getElementById("alterar").onclick = function()
+    {
+        location.href = "trocarSenha.html"
+    }

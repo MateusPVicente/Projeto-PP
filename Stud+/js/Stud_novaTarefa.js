@@ -43,7 +43,9 @@
 	  	}
 	  	else
 	  	{
+	  		adicionarTaf($("#form2"));
 	  		alert("Sua tarefa foi adicionada com sucesso!");
+	  		window.location = "tarefa.html"
 	  	}
 	  } 
 
@@ -63,6 +65,16 @@
 	  // 	sessionStorage.removeItem('name2');
 	  // 	window.location = "./home.html"
 	  // }
+
+	  adicionarTaf = function(form){
+      $.post( "http://localhost:3000/Tarefa/", form.serialize() ).done(function(data){
+          if (!data.erro) {
+              form.each(function(data)
+              {
+              });
+          }
+      });
+  };   
 
 
        

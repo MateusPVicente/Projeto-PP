@@ -20,20 +20,21 @@ function voltarAoTopo()
  }
 
 
- history.pushState(null, null, document.URL);
-    window.addEventListener('popstate', function () {
-        history.pushState(null, null, document.URL);
-    });
+ // history.pushState(null, null, document.URL);
+ //    window.addEventListener('popstate', function () {
+ //        history.pushState(null, null, document.URL);
+ //    });
 
- document.getElementById('imga').onmouseover = function()
- {
- 	document.getElementById('imga').src = 'img/cadastro2.png'
- }
+ // document.getElementById('imga').onmouseover = function()
+ // {
+ // 	document.getElementById('imga').src = 'img/cadastro2.png'
+ // }
 
-  document.getElementById('imga').onmouseout = function()
- {
- 	document.getElementById('imga').src = 'img/cadastro.png'
- }
+ //  document.getElementById('imga').onmouseout = function()
+ // {
+ // 	document.getElementById('imga').src = 'img/cadastro.png'
+ // }
+
 
  
 

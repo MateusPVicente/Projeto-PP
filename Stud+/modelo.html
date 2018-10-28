@@ -56,7 +56,7 @@
         <div class='col s12 m6'>
           <div class='card white darken-1'>
               <div class='card-content black-text'>
-              <span class='card-title'><i class='medium material-icons' id='face' >face</i> <p class='nome' >SLA</p></span>
+              <span class='card-title'><i class='medium material-icons' id='face' >face</i> <p class='nome' ></p></span>
               <p id='pergunta'>PERGUNTA:</p>
               </div>
           </div>
@@ -65,14 +65,14 @@
 
   
   <br><br><br>
-  <h2>RESPOSTAS:</h2>
+  <h3 id="pers" class="center-align">RESPOSTAS:</h3>
 
   <div id="quadrin" class="container col s12 m6">
     <div class="col s12 m6">
       <div class="card white darken-1">
         <div class="card-content black-text">
             <div class="row">
-            <form class="col s12" action="http://localhost:3000/Resposta" method="post">
+            <form class="col s12" action="" method="" id="form4">
               <input type="text" name="nome" id="nome" style="visibility: hidden;">
               <div class="row">
               <div class="input-field col s12">
@@ -83,7 +83,7 @@
              
              </div>
 
-             <button id="btnRes" class="container btn waves-effect waves-light">RESPONDER</button>
+             <div class="center-align"><a id="btnRes" class="container btn-large waves-effect waves-light">RESPONDER</a></div>
              <input type="text" name="codUsu" id="codUsu" style="visibility: hidden;">
              <input type="text" name="codPerg" id="codPerg" style="visibility: hidden;">
              </form>
@@ -93,6 +93,23 @@
   </div>
 
   <div id="respostas" class="container col s12 m6"></div>
+
+    <div id="opc" class="modal">
+    <div class="modal-content">
+      <h4>OPÇÕES</h4>
+      <br>
+      <h5 class="center-align">EDITAR PERGUNTA:</h5>
+<!--       <form action="" method="" id="altera"> -->
+      <textarea id="pergAlt" class="materialize-textarea" placeholder="ESCREVA AQUI" name="pergAlt"></textarea>
+      <br><br>
+      <div class="center-align"><a id="btnAlt" class="container btn-small waves-effect waves-light">ALTERAR</a></div>
+      <!-- </form> -->
+      <br>
+      <h6 class="center-align">ou</h6>
+      <br><br>
+      <div class="center-align"><a id="btnExc" class="btn-small red waves-effect waves-light">EXCLUIR</a></div>
+    </div>
+  </div>
 
     </body>
     <script type="text/javascript" src="js/materialize.min.js"></script>

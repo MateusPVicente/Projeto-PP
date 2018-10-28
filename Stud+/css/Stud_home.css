@@ -151,12 +151,23 @@ div #cr{
 {
     width: 40%;
     transform: translateY(20px);
-    transition: .3s;
-    animation-timing-function: ease-in;
+    animation: pulo 2s linear infinite;
 }
 
-#imga:hover
+@keyframes pulo
 {
-    transform: translateY(-20px);
-    transition: .3s;
+    0%
+    {
+        transform: translateY(-20px);
+    }
+
+    50%
+    {
+        transform: translateY(20px);
+    }
+
+    100%
+    {
+        transform: translateY(-20px);
+    }
 }

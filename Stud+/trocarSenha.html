@@ -2,6 +2,7 @@
   <html>
     <head>
       <title>Stud+ | Sobre</title>
+      <meta charset="utf-8">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -35,13 +36,26 @@
 
   <br><br>
 
-  <h4 class="teal-text center-align" id="txtS">OLÁ NOMEUSUARIO! BEM-VINDO(A) AO STUD+!</h4>
+  <h4 class="black-text center-align" id="txtS">TROCAR SENHA:</h4>
 
-  <div class="center-align"><img src="img/cadastro.png" class="responsive-img" id="imga"></div>
+<div class="container center-align">
+  <form action="" method="" id="form5">
+        
+        <tr>
+        <td><input type="text" id="senAtual" class="input1" required placeholder=" Senha atual"></td>   
+        </tr>
+        <tr>
+        <td><input type="text" id="novaSen" class="input2" required placeholder="Nova Senha"></td>   
+        </tr>
 
-  <br><br>
+        <br><br>
 
-  <div class="center-align"><a href="home.html" id="texto" class="container waves-effect waves-light btn-large">EXPLORAR!</a></div>
+        <div class="center-align"><a id="btnTrocar" class="container waves-effect waves-light btn-large">TROCAR</a></div>
+
+    </form>
+</div>
+
+  <br>
 
     <div id="modal2" class="modal">
       <div class="modal-content">
@@ -67,5 +81,5 @@
     <script type="text/javascript" src="js/Stud_home.js"></script>
     <script type="text/javascript" src="js/Stud_navbar.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/Stud_cadastroSucesso.js"></script>
+    <script type="text/javascript" src="js/Stud_perfil.js"></script>
   </html>

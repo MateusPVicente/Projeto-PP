@@ -22,7 +22,7 @@
       <ul class="right hide-on-med-and-down">
         <li><a href="homeLOGADO.html">HOME</a></li>
         <li><a href="sobreLOGADO.html">SOBRE</a></li>
-        <li><a id="name">BEM-VINDO, NOMEUSUARIO</a></li>
+        <li><a id="name" href="#perfil" class="modal-trigger">BEM-VINDO, NOMEUSUARIO</a></li>
       </ul>
     </div>
   </nav>
@@ -30,7 +30,7 @@
     <ul class="sidenav" id="mobile-demo">
     <li><a href="homeLOGADO.html">HOME</a></li>
     <li><a href="sobreLOGADO.html">SOBRE</a></li>
-    <li><a id="name2" class="blue-text">BEM-VINDO, NOMEUSUARIO</a></li>
+    <li><a id="name2" href="#perfil" class="blue-text modal-trigger">BEM-VINDO, NOMEUSUARIO</a></li>
   </ul>
 
   <!-- Element Showed -->
@@ -142,12 +142,27 @@
         </div>
       </div>
 
+      <div id="perfil" class="modal bottom-sheet center-align">
+        <div class="modal-content">
+          <i class="medium material-icons">build</i><br><br>
+
+          <h4>CONFIGURAÇÕES DO PERFIL</h4>
+
+          <br>
+
+          <a id="alterar" class="waves-effect waves-light btn-large"><i class="material-icons left">forum</i>ALTERAR SENHA</a>
+          <a id="AP_CONTA" class="red waves-effect waves-light btn-large"><i class="material-icons left">exit_to_app</i>APAGAR CONTA</a>
+
+        </div>
+      </div>
+
       
     </body>
     <script type="text/javascript" src="js/Stud_modal.js"></script>
-    <script type="text/javascript" src="js/Stud_home.js"></script>
+    <!-- <script type="text/javascript" src="js/Stud_home.js"></script> -->
     <script type="text/javascript" src="js/Stud_navbar.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/Stud_novaTarefa.js"></script>
     <script type="text/javascript" src="js/Stud_tarefa.js"></script>
+    <script type="text/javascript" src="js/Stud_perfil2.js"></script>
   </html>

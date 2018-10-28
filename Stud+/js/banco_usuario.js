@@ -43,9 +43,10 @@
             {
                if(arrNome[i] == usuario && arrSenha[i] == senha)
                {
+                  sessionStorage.setItem('sen', arrSenha[i]);
                   sessionStorage.setItem('nom', usuario);
                   sessionStorage.setItem('cod', arrCodUsu[i]);
-
+                  
                   // document.getElementById('name').innerHTML = "BEM-VINDO, " + usuario;
                   achou = true;
                   document.getElementById("f").action = "./tarefa.html";
@@ -56,51 +57,6 @@
               alert("Nome de usuário ou senha inválidos!");
         }
     }
-
-
-    document.getElementById("cad").onclick = function()
-  {
-      usuario = document.getElementById("usuario").value;
-      var senha = document.getElementById("senha").value;
-      var confirmarSenha = document.getElementById("confSenha").value;
-      var data = document.getElementById("data").value;
-      var achou = false;
-
-      var dataAlt = data.substring(6,10);
-
-      for(var i = 0; i < arr.length; i++)
-      {
-         if(usuario == arrNome[i] && achou == false)
-         {
-            alert("Esse nome de usuário já está sendo utilizado!");
-            achou = true;
-            usuario.innerHTML = "";
-         }
-      }
-
-      if(achou == false)
-      {
-        if(usuario == "" || senha == "" || confirmarSenha == "" || data == "")
-          {
-            alert("Digite os campos corretamente!");
-          }
-
-          else if(confirmarSenha != senha)
-          {
-            alert("As senhas digitadas não são iguais!");
-          }
-          else if(dataAlt >= 2018 || dataAlt < 1900 || dataAlt > 2015)
-          {
-            alert("A data digitada está fora do período válido!");
-          }
-          else
-          {
-            sessionStorage.setItem('nom', usuario);
-            cadastrar($("#form"));
-            location.href = "cadastroSucesso.html"
-          } 
-      }
-}
 
 // function passaCod()
 // {

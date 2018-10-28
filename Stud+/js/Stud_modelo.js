@@ -1,5 +1,6 @@
   var arr;
   var arra;
+  var arrInvertido;
   
   window.onload = function(){
 
@@ -46,16 +47,70 @@
     	arr = JSON.parse(response);
     	var estrutura = "";
 
-		estrutura += 
-		"<div class='col s12 m6'>" +
-		"<div class='card white darken-1'>" +
-		"<div class='card-content black-text'>" +
-		"<span class='card-title'><i class='medium material-icons' id='face' >face</i> <p class='nome' >"+arr[0].nomePerguntador+"</p></span>" + 
-		"<p id='pergunta'>PERGUNTA: "+arr[0].pergunta+"</p>" +
-		"</div></div></div>";
+    for(var i = 0; i < arr.length; i++)
+    {
+
+        if(arr[i].nomePerguntador == sessionStorage.getItem('nom'))
+        {
+    		estrutura += 
+    		"<div class='col s12 m6'>" +
+    		"<div class='card white darken-1'>" +
+    		"<div class='card-content black-text'>" +
+    		"<span class='card-title'><i class='medium material-icons' id='face' >sentiment_very_satisfied</i><i class='right small material-icons' id='set'>settings</i><p class='nome' >"+arr[0].nomePerguntador+"</p></span>" + 
+    		"<p id='pergunta'>PERGUNTA: "+arr[0].pergunta+"</p>" +
+    		"</div></div></div>";
+        }
+        else
+        {
+            estrutura += 
+            "<div class='col s12 m6'>" +
+            "<div class='card white darken-1'>" +
+            "<div class='card-content black-text'>" +
+            "<span class='card-title'><i class='medium material-icons' id='face' >sentiment_very_satisfied</i><p class='nome' >"+arr[0].nomePerguntador+"</p></span>" + 
+            "<p id='pergunta'>PERGUNTA: "+arr[0].pergunta+"</p>" +
+            "</div></div></div>";
+        }
+    }
 
 		document.getElementById('quadro').innerHTML = estrutura;
-    }
+
+        document.getElementById('set').onclick = function()
+        {
+            $('#opc').modal('open');
+        }
+
+        document.getElementById('btnAlt').onclick = function()
+        {
+            var input = document.getElementById('pergAlt').value
+
+            if(input == "")
+                alert("Digite uma alteração válida!");
+            else
+            {
+                var xml = new XMLHttpRequest();
+                var end = "http://localhost:3000/Pergunta/"+sessionStorage.getItem('codPerg')+"/"+input;
+                
+                xml.open("PATCH", end, true);
+                xml.send();
+                alert("Sua pergunta foi editada com sucesso!");
+                location.href = "modelo.html"
+            }
+        }
+
+        document.getElementById('btnExc').onclick = function()
+        {
+            var conf = confirm("Você deseja realmente apagar esta pergunta?");
+
+            if(conf)
+                var xmll = new XMLHttpRequest();
+                var endd = "http://localhost:3000/Pergunta/"+sessionStorage.getItem('codPerg');
+
+                xmll.open("DELETE", endd, true);
+                xmll.send();
+                alert("Sua pergunta foi excluída com sucesso!"); 
+                location.href = "home-forum.html"
+            }
+        }
 
     function VerificarRespostas()
     {
@@ -76,6 +131,10 @@
     {
         arra = JSON.parse(response);
 
+        arrInvertido = arra.map(function (item, indice, array){
+        return array[array.length - indice - 1];
+        });
+
         var estrutura = "";    
 
         for(var i = 0; i < arra.length; i++)
@@ -84,10 +143,38 @@
           "<div class='col s12 m6'>" +
           "<div class='card white darken-1'>" +
           "<div class='card-content black-text'>" +
-          "<span class='card-title'><i class='medium material-icons' id='face' >face</i> <p class='nome' >"+arra[i].nomeRespondedor+"</p></span>" + 
-          "<p id='resposta'>RESPOSTA: "+arra[i].resposta+"</p>" +
+           "<span class='card-title'><i class='medium material-icons' id='face' >sentiment_very_satisfied</i> <p class='nome' >"+arrInvertido[i].nomeRespondedor+"</p></span>" + 
+          "<p id='resposta'>RESPOSTA: "+arrInvertido[i].resposta+"</p>" +
           "</div></div></div>";
         }
 
         document.getElementById('respostas').innerHTML = estrutura;
+    }
+
+    adicionarResp = function(form){
+          $.post( "http://localhost:3000/Resposta/", form.serialize() ).done(function(data){
+              if (!data.erro) {
+                  form.each(function(data)
+                  {
+                  });
+              }
+          });
+      };   
+
+
+    document.getElementById('btnRes').onclick = function()
+    {
+        var input = document.getElementById('textarea1');
+
+        if(input.value == "")
+        {
+            alert('Insira uma resposta válida!');
+            document.getElementById('textarea1').focus();
+        }
+        else
+        {
+            adicionarResp($('#form4'));
+            location.href = "modelo.html"
+        }
+
     }

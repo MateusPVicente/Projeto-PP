@@ -21,6 +21,9 @@
  drop table Resposta
 
  alter table Tarefa
+ nocheck constraint fkcodUsuarioo
+
+ alter table Tarefa
  check constraint fkcodUsuarioo
 
  alter table Pergunta
@@ -31,6 +34,10 @@
  DBCC CHECKIDENT('Usuario', RESEED, 0)
  DBCC CHECKIDENT('Tarefa', RESEED, 0)
  DBCC CHECKIDENT('Pergunta', RESEED, 0)
+ DBCC CHECKIDENT('Resposta', RESEED, 0)
+
+ delete from Resposta
+ delete from Pergunta
 
  delete from Usuario
 

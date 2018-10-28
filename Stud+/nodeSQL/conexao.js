@@ -87,6 +87,18 @@ rota.delete('/Tarefa/:codTarefa?', (requisicao, resposta) =>{
 	execSQL('DELETE FROM Tarefa WHERE codTarefa=' + requisicao.params.codTarefa, resposta); 
 })
 
+rota.delete('/Pergunta/:codPergunta?', (requisicao, resposta) =>{ 
+	execSQL('DELETE FROM Pergunta WHERE codPergunta=' + requisicao.params.codPergunta, resposta); 
+	execSQL('DELETE FROM Resposta WHERE codPergunta=' + requisicao.params.codPergunta, resposta); 
+})
+
+rota.delete('/Usuario/:codUsuario?/:nomeUsuario?', (requisicao, resposta) =>{ 
+	execSQL('DELETE FROM Usuario WHERE codUsuario=' + requisicao.params.codUsuario, resposta); 
+	execSQL('DELETE FROM Pergunta WHERE nomePerguntador=' + requisicao.params.nomeUsuario, resposta); 
+	execSQL('DELETE FROM Resposta WHERE nomeRespondedor=' + requisicao.params.nomeUsuario, resposta);
+	execSQL('DELETE FROM Tarefa WHERE codUsuario=' + requisicao.params.codUsuario, resposta); 
+})
+
 rota.post('/Usuario', (requisicao, resposta) =>{
 const nome = requisicao.body.nomee.substring(0,150);
 const senha = requisicao.body.senhaa;
@@ -94,6 +106,16 @@ const data = requisicao.body.dataNasc;
 execSQL(`INSERT INTO Usuario(nomeUsuario, dataNascimento, senhaUsuario) VALUES('${nome}','${data}','${senha}')`, resposta);
 })
 
+rota.patch('/Pergunta/:codPergunta?/:pergunta?', (requisicao, resposta) =>{
+    execSQL(`UPDATE Pergunta SET pergunta = '${requisicao.params.pergunta}' WHERE codPergunta= ${requisicao.params.codPergunta}`, resposta);    
+})
+
 rota.patch('/Tarefa/:codTarefa?', (requisicao, resposta) =>{
     execSQL("UPDATE Tarefa SET finalizada='S' WHERE codTarefa=" + requisicao.params.codTarefa, resposta);  
 })
+
+rota.patch('/Usuario/:codUsuario?/:senhaUsuario?', (requisicao, resposta) =>{
+    execSQL(`UPDATE Usuario SET senhaUsuario='${requisicao.params.senhaUsuario}'  WHERE codUsuario= ${requisicao.params.codUsuario}`, resposta);  
+})
+
+
