@@ -57,7 +57,7 @@
     		"<div class='card white darken-1'>" +
     		"<div class='card-content black-text'>" +
     		"<span class='card-title'><i class='medium material-icons' id='face' >sentiment_very_satisfied</i><i class='right small material-icons' id='set'>settings</i><p class='nome' >"+arr[0].nomePerguntador+"</p></span>" + 
-    		"<p id='pergunta'>PERGUNTA: "+arr[0].pergunta+"</p>" +
+    		"<p id='pergunta'>"+arr[0].pergunta+"</p>" +
     		"</div></div></div>";
         }
         else
@@ -67,7 +67,7 @@
             "<div class='card white darken-1'>" +
             "<div class='card-content black-text'>" +
             "<span class='card-title'><i class='medium material-icons' id='face' >sentiment_very_satisfied</i><p class='nome' >"+arr[0].nomePerguntador+"</p></span>" + 
-            "<p id='pergunta'>PERGUNTA: "+arr[0].pergunta+"</p>" +
+            "<p id='pergunta'>"+arr[0].pergunta+"</p>" +
             "</div></div></div>";
         }
     }
@@ -108,7 +108,7 @@
                 xmll.open("DELETE", endd, true);
                 xmll.send();
                 alert("Sua pergunta foi excluída com sucesso!"); 
-                location.href = "home-forum.html"
+                    
             }
         }
 
@@ -143,8 +143,8 @@
           "<div class='col s12 m6'>" +
           "<div class='card white darken-1'>" +
           "<div class='card-content black-text'>" +
-           "<span class='card-title'><i class='medium material-icons' id='face' >sentiment_very_satisfied</i> <p class='nome' >"+arrInvertido[i].nomeRespondedor+"</p></span>" + 
-          "<p id='resposta'>RESPOSTA: "+arrInvertido[i].resposta+"</p>" +
+           "<span class='card-title'><i class='medium material-icons' id='face' >sentiment_very_satisfied</i> <p class='na' >"+arrInvertido[i].nomeRespondedor+"</p></span>" + 
+          "<p id='resposta'>&nbsp&nbsp&nbsp"+arrInvertido[i].resposta+"</p>" +
           "</div></div></div>";
         }
 

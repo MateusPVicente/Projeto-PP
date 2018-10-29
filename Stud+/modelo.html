@@ -40,7 +40,17 @@
   <a id="menu" class="waves-effect waves-light btn-large pulse btn-floating btn modal-trigger" href="#modal1" ><i class="material-icons">tune</i></a>
   </div>
 
-  <div id="modal1" class="modal">
+  <div class="fixed-action-btn">
+  <a class="waves-effect waves-light btn-large pulse btn-floating btn">
+    <i class="large material-icons">tune</i>
+  </a>
+  <ul>
+    <li><a href = "#re" class="btn-floating tooltipped yellow accent-4 modal-trigger" data-position="left" data-tooltip="Responder" yellow accent-4 modal-trigger"><i class="material-icons">mode_edit</i></a></li>
+    <li><a href="#modal1" class="btn-floating tooltipped red darken-1 modal-trigger" data-position="left" data-tooltip="Opções"><i class="material-icons">apps</i></a></li>
+  </ul>
+</div>
+
+  <div id="modal1" class="modal center-align">
       <div class="modal-content">
         <h4>MENU DE OPÇÕES</h4>
         
@@ -56,8 +66,8 @@
         <div class='col s12 m6'>
           <div class='card white darken-1'>
               <div class='card-content black-text'>
-              <span class='card-title'><i class='medium material-icons' id='face' >face</i> <p class='nome' ></p></span>
-              <p id='pergunta'>PERGUNTA:</p>
+              <span class='card-title'><i class='medium material-icons' id='face' >face</i> <p class='na' ></p></span>
+              <p id='pergunta'></p>
               </div>
           </div>
         </div>
@@ -66,31 +76,6 @@
   
   <br><br><br>
   <h3 id="pers" class="center-align">RESPOSTAS:</h3>
-
-  <div id="quadrin" class="container col s12 m6">
-    <div class="col s12 m6">
-      <div class="card white darken-1">
-        <div class="card-content black-text">
-            <div class="row">
-            <form class="col s12" action="" method="" id="form4">
-              <input type="text" name="nome" id="nome" style="visibility: hidden;">
-              <div class="row">
-              <div class="input-field col s12">
-              <textarea name="textarea1" id="textarea1" class="materialize-textarea"></textarea>
-              <label for="textarea1">Sabe a resposta? Escreva-a aqui para ajudar!</label>
-              </div>
-              </div>
-             
-             </div>
-
-             <div class="center-align"><a id="btnRes" class="container btn-large waves-effect waves-light">RESPONDER</a></div>
-             <input type="text" name="codUsu" id="codUsu" style="visibility: hidden;">
-             <input type="text" name="codPerg" id="codPerg" style="visibility: hidden;">
-             </form>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div id="respostas" class="container col s12 m6"></div>
 
@@ -111,6 +96,31 @@
     </div>
   </div>
 
+  <div id="re" class="modal">
+    <div class="modal-content">
+
+      <h3 id="pers" class="center-align">RESPONDER PERGUNTA</h3>
+
+            <form class="col s12" action="" method="" id="form4">
+              <input type="text" name="nome" id="nome" style="visibility: hidden;">
+              <div class="row">
+              <div class="input-field col s12">
+              <textarea name="textarea1" id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Sabe a resposta? Escreva-a aqui para ajudar!</label>
+              </div>
+              </div>
+             
+             </div>
+
+             <div class="center-align"><a id="btnRes" class="container btn-large waves-effect waves-light">RESPONDER</a></div>
+             <input type="text" name="codUsu" id="codUsu" style="visibility: hidden;">
+             <input type="text" name="codPerg" id="codPerg" style="visibility: hidden;">
+             </form>
+
+    </div>
+  </div>
+
+
     </body>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/Stud_navbar.js"></script>
@@ -118,4 +128,6 @@
     <script type="text/javascript" src="js/Stud_home.js"></script>
     <script type="text/javascript" src="js/Stud_modal.js"></script>
     <script type="text/javascript" src="js/Stud_modelo.js"></script>
+    <script type="text/javascript" src="js/Stud_FloatButton.js"></script>
+    <script type="text/javascript" src="js/Stud_tooltip.js"></script>
   </html>

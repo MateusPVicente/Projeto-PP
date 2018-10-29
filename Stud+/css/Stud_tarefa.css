@@ -26,7 +26,7 @@ table td a{
 
 tr
 {
-    font-family: "Comfortaa";
+    font-family: "Righteous";
     font-size: 18px;
 }
 
@@ -77,11 +77,10 @@ f1{
 }
 
 #h2{
-    font-size: 2rem;
-    font-family: "Comfortaa";
+    font-size: 2.5rem;
+    font-family: "Righteous";
     font-weight: bold;
     text-align: center;
-    color: #2196f3;
 }
 
 h6{
@@ -136,7 +135,7 @@ div #cr{
 
 #c
 {
-    font-family: "Comfortaa";
+    font-family: "Righteous";
 }
 
 #v
@@ -144,3 +143,7 @@ div #cr{
     font-family: "Righteous";
 }
 
+#sla
+{
+     font-family: "Righteous";
+}

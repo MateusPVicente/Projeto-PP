@@ -28,6 +28,20 @@ body {
 	left: 95px;
 	top:-40px;
     width: 80px;
+    font-size: 30px;
+    color: #38ada9;
+    font-family: "Righteous";
+}
+
+.na
+{
+    position: relative;
+    left: 95px;
+    top:-40px;
+    width: 80px;
+    font-size: 30px;
+    color: black;
+    font-family: "Righteous";  
 }
 
 ul li{
@@ -138,4 +152,17 @@ div #cr{
 {
     font-family: 'Righteous';
     user-select: none;
+}
+
+#pergunta
+{
+    font-size: 30px;
+    color: black;
+    font-family: "Righteous";
+}
+
+#respostas
+{
+    font-size: 30px;
+    font-family: "Righteous";
 }
