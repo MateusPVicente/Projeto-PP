@@ -23,19 +23,16 @@ window.onload = function(){
 
         document.getElementById('name').innerHTML = "BEM-VINDO, " + sessionStorage.getItem('nom').toUpperCase();
         document.getElementById('name2').innerHTML = "BEM-VINDO, " + sessionStorage.getItem('nom').toUpperCase();
-        document.getElementById('c').innerHTML = sessionStorage.getItem('nom').toUpperCase();    
+        document.getElementById('c').innerHTML = sessionStorage.getItem('nom').toUpperCase();  
 
-        $("#loading").modal('open');
+        $('#loading').modal('open');
+        setTimeout("Loading()", 1000);
     }
 
-    // function Loading()
-    // {
-    //     var modal = document.getElementById('loading');
-
-    //     setTimeout(Loading(), 500);
-
-    //     $(modal).modal('close');
-    // }
+    function Loading()
+    {
+        $('#loading').modal('close');
+    }
 
     function apagarTarefa(obj, id)
     {

@@ -29,7 +29,7 @@
                 {
                 	arrNome[i] = arr[i].nomeUsuario;
                 	arrSenha[i] = arr[i].senhaUsuario;
-                  arrCodUsu[i] = arr[i].codUsuario;
+                  	arrCodUsu[i] = arr[i].codUsuario;
                 }
             }
         }
@@ -38,8 +38,8 @@
         xmlhttp.send();
     } 
 
-        document.getElementById("cad").onclick = function()
-  {
+     document.getElementById("cad").onclick = function()
+  	{
       usuario = document.getElementById("usuario").value;
       var senha = document.getElementById("senha").value;
       var confirmarSenha = document.getElementById("confSenha").value;
@@ -56,7 +56,7 @@
             achou = true;
             usuario.innerHTML = "";
          }
-      }
+     }
 
       if(achou == false)
       {
