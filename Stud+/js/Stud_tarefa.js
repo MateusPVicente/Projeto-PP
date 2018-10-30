@@ -21,12 +21,12 @@ window.onload = function(){
         xmlhttp.open("GET", url, true);
         xmlhttp.send(); 
 
-        document.getElementById('name').innerHTML = "BEM-VINDO, " + sessionStorage.getItem('nom').toUpperCase();
-        document.getElementById('name2').innerHTML = "BEM-VINDO, " + sessionStorage.getItem('nom').toUpperCase();
+        // document.getElementById('name').innerHTML = "BEM-VINDO, " + sessionStorage.getItem('nom').toUpperCase();
+        // document.getElementById('name2').innerHTML = "BEM-VINDO, " + sessionStorage.getItem('nom').toUpperCase();
         document.getElementById('c').innerHTML = sessionStorage.getItem('nom').toUpperCase();  
 
         $('#loading').modal('open');
-        setTimeout("Loading()", 1000);
+        setTimeout("Loading()", 2000);
     }
 
     function Loading()

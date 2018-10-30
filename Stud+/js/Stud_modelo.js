@@ -108,6 +108,7 @@
                 xmll.open("DELETE", endd, true);
                 xmll.send();
                 alert("Sua pergunta foi excluída com sucesso!"); 
+                location.href = "home-forum.html"
                     
             }
         }

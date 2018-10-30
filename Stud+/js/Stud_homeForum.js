@@ -17,8 +17,8 @@
         xmlhttp.open("GET", url, true);
         xmlhttp.send(); 
 
-        document.getElementById('name').innerHTML = "BEM-VINDO, " + sessionStorage.getItem('nom').toUpperCase();
-        document.getElementById('name2').innerHTML = "BEM-VINDO, " + sessionStorage.getItem('nom').toUpperCase(); 
+        document.getElementById('name').innerHTML = sessionStorage.getItem('nom').toUpperCase();
+        document.getElementById('name2').innerHTML = sessionStorage.getItem('nom').toUpperCase(); 
         document.getElementById('nome').value = sessionStorage.getItem('nom');        
     }
 
@@ -34,7 +34,7 @@
       else
       {
         adicionarPerg($('#form3'));
-        location.href = "home-forum.html"        
+        location.href = "home-forum.html"
       }
 
     }

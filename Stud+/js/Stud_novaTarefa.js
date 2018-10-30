@@ -51,8 +51,8 @@
 
 	  window.onload = function()
 	  {
-	  	document.getElementById('name').innerHTML = "BEM-VINDO, " + sessionStorage.getItem('nom').toUpperCase();
-	  	document.getElementById('name2').innerHTML = "BEM-VINDO, " + sessionStorage.getItem('nom').toUpperCase();
+	  	document.getElementById('name').innerHTML = sessionStorage.getItem('nom').toUpperCase();
+	  	document.getElementById('name2').innerHTML = sessionStorage.getItem('nom').toUpperCase();
 	  	document.getElementById('cod').value = sessionStorage.getItem('cod');
 	  	//valCod = sessionStorage.getItem('cod');
 
