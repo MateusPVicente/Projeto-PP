@@ -147,3 +147,15 @@ div #cr{
 {
      font-family: "Righteous";
 }
+
+#name
+{
+    background-color: #1e88e5;
+    color: white;
+}
+
+#name:hover
+{
+    background-color: #1976d2;
+    transition: .2s;
+}

@@ -52,9 +52,9 @@
     for(var i = 0; i < arrInvertido.length; i++)
     {
       if(arrInvertido[i].nomePerguntador == sessionStorage.getItem('nom'))
-		    estrutura += "<div id='quadro' class='container col s12 m6'><div class='col s12 m6'><div class='card white darken-1'><div class='card-content black-text'><span class='card-title'><i class='medium material-icons' id='face' >sentiment_very_satisfied</i><a onclick='criarPag("+arrInvertido[i].codPergunta+")'><p>"+arrInvertido[i].pergunta+"</p></a></span><p>~"+arrInvertido[i].nomePerguntador+"~</p></div></div></div></div>";        
+		    estrutura += "<div id='quadro' class='container col s12 m6'><div class='col s12 m6'><div class='card white darken-1'><div class='card-content black-text'><span class='card-title'><a onclick='criarPag("+arrInvertido[i].codPergunta+")'><p>"+arrInvertido[i].pergunta+"</p></a></span><p>~"+arrInvertido[i].nomePerguntador+"~</p></div></div></div></div>";        
       else
-        estrutura += "<div id='quadro' class='container col s12 m6'><div class='col s12 m6'><div class='card white darken-1'><div class='card-content black-text'><span class='card-title'><i class='medium material-icons' id='face' >sentiment_very_satisfied</i> <a onclick='criarPag("+arrInvertido[i].codPergunta+")'><p>"+arrInvertido[i].pergunta+"</p></a></span><p>~"+arrInvertido[i].nomePerguntador+"~</p></div></div></div></div>";
+        estrutura += "<div id='quadro' class='container col s12 m6'><div class='col s12 m6'><div class='card white darken-1'><div class='card-content black-text'><span class='card-title'><a onclick='criarPag("+arrInvertido[i].codPergunta+")'><p>"+arrInvertido[i].pergunta+"</p></a></span><p>~"+arrInvertido[i].nomePerguntador+"~</p></div></div></div></div>";
     }
 
     document.getElementById('group').innerHTML = estrutura; 
@@ -75,3 +75,4 @@
           }
       });
   };   
+//<i class='medium material-icons' id='face' >sentiment_very_satisfied</i> 
