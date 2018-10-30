@@ -133,3 +133,15 @@ div #cr{
      border-bottom: 1px solid #795548;
      box-shadow: 0 1px 0 0 #795548;
 }
+
+#name
+{
+    background-color: #1e88e5;
+    color: white;
+}
+
+#name:hover
+{
+    background-color: #1976d2;
+    transition: .2s;
+}

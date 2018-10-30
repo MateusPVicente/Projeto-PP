@@ -76,5 +76,10 @@
       });
   };   
 
+     document.getElementById("alterar").onclick = function()
+    {
+        location.href = "trocarSenha.html"
+    }
+
 
        

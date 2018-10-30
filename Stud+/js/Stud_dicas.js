@@ -2,12 +2,6 @@
     $('.collapsible').collapsible();
   });
 
- $(document).ready(function(){
-    $('.modal').modal({
-    	dismissible:false
-    });
-  });
-
  var titulo = document.getElementById('titulo');
  var texto = document.getElementById('texto');
  var imagem = document.getElementById('imagem');
@@ -92,3 +86,8 @@
  	document.getElementById('name').innerHTML = sessionStorage.getItem('nom').toUpperCase();
     document.getElementById('name2').innerHTML = sessionStorage.getItem('nom').toUpperCase();       
  }
+
+ document.getElementById("alterar").onclick = function()
+{
+    location.href = "trocarSenha.html"
+}
