@@ -1,6 +1,7 @@
   var arr;
   var arra;
   var arrInvertido;
+  var codResp = new Array;
   
   window.onload = function(){
 
@@ -138,19 +139,84 @@
 
         var estrutura = "";    
 
-        for(var i = 0; i < arra.length; i++)
+        for(var i = 0; i < arrInvertido.length; i++)
         {
-          estrutura += 
-          "<div class='col s12 m6'>" +
-          "<div class='card white darken-1'>" +
-          "<div class='card-content black-text'>" +
-           "<span class='card-title'><i class='medium material-icons' id='face' >sentiment_very_satisfied</i> <p class='na' >"+arrInvertido[i].nomeRespondedor+"</p></span>" + 
-          "<p id='resposta'>&nbsp&nbsp&nbsp"+arrInvertido[i].resposta+"</p>" +
-          "</div></div></div>";
+            if(arrInvertido[i].nomeRespondedor == sessionStorage.getItem('nom'))
+            {
+               estrutura += 
+              "<div class='col s12 m6'>" +
+              "<div class='card white darken-1'>" +
+              "<div class='card-content black-text'>" +
+              // "<span class='card-title'><i class='medium material-icons' id='face' >sentiment_very_satisfied</i><i class='right small material-icons' id='s"+i+"'>settings</i><p class='na' >"+arrInvertido[i].nomeRespondedor+"</p></span>" + 
+              "<span class='card-title'><i class='medium material-icons' id='face' >sentiment_very_satisfied</i><p class='na' >"+arrInvertido[i].nomeRespondedor+"</p></span>" + 
+              "<p id='resposta'>&nbsp&nbsp&nbsp"+arrInvertido[i].resposta+"</p>" +
+              "</div></div></div>"; 
+
+              // codResp[i] = arrInvertido[i].codResp;
+              // alert(codResp[i]);
+            }
+
+            else
+            {
+               estrutura += 
+              "<div class='col s12 m6'>" +
+              "<div class='card white darken-1'>" +
+              "<div class='card-content black-text'>" +
+               "<span class='card-title'><i class='medium material-icons' id='face' >sentiment_very_satisfied</i> <p class='na' >"+arrInvertido[i].nomeRespondedor+"</p></span>" + 
+              "<p id='resposta'>&nbsp&nbsp&nbsp"+arrInvertido[i].resposta+"</p>" +
+              "</div></div></div>"; 
+            }
+          
         }
 
         document.getElementById('respostas').innerHTML = estrutura;
-    }
+
+        // for(var i = 0; i < arra.length; i++)
+        // {
+
+        //     document.getElementById('s'+i).style.cursor = "pointer";
+
+        //     document.getElementById('s'+i).onclick = function()
+        //     {
+        //         $('#opc2').modal('open');
+        //         sessionStorage.removeItem('codResp');
+        //         sessionStorage.setItem('codResp', codResp[i]);
+        //     }   
+        // }
+
+        // document.getElementById('btnAlt2').onclick = function()
+        // {
+        //     var input = document.getElementById('respAlt').value
+
+        //     if(input == "")
+        //         alert("Digite uma alteração válida!");
+        //     else
+        //     {
+        //         var x = new XMLHttpRequest();
+        //         var e = "http://localhost:3000/Resposta/"+sessionStorage.getItem('codResp')+"/"+input;
+                
+        //         x.open("PATCH", e, true);
+        //         x.send();
+        //         alert("Sua pergunta foi editada com sucesso!");
+        //         location.href = "modelo.html"
+        //     }
+        // }
+
+        // document.getElementById('btnExc2').onclick = function()
+        // {
+        //     var conf = confirm("Você deseja realmente apagar esta pergunta?");
+
+        //     if(conf)
+        //         var xmll = new XMLHttpRequest();
+        //         var endd = "http://localhost:3000/Pergunta/"+sessionStorage.getItem('codPerg');
+
+        //         xmll.open("DELETE", endd, true);
+        //         xmll.send();
+        //         alert("Sua pergunta foi excluída com sucesso!"); 
+        //         location.href = "home-forum.html"
+                    
+        //     }
+        }
 
     adicionarResp = function(form){
           $.post( "http://localhost:3000/Resposta/", form.serialize() ).done(function(data){
@@ -178,4 +244,15 @@
             location.href = "modelo.html"
         }
 
+    }
+
+    document.getElementById('sair').onclick = function()
+    {
+        sessionStorage.removeItem('cod');
+        sessionStorage.removeItem('codPerg');
+        sessionStorage.removeItem('nom');
+        sessionStorage.removeItem('sen');
+        sessionStorage.removeItem('primeiraVez');
+        sessionStorage.setItem('primeiraVez', 'sim');
+        location.href = "home.html"
     }

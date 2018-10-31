@@ -17,7 +17,7 @@ body {
 }
 
 #table{
-	border: 5px solid #20cdc4;
+	border: 5px solid #0070c4;
 }
 
 table td a{
@@ -28,6 +28,12 @@ tr
 {
     font-family: "Righteous";
     font-size: 18px;
+}
+
+th
+{
+    background-color: #0086ea;
+    color: white;
 }
 
 .img
@@ -158,4 +164,9 @@ div #cr{
 {
     background-color: #1976d2;
     transition: .2s;
+}
+
+#dest
+{
+    user-select: none;
 }

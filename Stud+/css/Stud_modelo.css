@@ -148,6 +148,19 @@ div #cr{
     transition: .3s;
 }
 
+#set2
+{
+    transition: .3s;
+    user-select: none;
+}
+
+#set2:hover
+{
+    color: #f44336 ;
+    cursor: pointer;
+    transition: .3s;
+}
+
 #pers
 {
     font-family: 'Righteous';
@@ -177,4 +190,9 @@ div #cr{
 {
     background-color: #1976d2;
     transition: .2s;
+}
+
+#re
+{
+    overflow: hidden;
 }

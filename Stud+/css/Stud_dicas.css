@@ -87,3 +87,8 @@ h3{
     background-color: #1976d2;
     transition: .2s;
 }
+
+#menu
+{
+	font-family: 'Righteous';
+}

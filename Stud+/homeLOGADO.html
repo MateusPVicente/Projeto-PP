@@ -9,21 +9,24 @@
       <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
       <link rel="shortcut icon" type="image/x-icon" href="./Icon.ico">
       <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+      <meta charset="utf-8">
 
       <link rel="stylesheet" type="text/css" href=".\css\Stud_home.css">
+
     </head>
     <body>
 
-  <nav>
-    <img class="header" class="responsive-img" src="./img/fundo3.png">
-    <div class="nav-wrapper container">
+  <nav id="nav">
+    <img class="header" src="./img/fundo3.png">
+    <div id="header" class="nav-wrapper container">
       <a href="#" class="brand-logo"><img class="logo" src=".\img\Logo_Oficial.png"></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="">HOME</a></li>
         <li><a href="sobreLOGADO.html">SOBRE</a></li>
         <li><a href="tarefa.html">TAREFAS</a></li>
-        <li><a id="name">BEM-VINDO, NOMEUSUARIO</a></li>
+        <li><a id="name" class="modal-trigger" href="#perfil">NOMEUSUARIO</a>
+      </ul>
     </div>
   </nav>
 
@@ -31,32 +34,206 @@
     <li><a href="">HOME</a></li>
     <li><a href="sobre.html">SOBRE</a></li>
     <li><a href="tarefa.html">TAREFAS</a></li>
-    <li><a id="name2" class="blue-text waves-effect waves-light" href="#modal1">LOGIN</a></li>
+    <li><a id="name2" class="blue-text modal-trigger" href="#perfil">NOMEUSUARIO</a></li>
   </ul>
 
-     <div class="parallax-container">
-      <div class="parallax"><img src=".\img\fundo.png"></div>
+  <section class="slider">
+    <ul class="slides">
+      <li>
+        <img id="img" src="img/out.png"> <!-- random image -->
+        <div class="caption center-align">
+          <h1 id="hh">A DESORDEM BATEU?</h1>
+          <h3 class="teal-text darken-2" id="h">STUD+ RESOLVEU!</h3>
+      </li>
+
+      <li>
+        <img src="img/CEU.png"> <!-- random image -->
+        <div class="caption center-align">
+          <h2 class="center-align" id="f1">"DESAFIE-SE, SURPREENDA-SE, ESTUDE."</h2>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <section id="sec1" class="section teal white-text center scrollspy">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h4 id="texto" class="white-text center-align">ORGANIZE TAREFAS DE ACORDO COM SUA NECESSIDADE!</h4>
+        </div>
+      </div>
+
+        <div class="row">
+          <div class="col s12 m12 l4">
+            <div class="card white">
+              <div class="card-content white-text">
+                <span id="fonte" class="card-title teal-text">CRIE, LEIA.</span>
+                <i class="material-icons large teal-text">book</i>
+                <p id="fonte" class="black-text">Utilize o menu de opções para criar novas tarefas, ler dicas de organização e acessar o fórum do estudante.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m12 l4">
+            <div class="card white">
+              <div class="card-content white-text">
+                <span id="fonte" class="card-title teal-text">DESIGN SIMPLES.</span>
+                <i class="material-icons large teal-text">touch_app</i>
+                <p id="fonte" class="black-text">A Stud+ conta com um design simples e fácil de usar, dessa forma, ajudando na sua dinamicidade.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m12 l4">
+            <div class="card white">
+              <div class="card-content white-text">
+                <span id="fonte" class="card-title teal-text">EDITE E INOVE.</span>
+                <i class="material-icons large teal-text">create</i>
+                <p id="fonte" class="black-text">Conclua, exclua e filtre tarefas por prazo, título, relevância e concluídas, facilitando assim a visualização dos seus afazeres!</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </div>
+  </section>
+
+  <div class="parallax-container">
+    <br><br><br><br>
+    <!-- <h2 id="texto2" class="white-text center-align">HORA DE EXPLORAR!</h2> -->
+    <div class="center-align"><img class="responsive-img" src="img/sulfitinho2.png"></div>
+      <div class="parallax"><img src=".\img\fundoo.png"></div>
     </div>
 
-    <img class="fundo1" class="responsive-img" src="./img/fundo1.png">
+    
 
-    <br>
 
-    <p id="h2">ORGANIZE TAREFAS DE ACORDO COM SUA NECESSIDADE!</p>
+    <section class="section teal white-text center scrollspy">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h4 id="texto" class="white-text center-align">VERIFIQUE SEU DESEMPENHO E TIRE DÚVIDAS SEMPRE QUE QUISER</h4>
+        </div>
+      </div>
 
-    <br>
+        <div class="row">
+          <div class="col s12 m12 l4">
+            <div class="card white">
+              <div class="card-content white-text">
+                <span id="fonte" class="card-title teal-text">TREINE E SUPERE.</span>
+                <i class="material-icons large teal-text">stars</i>
+                <p id="fonte"class="black-text">Verifique qual é o seu desempenho de acordo com a quantidade de tarefas concluídas.</p>
+              </div>
+            </div>
+          </div>
 
-    <img id="fundo2" class="responsive-img" src=".\img\fundo2.png">
-    <br><br>
+          <div class="col s12 m12 l4">
+            <div class="card white">
+              <div class="card-content white-text">
+                <span id="fonte" class="card-title teal-text">QUESTIONE.</span>
+                <i class="material-icons large teal-text">public</i>
+                <p id="fonte"class="black-text">Utilize nosso fórum para perguntar e responder questões de outros usuários!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m12 l4">
+            <div class="card white">
+              <div class="card-content white-text">
+                <span id="fonte" class="card-title teal-text">APRIMORE-SE.</span>
+                <i class="material-icons large teal-text">local_play</i>
+                <p id="fonte"class="black-text">Aprimore suas capacidades de estudo lendo dicas preciosas para melhorar seu desempenho.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </div>
+  </section>
+
+<!--   <section class="section white teal-text center scrollspy">
+    <h3 id="texto">AJUDE-NOS A CRESCER!</h3>
+  </section> -->
+
+  <!--   <img class="nuvens" src="./img/nuvens.png">
+  <img class="sulf" src="./img/sulfitinho.png"> -->
+
+  <!-- <div class=""><h3 id="texto" class="center-align">DESAFIE-SE, SUPREENDA-SE, ESTUDE.</h3></div> -->
+
+    <!-- <img id="fundo1" src="./img/fundo1.png"> -->
+
+    <!-- <h3 id="h3">"DESAFIE-SE, SURPREENDA-SE, ESTUDE."</h3>
+          
+    <div class="cards-container">
+      <h2>ORGANIZE TAREFAS DE ACORDO COM SUA NECESSIDADE!</h2>
+      <div class="row container">
+    <div class="col s12 m6 l3">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m8 l3">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m8 l3">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m8 l3">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>      
+    </div>
+
+    
 
     <div class="parallax-container">
-      <div class="parallax"><img src=".\img\fundo4.png"></div>
-    </div>
+      <div class="parallax"><img src="img/fundo.png"></div>
+    </div> -->
 
-  <footer class="page-footer blue">
+    <!-- <p id="a">ORGANIZE TAREFAS DE ACORDO COM SUA NECESSIDADE!</p> -->
+
+    <!-- <div id="sec"></div> -->
+
+    <!-- <img id="fundo2" class="responsive-img" src=".\img\fundo2.png"> -->
+  <!--   <br><br>
+
+    <div class="parallax-container">
+      <div class="parallax"><img src=".\img\fundo.png"></div>
+    </div> -->
+
+    <!-- <h2 id="frase2" class="center-align">HORA DE EXPLORAR!</h2> -->
+
+  <footer class="page-footer teal lighten-2">
           <div class="container">
             <div class="row">
-              <div class="row l6 s12">
+              <div class="row l12 s12">
                 <h5 class="white-text">Stud+</h5>
                 <f1 class="grey-text text-lighten-4">“Nenhum obstáculo é tão grande se sua vontade de vencer for maior!”</f1>
               </div>
@@ -75,9 +252,9 @@
     <!-- Modal Structure -->
     <div id="modal1" class="modal">
       <div class="modal-content">
-        <h4>LOGIN</h4>
-        <form action="tarefa.html">
-        
+        <h4 class="center-align">LOGIN</h4>
+        <form id="f">
+  
         <tr>
         <td><input type="text" id="usu" class="input1" required placeholder=" Usuário"></td>   
         </tr>
@@ -92,11 +269,25 @@
         <h6>Não possui uma conta? Cadastre-se agora!</h6>
         <br>
 
-        <a href="cadastro.html" id="btnCadastrar" class="waves-effect waves-light btn">Cadastre-se</a>
+       <a href="cadastro.html" id="btnCadastrar" class="waves-effect waves-light btn">Cadastre-se</a>
 
         </form>
       </div>
     </div>
+
+            <div id="perfil" class="modal bottom-sheet center-align">
+        <div class="modal-content">
+          <i class="medium material-icons">build</i><br><br>
+
+          <h4>CONFIGURAÇÕES DO PERFIL</h4>
+
+          <br>
+
+          <a id="alterar" class="waves-effect waves-light btn-large"><i class="material-icons left">forum</i>ALTERAR SENHA</a>
+          <a id="AP_CONTA" class="red waves-effect waves-light btn-large"><i class="material-icons left">exit_to_app</i>APAGAR CONTA</a>
+
+        </div>
+      </div>
       
     </body>
     <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -105,5 +296,9 @@
     <script type="text/javascript" src="js/Stud_home.js"></script>
     <script type="text/javascript" src="js/Stud_modal.js"></script>
     <script type="text/javascript" src="js/Stud_seta.js"></script>
-    <script type="text/javascript" src="js/Stud_novaTarefa.js"></script>
+    <script type="text/javascript" src="nodeSQL/conexao.js"></script>
+    <script type="text/javascript" src="js/banco_usuario.js"></script>
+    <script type="text/javascript" src="js/Stud_slider.js"></script>
+    <script type="text/javascript" src="js/Stud_perfil2.js"></script>
+    <script type="text/javascript" src="js/Stud_homeLogado.js"></script>
   </html>

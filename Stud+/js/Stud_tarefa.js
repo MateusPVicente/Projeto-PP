@@ -23,10 +23,14 @@ window.onload = function(){
 
         document.getElementById('name').innerHTML = sessionStorage.getItem('nom').toUpperCase();
         document.getElementById('name2').innerHTML = sessionStorage.getItem('nom').toUpperCase();
-        document.getElementById('c').innerHTML = sessionStorage.getItem('nom').toUpperCase();  
+        document.getElementById('c').innerHTML = sessionStorage.getItem('nom').toUpperCase();
 
-        $('#loading').modal('open');
-        setTimeout("Loading()", 10);
+        if(sessionStorage.getItem('primeiraVez') == 'sim')
+        {
+           $('#loading').modal('open');
+           setTimeout("Loading()", 4500); 
+           sessionStorage.setItem('primeiraVez', 'nao');
+        }
     }
 
     function Loading()
@@ -260,6 +264,8 @@ window.onload = function(){
         sessionStorage.removeItem('cod');
         sessionStorage.removeItem('nom');
         sessionStorage.removeItem('sen');
+        sessionStorage.removeItem('primeiraVez');
+        sessionStorage.setItem('primeiraVez', 'sim');
         location.href = "home.html"
     }
 

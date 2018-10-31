@@ -110,6 +110,10 @@ rota.patch('/Pergunta/:codPergunta?/:pergunta?', (requisicao, resposta) =>{
     execSQL(`UPDATE Pergunta SET pergunta = '${requisicao.params.pergunta}' WHERE codPergunta= ${requisicao.params.codPergunta}`, resposta);    
 })
 
+rota.patch('/Resposta/:codResposta?/:resposta?', (requisicao, resposta) =>{
+    execSQL(`UPDATE Resposta SET resposta = '${requisicao.params.resposta}' WHERE codResposta= ${requisicao.params.codResposta}`, resposta);    
+})
+
 rota.patch('/Tarefa/:codTarefa?', (requisicao, resposta) =>{
     execSQL("UPDATE Tarefa SET finalizada='S' WHERE codTarefa=" + requisicao.params.codTarefa, resposta);  
 })

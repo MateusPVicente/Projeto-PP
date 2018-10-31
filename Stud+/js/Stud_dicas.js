@@ -91,3 +91,14 @@
 {
     location.href = "trocarSenha.html"
 }
+
+	document.getElementById('sair').onclick = function()
+    {
+        sessionStorage.removeItem('cod');
+        sessionStorage.removeItem('codPerg');
+        sessionStorage.removeItem('nom');
+        sessionStorage.removeItem('sen');
+        sessionStorage.removeItem('primeiraVez');
+        sessionStorage.setItem('primeiraVez', 'sim');
+        location.href = "home.html"
+    }

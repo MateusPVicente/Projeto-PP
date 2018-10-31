@@ -23,7 +23,7 @@
         <li><a href="homeLOGADO.html">HOME</a></li>
         <li><a href="">SOBRE</a></li>
         <li><a href="tarefa.html">TAREFAS</a></li>
-        <li><a id="name">BEM-VINDO, NOMEUSUARIO</a></li>
+        <li><a id="name" class="modal-trigger" href="#perfil">NOMEUSUARIO</a>
       </ul>
     </div>
   </nav>
@@ -32,16 +32,52 @@
     <li><a href="homeLOGADO.html">HOME</a></li>
     <li><a href="">SOBRE</a></li>
     <li><a href="tarefa.html">TAREFAS</a></li>
-    <li><a id="name2" class="blue-text waves-effect waves-light">BEM-VINDO, NOMEUSUARIO</a></li>
+    <li><a id="name2" class="blue-text modal-trigger" href="#perfil">NOMEUSUARIO</a></li>
   </ul>
 
-  <br><br>
+  <div class="parallax-container">
+    <br><br><br>
+      <h3 id="a" class="white-text text-darken-3 center">SOBRE NÓS</h3>
+      <div class="parallax"><img src="img/nos.jpg"></div>
+    </div>
 
-  <h3 id="a" class="blue-text text-darken-3 center">SOBRE NÓS</h3>
+  <br><br><br><br>
 
-  <hr class="hr">
+   <div class="row container center-align">
+    <div class="col s12 m5 l4">
+      <div class="card teal accent-4 darken-1">
+        <div class="card-content white-text">
+          <span id="v1" class="card-title">CRIADO POR</span>
+          <i class="material-icons large white-text">code</i>
+          <h5 id="v">STUD+ é um projeto desenvolvido por Mateus Vicente e Vitor Ramos.</h5>
+        </div>
+      </div>
+    </div>
 
-  <img class="sobre" src="./img/sobre.png">
+    <div class="col s12 m5 l4">
+      <div class="card red darken-2">
+        <div class="card-content white-text">
+          <span id="v2" class="card-title">QUEM SOMOS?</span>
+          <i class="material-icons large white-text">perm_contact_calendar</i>
+          <h5 id="v">Somos estudantes do curso de Informática do colégio COTUCA.</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m5 l4">
+      <div class="card amber darken-3">
+        <div class="card-content white-text">
+          <span id="v3" class="card-title">OBJETIVO</span>
+          <i class="material-icons large white-text">show_chart</i>
+          <h5 id="v">Nosso objetivo é auxiliar o estudo e desempenho dos estudantes.</h5>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <br> <br><br><br>
+        
 
         <img src=".\img\seta.png" id="img" class="seta" onmouseover="hoverSeta();" onmouseout="sairHoverSeta();" onclick="voltarAoTopo();">
 
@@ -70,10 +106,44 @@
         </form>
       </div>
     </div>
+    
+    <footer class="page-footer teal lighten-2">
+          <div class="container">
+            <div class="row">
+              <div class="row l12 s12">
+                <h5 class="white-text">Stud+</h5>
+                <f1 class="grey-text text-lighten-4">“Nenhum obstáculo é tão grande se sua vontade de vencer for maior!”</f1>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div id="cr" class="container">
+            © 2018 Stud+ é um projeto desenvolvido por Vitor Ramos e Mateus Vicente
+            </div>
+          </div>
+        </footer>
+
+        <div id="perfil" class="modal bottom-sheet center-align">
+        <div class="modal-content">
+          <i class="medium material-icons">build</i><br><br>
+
+          <h4>CONFIGURAÇÕES DO PERFIL</h4>
+
+          <br>
+
+          <a id="alterar" class="waves-effect waves-light btn-large"><i class="material-icons left">forum</i>ALTERAR SENHA</a>
+          <a id="AP_CONTA" class="red waves-effect waves-light btn-large"><i class="material-icons left">exit_to_app</i>APAGAR CONTA</a>
+
+        </div>
+      </div>
       
     </body>
     <script type="text/javascript" src="js/Stud_modal.js"></script>
     <script type="text/javascript" src="js/Stud_home.js"></script>
     <script type="text/javascript" src="js/Stud_navbar.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/Stud_paralax.js"></script>
+    <script type="text/javascript" src="js/Stud_sobre.js"></script>
+    <script type="text/javascript" src="js/Stud_sobreLogado.js"></script>
+    <script type="text/javascript" src="js/Stud_perfil2.js"></script>
   </html>
