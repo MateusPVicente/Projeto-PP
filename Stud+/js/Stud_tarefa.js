@@ -5,6 +5,7 @@
       var ordenado = false;
       var filtro = 'a';
       var ajuda;
+      sessionStorage.setItem('primeiraVez', 'sim');
 
 window.onload = function(){
 
