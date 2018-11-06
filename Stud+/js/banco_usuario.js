@@ -25,6 +25,9 @@
 
         xmlhttp.open("GET", url, true);
         xmlhttp.send();
+
+        window.history.forward(1);
+        sessionStorage.setItem('primeiraVez', 'sim');
     } 
 
     document.getElementById("btnEntrar").onclick = function()

@@ -5,7 +5,7 @@
       var ordenado = false;
       var filtro = 'a';
       var ajuda;
-      sessionStorage.setItem('primeiraVez', 'sim');
+      // sessionStorage.setItem('primeiraVez', 'sim');
 
 window.onload = function(){
 
@@ -29,7 +29,7 @@ window.onload = function(){
         if(sessionStorage.getItem('primeiraVez') == 'sim')
         {
            $('#loading').modal('open');
-           setTimeout("Loading()", 4500); 
+           setTimeout("Loading()", 4000); 
            sessionStorage.setItem('primeiraVez', 'nao');
         }
     }
@@ -265,6 +265,7 @@ window.onload = function(){
         sessionStorage.removeItem('cod');
         sessionStorage.removeItem('nom');
         sessionStorage.removeItem('sen');
+        sessionStorage.removeItem('codPerg');
         sessionStorage.removeItem('primeiraVez');
         sessionStorage.setItem('primeiraVez', 'sim');
         location.href = "home.html"

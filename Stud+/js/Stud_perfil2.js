@@ -10,6 +10,12 @@ document.getElementById("AP_CONTA").onclick = function()
     {
 	    xml.open("DELETE", end, true);
 	    xml.send();
+	    
+	    sessionStorage.removeItem('cod');
+        sessionStorage.removeItem('nom');
+        sessionStorage.removeItem('sen');
+	    sessionStorage.removeItem('primeiraVez');
+	    sessionStorage.setItem('primeiraVez', 'sim');
 
 	    location.href = "adeus.html"
 	}	

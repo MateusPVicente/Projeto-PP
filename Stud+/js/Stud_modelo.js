@@ -256,3 +256,8 @@
         sessionStorage.setItem('primeiraVez', 'sim');
         location.href = "home.html"
     }
+
+    document.getElementById("alterar").onclick = function()
+    {
+        location.href = "trocarSenha.html"
+    }

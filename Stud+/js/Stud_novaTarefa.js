@@ -86,6 +86,7 @@
         sessionStorage.removeItem('cod');
         sessionStorage.removeItem('nom');
         sessionStorage.removeItem('sen');
+        sessionStorage.removeItem('codPerg');
         sessionStorage.removeItem('primeiraVez');
         sessionStorage.setItem('primeiraVez', 'sim');
         location.href = "home.html"
