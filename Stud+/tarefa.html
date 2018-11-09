@@ -56,9 +56,23 @@
     <div class="col s12 m12 l12">
       <div class="card green accent-2">
         <div class="card-content white-text">
-          <div class="center-align"><img class="img" src="img/perfil.png"></div>
+          <div class="center-align"><img id="fotin" class="img" src="img/perfil.png"></div>
           <h5 class="center-align" id="c">NomeUsuario</h5>
-          <br><br>
+
+          <br>
+
+          <!-- /////////////////////////////////////////////////// -->
+
+          <div class="center-align">
+		      <div class="btn">
+		        <span id="aa">ALTERAR FOTO</span>
+		        <input id="inputFile" onchange="readURL(this);" type="file" style="display: none;">
+		      </div>
+		  </div>
+
+          <!-- /////////////////////////////////////////////////// -->
+
+          <br>
 
           <div class="row">
             <div class="col s12 m12 l12">

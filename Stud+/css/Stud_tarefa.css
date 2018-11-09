@@ -38,9 +38,14 @@ th
 
 .img
 {
-    max-width: 100%;
-    height: auto;
+    max-height: 200px;
+    max-width: 200px;
+    height: 100%;
+    width: 100%;
     position: relative;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 
 #v
@@ -169,4 +174,9 @@ div #cr{
 #dest
 {
     user-select: none;
+}
+
+#aa
+{
+    font-family: "Righteous";
 }

@@ -122,4 +122,9 @@ rota.patch('/Usuario/:codUsuario?/:senhaUsuario?', (requisicao, resposta) =>{
     execSQL(`UPDATE Usuario SET senhaUsuario='${requisicao.params.senhaUsuario}'  WHERE codUsuario= ${requisicao.params.codUsuario}`, resposta);  
 })
 
+rota.patch('/bear/:codUsuario?/', (requisicao, resposta) =>{
+	const fotoPerfil = requisicao.body.foto;
+    execSQL(`UPDATE Usuario SET foto='${fotoPerfil}'  WHERE codUsuario= ${requisicao.params.codUsuario}`, resposta);  
+})
+
 
