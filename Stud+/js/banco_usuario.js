@@ -2,7 +2,6 @@
    var arrNome = new Array();
    var arrSenha = new Array();
    var arrCodUsu = new Array();
-   var arrFoto = new Array();
    var arr;
    var usuario;
 
@@ -20,7 +19,6 @@
                 	arrNome[i] = arr[i].nomeUsuario;
                 	arrSenha[i] = arr[i].senhaUsuario;
                   arrCodUsu[i] = arr[i].codUsuario;
-                  arrFoto[i] = arr[i].foto;
                 }
             }
         }
@@ -51,8 +49,6 @@
                   sessionStorage.setItem('sen', arrSenha[i]);
                   sessionStorage.setItem('nom', usuario);
                   sessionStorage.setItem('cod', arrCodUsu[i]);
-                  sessionStorage.removeItem('foto');
-                  sessionStorage.setItem('foto', arrFoto[i]);
                   
                   // document.getElementById('name').innerHTML = "BEM-VINDO, " + usuario;
                   achou = true;

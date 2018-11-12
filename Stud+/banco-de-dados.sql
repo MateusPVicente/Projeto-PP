@@ -9,7 +9,6 @@
  drop table Tarefa
  drop table Pergunta
  drop table Resposta
- drop table Foto
 
  alter table Tarefa
  nocheck constraint fkcodUsuarioo
@@ -36,7 +35,8 @@
  nomeUsuario varchar(30) not null,
  dataNascimento varchar(15) not null,
  senhaUsuario varchar(30) not null,
- foto varchar(MAX)	
+ codDesempenho int null,
+ constraint fkcodDesempenho foreign key (codDesempenho) references Desempenho(codDesempenho)
  )
 
  select * from Usuario

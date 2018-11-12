@@ -2,12 +2,9 @@
       var arrTitulo = new Array();
       var arrData = new Array();
       var arrRelevacia = new Array();
-      var arrFoto = new Array();
       var ordenado = false;
       var filtro = 'a';
       var ajuda;
-      var diret;
-      var fotoPerfil = new Object();
       // sessionStorage.setItem('primeiraVez', 'sim');
 
 window.onload = function(){
@@ -233,9 +230,6 @@ window.onload = function(){
 
         //--------------------------------------------
 
-        var foto = document.getElementById('fotin');
-        foto.src = sessionStorage.getItem('foto');
-
         for(var i = 0; i < arr.length; i++) 
         {
             if(arr[i].finalizada == "N")
@@ -285,35 +279,4 @@ window.onload = function(){
     document.getElementById("alterar").onclick = function()
     {
         location.href = "trocarSenha.html"
-    }
-
-    document.getElementById('aa').onclick = function()
-    {
-        var input = document.getElementById('inputFile');
-        input.click();
-    }
-
-    function readURL(input)
-    {
-        if(input.files && input.files[0])
-        {
-            var reader = new FileReader();
-            reader.onload = function(e)
-            {
-                $('#fotin')
-                .attr('src', e.target.result)
-                .width(200)
-                .height(200);
-
-                diret = e.target.result;
-                fotoPerfil.foto = diret;
-
-                sessionStorage.removeItem('foto');
-                sessionStorage.setItem('foto', fotoPerfil.foto);
-                $.ajax({url: "http://localhost:3000/bear/" + sessionStorage.getItem('cod'), type: "PATCH", data: fotoPerfil});
-                
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }
     }
