@@ -1,11 +1,8 @@
 
 --Banco de dados - Prática Profssional:
 
-
 -------------------------------------
  drop table Usuario
- drop table Desempenho
- drop table Acesso
  drop table Tarefa
  drop table Pergunta
  drop table Resposta
@@ -35,23 +32,9 @@
  nomeUsuario varchar(30) not null,
  dataNascimento varchar(15) not null,
  senhaUsuario varchar(30) not null,
- codDesempenho int null,
- constraint fkcodDesempenho foreign key (codDesempenho) references Desempenho(codDesempenho)
  )
 
  select * from Usuario
-
- -------------------------------------
-
- create table Acesso(
- codAcesso int primary key not null,
- dataAcesso date not null,
- horaAcesso time not null,
- codUsuario int not null,
- constraint fkcodUsuario foreign key(codUsuario) references Usuario(codUsuario)
- )
-
- select * from Acesso
 
  -------------------------------------
 
@@ -88,12 +71,3 @@
   select * from Resposta
 
   -------------------------------------
-
- create table Desempenho(
- codDesempenho int primary key not null,
- pontuacao int not null
- )
-
- select * from Desempenho
-
- -------------------------------------
