@@ -22,7 +22,7 @@ ul li{
 
 .logo{
     position: absolute;
-    width: 120px;
+    width: 130px;
     top: 12px;
     left: -40px;
 }
@@ -210,4 +210,9 @@ div #cr{
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+}
+
+#nav
+{
+    background-image: linear-gradient(to left, #00ea6a, #007bd0);
 }

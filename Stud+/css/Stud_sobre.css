@@ -161,3 +161,8 @@ div #cr{
     background-color: #1976d2;
     transition: .2s;
 }
+
+#nav
+{
+    background-image: linear-gradient(to left, #00ea6a, #007bd0);
+}

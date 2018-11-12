@@ -136,3 +136,8 @@ div #cr{
     font-size: 13px;
     z-index: -1;
 }
+
+#nav
+{
+    background-image: linear-gradient(to left, #00ea6a, #007bd0);
+}

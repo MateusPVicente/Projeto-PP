@@ -92,3 +92,8 @@ h3{
 {
 	font-family: 'Righteous';
 }
+
+#nav
+{
+    background-image: linear-gradient(to left, #00ea6a, #007bd0);
+}

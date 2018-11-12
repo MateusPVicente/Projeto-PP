@@ -196,3 +196,8 @@ div #cr{
 {
     overflow: hidden;
 }
+
+#nav
+{
+    background-image: linear-gradient(to left, #00ea6a, #007bd0);
+}
