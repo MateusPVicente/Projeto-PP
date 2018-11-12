@@ -59,7 +59,7 @@ window.onload = function(){
         var concluidas = parseInt(nTarefasConcluidas);
 
         if(nTarefas == 0)
-            document.getElementById("v").innerHTML = "DESEMPENHO: 100%";
+            document.getElementById("v").innerHTML = "ADICIONE NOVAS TAREFAS!";
         else if(nTarefasConcluidas == 0)
             document.getElementById("v").innerHTML = "VOCÊ TEM TAREFAS DISPONÍVEIS!";
         else
@@ -234,13 +234,29 @@ window.onload = function(){
         {
             if(arr[i].finalizada == "N")
             {
-                estrutura += "<tr id="+arr[i].codTarefa+">" + 
-                "<td>"+arrTitulo[i]+"<td>" +
-                "<td>"+arrData[i].substring(0,10)+"<td>" +
-                "<td>"+arrRelevacia[i]+"<td>" +
-                "<a onclick='concluirTarefa("+arr[i].codTarefa+", this);'><img src='./img/edit.png' width='25' height='25'></a>" +
-                "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
-                "</tr>";
+                var dataDesejada = new Date(arrData[i]);
+                var dataAtual = new Date();
+
+                if (dataDesejada < dataAtual+1)
+                {
+                    estrutura += "<tr bgcolor='#EA2027' style='color: white; font-weight: bold' id="+arr[i].codTarefa+">" + 
+                    "<td>"+arrTitulo[i]+"<td>" +
+                    "<td>"+arrData[i].substring(0,10)+"<td>" +
+                    "<td>"+arrRelevacia[i]+"<td>" +
+                    "<a onclick='concluirTarefa("+arr[i].codTarefa+", this);'><img src='./img/edit.png' width='25' height='25'></a>" +
+                    "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
+                    "</tr>";
+                }
+                else
+                {
+                    estrutura += "<tr id="+arr[i].codTarefa+">" + 
+                    "<td>"+arrTitulo[i]+"<td>" +
+                    "<td>"+arrData[i].substring(0,10)+"<td>" +
+                    "<td>"+arrRelevacia[i]+"<td>" +
+                    "<a onclick='concluirTarefa("+arr[i].codTarefa+", this);'><img src='./img/edit.png' width='25' height='25'></a>" +
+                    "<a onclick='apagarTarefa(getElementById("+arr[i].codTarefa+"),"+arr[i].codTarefa+");'><img id='delete' src='./img/delete.png' width='25' height='25'></a>" +
+                    "</tr>";
+                }
             }
             else
             {

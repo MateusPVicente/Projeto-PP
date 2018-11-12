@@ -1,21 +1,3 @@
-
-	// $('#nt').click(function(){
-	// 	M.toast(
-	// 	{
-	// 		html: 'Tarefa adicionada com sucesso!', 
-	// 		classes: 'rounded',
-	// 	});
-	// });
-
-	// $('#ca').click(function(){
-	// 	M.toast(
-	// 	{
-	// 		html: 'Cadastro realizado com sucesso!', 
-	// 		classes: 'rounded',
-	// 	});
-	// });
-
-
 	  $(document).ready(function(){
    		 $('.datepicker').datepicker();
     		});
@@ -33,7 +15,7 @@
 	  	{
 	  		alert("Digite as informações corretamente!");
 	  	}
-	  	else if(dataDesejada < dataAtual)
+	  	else if(dataDesejada < dataAtual+1)
 	  	{
 	  		alert("A data digitada está fora do período válido!");
 	  	}
