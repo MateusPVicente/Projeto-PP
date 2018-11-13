@@ -30,6 +30,11 @@ tr
     font-size: 18px;
 }
 
+#mo
+{
+    font-family: "Righteous";
+}
+
 th
 {
     background-color: #0086ea;
@@ -56,7 +61,7 @@ th
 #m
 {
     font-weight: bold;
-    font-family: "Comfortaa";
+    font-family: "Righteous";
 }
 
 ul li{
@@ -174,4 +179,9 @@ div #cr{
 #nav
 {
     background-image: linear-gradient(to left, #00ea6a, #007bd0);
+}
+
+#cp
+{
+    font-family: "Righteous"
 }
