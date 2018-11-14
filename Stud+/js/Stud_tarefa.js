@@ -234,10 +234,10 @@ window.onload = function(){
         {
             if(arr[i].finalizada == "N")
             {
-                var dataDesejada = new Date(arrData[i]);
+            	var dataDesejada = new Date(arrData[i].substring(0,4), (arrData[i].substring(5,7) - 1), arrData[i].substring(8,10));
                 var dataAtual = new Date();
 
-                if (dataDesejada < dataAtual+1)
+                if (dataDesejada < dataAtual)
                 {
                     estrutura += "<tr bgcolor='#EA2027' style='color: white; font-weight: bold' id="+arr[i].codTarefa+">" + 
                     "<td>"+arrTitulo[i]+"<td>" +

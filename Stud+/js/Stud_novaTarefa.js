@@ -15,7 +15,7 @@
 	  	{
 	  		alert("Digite as informações corretamente!");
 	  	}
-	  	else if(dataDesejada < dataAtual+1)
+	  	else if(dataDesejada < dataAtual)
 	  	{
 	  		alert("A data digitada está fora do período válido!");
 	  	}
