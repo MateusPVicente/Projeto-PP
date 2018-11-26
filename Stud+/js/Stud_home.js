@@ -26,26 +26,4 @@ function voltarAoTopo()
    } else if(scroll < 250) {
       $('#imagem2').css("display","none");
 }
-
 });
-
-
- // history.pushState(null, null, document.URL);
- //    window.addEventListener('popstate', function () {
- //        history.pushState(null, null, document.URL);
- //    });
-
- // document.getElementById('imga').onmouseover = function()
- // {
- // 	document.getElementById('imga').src = 'img/cadastro2.png'
- // }
-
- //  document.getElementById('imga').onmouseout = function()
- // {
- // 	document.getElementById('imga').src = 'img/cadastro.png'
- // }
-
-
- 
-
-

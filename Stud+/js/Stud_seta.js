@@ -1,5 +1,3 @@
-
-
   $(window).scroll(function() {
    var scroll = $(window).scrollTop();
    
@@ -12,14 +10,3 @@
 }
 
 });
-
-  // function verificaTela()
-  // {
-  // 	var width = screen.width;
-  // 	var heigth = screen.height;
-
-  // 	if(width < 100 || heigth < 100)
-  // 	{
-  // 		alert("sssssss");
-  // 	}
-  // }

@@ -20,25 +20,6 @@ ul li{
     left: -40px;
 }
 
-/*p{
-	position: absolute;
-	font-family: "Comfortaa";
-
-	background: -webkit-linear-gradient(left, #256DA4, #277AB9, #2A89D0 100%);
-	background: linear-gradient(to right,  #256DA4, #277AB9, #2A89D0 100%);
-
-	border-bottom-color: #1064A8;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-
-	font-size: 30px;
-	left: 40vw;
-	top: 80%;
-	border-bottom: 2px solid #1064A8;
-	transition: .5s;
-	user-select: none;
-}*/
-
 .h44{
 	font-family: "Righteous";
 

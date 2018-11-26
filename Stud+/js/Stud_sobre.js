@@ -1,4 +1,3 @@
-
 window.onload = function()
 {
 	document.getElementById('name').innerHTML = sessionStorage.getItem('nom').toUpperCase();

@@ -2,10 +2,8 @@
       var arrTitulo = new Array();
       var arrData = new Array();
       var arrRelevacia = new Array();
-      var ordenado = false;
       var filtro = 'a';
       var ajuda;
-      // sessionStorage.setItem('primeiraVez', 'sim');
 
 window.onload = function(){
 
@@ -106,8 +104,6 @@ window.onload = function(){
 
             return 0;
         });
-
-        ordenado = true;
     }
 
     function OrdemDePrazo(array)
@@ -144,8 +140,6 @@ window.onload = function(){
 
             return 0;
         });
-
-        ordenado = true;
     }
 
     function OrdemDeConcluida(array)
@@ -164,8 +158,6 @@ window.onload = function(){
 
             return 0;
         });
-
-        ordenado = true;
     }
 //---------------------------------------------------------------------------
     document.getElementById("sla").onclick = function(){
@@ -286,11 +278,6 @@ window.onload = function(){
         sessionStorage.setItem('primeiraVez', 'sim');
         location.href = "home.html"
     }
-
-    // history.pushState(null, null, document.URL);
-    // window.addEventListener('popstate', function () {
-    //     history.pushState(null, null, document.URL);
-    // });
 
     document.getElementById("alterar").onclick = function()
     {

@@ -49,8 +49,6 @@
                   sessionStorage.setItem('sen', arrSenha[i]);
                   sessionStorage.setItem('nom', usuario);
                   sessionStorage.setItem('cod', arrCodUsu[i]);
-                  
-                  // document.getElementById('name').innerHTML = "BEM-VINDO, " + usuario;
                   achou = true;
                   document.getElementById("f").action = "./tarefa.html";
                }
@@ -60,21 +58,3 @@
               alert("Nome de usuário ou senha inválidos!");
         }
     }
-
-// function passaCod()
-// {
-//   console.log(arrNome);
-//     for(var u = 0; u < arrNome.length; u++)
-//     {
-//       console.log(usuario);
-//       console.log(arrNome[u]);
-//       alert("1");
-//       if(usuario == arrNome[u])
-//       {
-//         sessionStorage.setItem('cod', arrCodUsu[u]);
-//       }
-//       alert("2");
-//     }
-//     alert("3");
-// }
-

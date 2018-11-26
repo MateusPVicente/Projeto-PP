@@ -36,17 +36,7 @@
 	  	document.getElementById('name').innerHTML = sessionStorage.getItem('nom').toUpperCase();
 	  	document.getElementById('name2').innerHTML = sessionStorage.getItem('nom').toUpperCase();
 	  	document.getElementById('cod').value = sessionStorage.getItem('cod');
-	  	//valCod = sessionStorage.getItem('cod');
-
-	  	// window.history.forward(1);
 	  }
-
-	  // document.getElementById('sair').onclick = function()
-	  // {
-	  // 	sessionStorage.removeItem('name');
-	  // 	sessionStorage.removeItem('name2');
-	  // 	window.location = "./home.html"
-	  // }
 
 	  adicionarTaf = function(form){
       $.post( "http://localhost:3000/Tarefa/", form.serialize() ).done(function(data){

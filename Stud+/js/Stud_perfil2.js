@@ -1,4 +1,3 @@
-
 document.getElementById("AP_CONTA").onclick = function()
 {
 	var xml = new XMLHttpRequest();

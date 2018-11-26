@@ -1,4 +1,3 @@
-  
 var senhaAtual = document.getElementById('senAtual');
 var novaSenha = document.getElementById('novaSen');
 

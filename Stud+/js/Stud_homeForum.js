@@ -74,10 +74,9 @@
               });
           }
       });
-  };   
-//<i class='medium material-icons' id='face' >sentiment_very_satisfied</i> 
+  };    
 
-document.getElementById("alterar").onclick = function()
+    document.getElementById("alterar").onclick = function()
     {
         location.href = "trocarSenha.html"
     }

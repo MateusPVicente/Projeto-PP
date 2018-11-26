@@ -4,7 +4,6 @@
           if (!data.erro) {
               form.each(function(data)
               {
-                
               });
           }
       });
